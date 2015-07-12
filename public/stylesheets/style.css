@@ -1,0 +1,157 @@
+#html {
+	background:  
+	url(/images/background.jpg) 0px 0px no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+
+}
+
+textarea {
+    resize: none;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: black;
+
+}
+
+#mainDiv {
+	background:  url(/images/backtop.png) top repeat-x , 
+	url(/images/backbot.png) 0px bottom repeat-x;
+	background-color: rgba(0,0,0,0.2);
+	
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+
+	width: 100%;
+
+	margin: 0;
+	padding: 0;	
+	overflow: none;
+	/*margin-bottom:-10px;*/
+	font-family: Helvetica , Arial , Sans-Serif;
+	position: absolute;
+}
+
+p {
+	/*text-align: center;*/
+}
+
+#central{
+	margin: 0;
+	padding: 0;
+}
+
+.mainSent {
+	width: auto;
+    /*padding-top: 8%;*/
+    text-align: center;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 1.2cm;
+  	color: white;
+	margin-bottom: -2pt;
+}
+
+h2 {
+	margin-top: -2pt;
+	font-family: 'Open Sans Condensed', sans-serif;
+	color: white;
+	text-align: center;
+	font-size: 1cm;
+}
+
+hr {
+	width: 20em;
+}
+
+.mainButtom {
+	text-align: center;
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	color: white;
+	/*margin-bottom: 5%;*/
+	letter-spacing: 0.08em;
+	height: 6em;
+}
+
+.mainButtom a {
+	font-size: .8cm;
+	margin-right: 20px;
+	margin-left: 20px;
+	text-decoration: none;
+	border: solid 2px white;
+	border-radius: 10px;
+	padding: .2em;
+}
+
+#restDoc{
+	background-color: black;
+	color: white;
+	padding: 10%;
+	padding-top: 10%;
+	margin: 0;
+	text-align: left;;
+}
+
+.backColorWhite {
+	background-color: rgba(255,255,255,0.2);	
+}
+
+footer {
+	text-align:center;
+	font-size:10px;
+	margin-top:100px;
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	color: white;
+	font-size: .3cm;
+}
+
+footer p,a {
+	color:White;
+}
+
+#socials {
+	padding: 0;
+	margin: 0;
+	/*padding-top: 5%;*/
+	width: 100%;
+	text-align: center;
+}
+
+#socials a {
+	width:75px;
+	height:75px;
+	background: url(/images/social-s.png);
+	border: solid 6px white;
+	border-radius: 75px;
+	display: block;
+}
+
+#socials ul {
+  	list-style: none;
+  	margin-left: -38px;
+}
+
+#socials li
+{
+  	display: inline-block;
+  	margin-left: 40px;
+	margin-right: 40px;
+}
+
+#gp a {
+	background-position: -0px 0px;
+}
+
+#fa a {
+	background-position: -75px 0px;
+}
+
+#tw a {
+	background-position: -150px 0px;
+}

@@ -1,0 +1,17 @@
+body {
+  padding-top: 50px;
+}
+.starter-template {
+  text-align: center;
+}
+
+.arguments {
+  padding-top: 20px;
+  padding-bottom:  10px;
+  padding-left:  20px;
+  text-align: left;
+}
+
+textarea {
+    resize: none;
+}
