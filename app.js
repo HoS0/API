@@ -8,11 +8,16 @@ var fs = require('fs');
 var exec = require('child_process').exec;
 var uuid = require('uuid');
 var mkdirp = require('mkdirp');
+var amqp = require('AMQP-boilerplate');
+
+var name = 'api';
+
+
 
 var app = express();
 
 // all environments
-app.set('port', 80);
+app.set('port', 8080);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'html');
 app.use(express.favicon(path.join(__dirname, 'public/images/favicon.ico')));
@@ -34,6 +39,12 @@ app.get('/docconv', docconv.list);
 
 http.createServer(app).listen(app.get('port'), function () {
     console.log('Express server listening on port ' + app.get('port'));
+    
+    
+    amqp.Initialize(name, function (){
+       
+        amqp.Log("error","something","else"); 
+    });
 });
 
 

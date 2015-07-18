@@ -17,6 +17,8 @@
     "node-uuid": "^1.4.3",
     "nodejs-websocket": "^1.2.1",
     "stylus": "*",
-    "uuid": "^2.0.1"
+    "uuid": "^2.0.1",
+    "node-amqp": "git+https://github.com/postwait/node-amqp",
+    "amqp": "git+https://github.com/HoS0/node-amqp.git"
   }
 }
