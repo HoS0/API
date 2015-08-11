@@ -11,7 +11,7 @@ var mkdirp = require('mkdirp');
 var amqp = require('AMQP-boilerplate');
 
 var name = 'api';
-
+var DataManager = 'datamanager';
 
 
 var app = express();
@@ -44,7 +44,23 @@ http.createServer(app).listen(app.get('port'), function () {
     amqp.Initialize(name, function (){
        
         amqp.Log("error","something","else"); 
+
+        
+        var message = {
+            action: "retrieve",
+            type: "user",
+            payload: {
+                username: "ali",
+                password: "alikh"
+            },
+            responceNeeded: true
+        }
+
+        amqp.SendMessage(DataManager, message, new function(res) {
+            console.log(res);
+        });
     });
+
 });
 
 
