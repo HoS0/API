@@ -107,123 +107,6 @@ function OnMessageSendClicked() {
     input.value = ""
 }
 
-function compareProviders(a,b) {
-
-    if (a.num > b.num)
-        return -1;
-
-    if (a.num < b.num)
-        return 1;
-
-    return 0;
-}
-
-function compareVersionReport(a,b) {
-
-    if (a.Summ > b.Summ)
-        return -1;
-
-    if (a.Summ < b.Summ)
-        return 1;
-
-    return 0;
-}
-
-function processPeoviderStatics(res) {
-
-    doughnutData = [];
-
-    var content = ""
-    var total = 0;
-    var count = 0;
-
-    console.log(res);
-
-    res.payload.providers.sort(compareProviders);    
-    res.payload.providers.forEach(function(pro) {
-
-        color = colorCollection[count].color;
-        colorH = colorCollection[count].colorH;
-        count += 1;
-
-        var p = {
-            value: pro.num,
-            color: color,
-            highlight: colorH,
-            label: pro.name
-        };
-
-        total += pro.num;
-        doughnutData.push(p);
-    });
-
-    res.payload.queues.forEach(function(q) {
-
-        q.name = q.name.substr(0, q.name.indexOf("."));
-        content += '<tr><td>' + q.fname + '</td><td>' + q.lname + '</td><td>' + q.email + '</td><td>' + q.name + '</td></tr>';
-    });
-
-    $('#chart').html('');
-    $('#chart').append('<canvas id="chart-area" width="500" height="500"></canvas>');
-
-    var ctx = document.getElementById("chart-area").getContext("2d");
-
-    if(pie !== null)
-        pie.destroy();
-
-    var optionsNoAnimation = {animation : false}
-    var myNewChart = new Chart(ctx);
-    pie = myNewChart.Doughnut(doughnutData, {responsive : true, animation: false});
-    
-    $('#here_table').html('');
-    $('#here_table').append(content);
-
-
-    var msg = document.getElementById("total-users");
-    if(msg)
-        msg.innerHTML = 'Total number: ' + total;
-
-    $('#dataTables-example').DataTable({
-            responsive: true
-    });
-}
-
-function processDailyReportNotify(res) {
-
-    recentData = res;
-
-    lineChartData.labels = [];
-    lineChartData.datasets[0].data = [];
-    lineChartData.datasets[1].data = [];
-
-    var total = 0;
-    var count = 0;
-
-    res.payload.forEach(function(pro) {
-      if(pro){
-        var a = pro.createdAt.substring(11, 16) + "GMT";
-        lineChartData.labels.push(a);
-        lineChartData.datasets[0].data.push(pro.numberOfQueue);  
-
-        $('#providerSelect').html('');
-
-        pro.providers.forEach(function (p) {
-            $('#providerSelect').append('<option value="' + p.name + '">' + p.name + '</option>');
-        });
-      }
-    });
-
-    var ctx = document.getElementById("canvas").getContext("2d");
-
-    if(lineChart !== null)
-       lineChart.destroy();
-
-    var optionsNoAnimation = {animation : false}
-    var myNewChart = new Chart(ctx);
-    lineChart = myNewChart.Line(lineChartData, {responsive : true, animation: false});
-
-    getval(null);
-}
 
 function GetServiceInfoCliecked(service) {
     ws.send(JSON.stringify({
@@ -502,146 +385,6 @@ function processHOSProcess(res) {
 }
 
 
-function processUserVersionReport(res) {
-
-    doughnutData = [];
-
-    var content = ""
-
-    res.payload.sort(compareVersionReport);
-
-    var total = 0;
-    var count = 0;
-
-    res.payload.forEach(function(pro) {
-
-        color = colorCollection[count].color;
-        colorH = colorCollection[count].colorH;
-        count += 1;
-
-        var p = {
-            value: pro.Summ,
-            color: color,
-            highlight: colorH,
-            label: pro.ClientVersion
-        };
-
-        total += pro.Summ;
-        doughnutData.push(p);
-        content += '<tr><td>' + pro.ClientVersion + '</td><td>' + pro.Summ + '</td></tr>';
-    });
-
-    var msg = document.getElementById("total-users");
-    if(msg)
-        msg.innerHTML = 'Total number: ' + total;
-    
-    $('#morris-donut-chart').html('');
-    $('#morris-donut-chart').append('<canvas id="chart-area" width="500" height="500"></canvas>');
-
-    var ctx = document.getElementById("chart-area").getContext  ("2d");
-
-    if(pie !== null)
-        pie.destroy();
-
-    var optionsNoAnimation = {animation : false}
-    var myNewChart = new Chart(ctx);
-    pie = myNewChart.Doughnut(doughnutData, {responsive : true, animation: false});
-
-    $('#version_table').html('');
-    $('#version_table').append(content);
-
-    $('#dataTables-example').DataTable({
-            responsive: true
-    });
-}
-
-function GetRegisteredUsersReport(res) {
-
-    var content = ""
-
-    var total = 0;
-
-    console.log(res);
-
-    res.payload.forEach(function(pro) {
-      total += 1;
-      content += '<tr><td>' + pro.Email + '</td><td>' + pro.startdate + '</td></tr>';
-    });
-
-    var msg = document.getElementById("total-users");
-    if(msg)
-        msg.innerHTML = 'Total number: ' + total;
-
-    $('#register_table').html('');
-    $('#register_table').append(content);
-
-    $('#dataTables-example').DataTable({
-            responsive: true
-    });
-}
-
-function GetPaidUsersReport(res) {
-
-    var content = ""
-
-    var total = 0;
-
-    console.log(res);
-
-    res.payload.forEach(function(pro) {
-      total += 1;
-      type = "";
-      switch (pro.AddOnId) {
-        case 1000:
-            type = "Zettabox Pro 1 1334A4";
-            break;
-        case 1001:
-            type = "Zettabox Grow 1 user 500 Gb 1 1334A5";
-            break;
-        case 1002:
-            type = "Zettabox Grow 2 user 1 Tb 2 1334A5";
-            break;
-        case 1003:
-            type = "Zettabox Grow 3 user 1.5 Tb 3 1334A5";
-            break;
-        case 1004:
-            type = "Zettabox Grow 4 user 2 Tb 4 1334A5";
-            break;
-        case 1005:
-            type = "Zettabox Grow 5 user 2.5 Tb 5 1334A5";
-            break;
-        case 1006:
-            type = "Zettabox Grow 6 user 3 Tb 6 1334A5";
-            break;
-        case 1007:
-            type = "Zettabox Grow 7 user 3.5 Tb 7 1334A5";
-            break;
-        case 1008:
-            type = "Zettabox Grow 8 user 4 Tb 8 1334A5";
-            break;
-        case 1009:
-            type = "Zettabox Grow 9 user 4.5 Tb 9 1334A5";
-            break;
-        case 1010:
-            type = "Zettabox Grow 10 user 5 Tb 10 1334A5";
-            break;
-
-      }
-      content += '<tr><td>' + pro.Email + '</td><td>' + pro.Firstname + '</td><td>' + pro.Surname + '</td><td>' + pro.ModifiedOn +  '</td><td>' + pro.AddOnId + '</td><td>' + type +'</td></tr>';
-    });
-
-    var msg = document.getElementById("total-users");
-    if(msg)
-        msg.innerHTML = 'Total number: ' + total;
-
-    $('#register_table').html('');
-    $('#register_table').append(content);
-
-    $('#dataTables-example').DataTable({
-            responsive: true
-    });
-}
-
 function processToken(res) {
 
     if(res.accepted) {
@@ -741,40 +484,14 @@ function messageRecieved(e) {
 
         var res = JSON.parse(e.data)
 
-        if(res.type === 'providerStatics') {
-
-            processPeoviderStatics(res);
-        }
-
         if(res.type === 'logger' && res.action === "retrieve") {
 
             processLogger(res);
         }
 
-
-        if(res.type === 'DailyReportNotify') {
-
-            processDailyReportNotify(res);
-        }
-
-        if(res.type === 'UserVersionReport') {
-
-            processUserVersionReport(res);
-        }
-
         if(res.type === 'HOSProcess') {
 
             processHOSProcess(res);
-        }
-
-        if(res.type === 'GetRegisteredUsersReport') {
-
-            GetRegisteredUsersReport(res);
-        }
-
-        if(res.type === 'GetPaidUsersReport') {
-
-            GetPaidUsersReport(res);
         }
 
         if(res.type === 'chat') {
@@ -795,10 +512,6 @@ function messageRecieved(e) {
         if(res.type === 'credential') {
 
             processCredential(res)
-        }
-
-        else if(res.type === 'token') {
-
         }
     }
     catch (err) {
