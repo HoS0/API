@@ -17,9 +17,11 @@
     "mkdirp": "^0.5.1",
     "moment": "^2.10.6",
     "mongodb": "^1.4.28",
+    "mongoose": "^4.1.2",
     "node-amqp": "git+https://github.com/postwait/node-amqp",
     "node-uuid": "^1.4.3",
     "nodejs-websocket": "^1.2.1",
+    "request": "^2.60.0",
     "stylus": "*",
     "uuid": "^2.0.1"
   }
