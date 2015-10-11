@@ -2,8 +2,8 @@ WEB_SOCKET_SWF_LOCATION = "WebSocketMain.swf";
 WEB_SOCKET_DEBUG = true;
 
 var recentData = null;
-var baseUrl = 'localhost';
-//var baseUrl = 'al-kh.me';
+//var baseUrl = 'localhost';
+var baseUrl = 'al-kh.me';
 var ws;
 var doughnutData = [];
 
