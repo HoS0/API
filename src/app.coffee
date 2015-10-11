@@ -31,6 +31,7 @@ http.createServer(app).listen app.get('port'), () ->
     console.log 'Express server listening on port ' + app.get 'port'
 
 amqp.Initialize name, () ->
+    console.log "something"
     amqp.CreateRequestQueue name, (message) ->
         log "info",  neme + " service has started working.", ""
     

@@ -2,7 +2,8 @@ WEB_SOCKET_SWF_LOCATION = "WebSocketMain.swf";
 WEB_SOCKET_DEBUG = true;
 
 var recentData = null;
-var baseUrl = 'localhost';
+//var baseUrl = 'localhost';
+var baseUrl = 'al-kh.me';
 var ws;
 var doughnutData = [];
 
@@ -339,7 +340,7 @@ function processHOSProcess(res) {
 
     res.payload.services.forEach(function(pro) {
         total += 1;
-        content += '<tr><td>' + pro.name + " on " + pro.host + '</td><td>' + pro.id + '</td><td>' 
+        content += '<tr><td>' + pro.name + '</td><td>' + pro.id + '</td><td>' 
             + '<button type="button" onclick="GetServiceInfoCliecked(\'' + pro.name  + "." + pro.id + '\');" class="btn btn-primary">Get Info</button>';
 
         if(pro.name === "taskManager")
@@ -545,7 +546,7 @@ function init() {
     });
 
 
-    ws = new WebSocket("ws://"+baseUrl+":8001/");
+    ws = new WebSocket("ws://"+baseUrl+":8009/");
 
     ws.onopen = function() {        
         output("onOpen");
