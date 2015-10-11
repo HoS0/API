@@ -26,6 +26,7 @@ app.use bodyParser.urlencoded
 
 app.get '/', index.index
 app.post '/main', index.main
+app.post '/TaskManager', index.main
 
 http.createServer(app).listen app.get('port'), () ->
     console.log 'Express server listening on port ' + app.get 'port'
