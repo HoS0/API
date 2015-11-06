@@ -1,0 +1,937 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DOCUMENT Type="Advanced Installer" CreateVersion="9.5" version="12.0" Modules="enterprise" RootPath="." Language="en_GB" Id="{9CBB79BD-0362-4856-87CB-2DDC8CED7B0F}">
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiValidationComponent">
+    <ROW Table="File" Column="Sequence" MinValue="1" MaxValue="2147483647" Description="Sequence with respect to the media images; order must track cabinet order." Options="0" ColumnType="3" ColumnIndex="7" ColumnSize="4" MsiKey="File#Sequence"/>
+    <ROW Table="Media" Column="LastSequence" MinValue="0" MaxValue="2147483647" Description="File sequence number for the last file for this media." Options="0" ColumnType="3" ColumnIndex="1" ColumnSize="4" MsiKey="Media#LastSequence"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiPropsComponent">
+    <ROW Property="AI_BITMAP_DISPLAY_MODE" Value="0"/>
+    <ROW Property="AI_BackgroundColor" Value="lightblue" MultiBuildValue="DefaultBuild:orange" MsiKey="AI_BackgroundColor"/>
+    <ROW Property="AI_EXTERNALUIUNINSTALLERNAME" MultiBuildValue="DefaultBuild:aiui#MsiBuild:aiui"/>
+    <ROW Property="AI_FINDEXE_TITLE" Value="Select the installation package for [|ProductName]" ValueLocId="AI.Property.FindExeTitle"/>
+    <ROW Property="AI_FrameBtnsColor" Value="powderblue" MsiKey="AI_FrameBtnsColor"/>
+    <ROW Property="AI_FrameColor" Value="powderblue" MsiKey="AI_FrameColor"/>
+    <ROW Property="AI_ImagesColor" Value="powderblue" MultiBuildValue="DefaultBuild:orange" MsiKey="AI_ImagesColor"/>
+    <ROW Property="AI_MINDOTNETVERSION" MultiBuildValue="DefaultBuild:4.0" ValueLocId="-"/>
+    <ROW Property="AI_PRODUCTNAME_ARP" Value="[|ProductName]"/>
+    <ROW Property="AI_SLIDESHOW_BACKGROUND_COLOR" Value="16777215"/>
+    <ROW Property="AI_SLIDESHOW_PROGRESS_DLG_POS" Value="5"/>
+    <ROW Property="AI_ThemeStyle" Value="head" MultiBuildValue="DefaultBuild:nohead" MsiKey="AI_ThemeStyle"/>
+    <ROW Property="AI_UNINSTALLER" Value="msiexec.exe"/>
+    <ROW Property="ALLUSERS" Value="1"/>
+    <ROW Property="ARPCOMMENTS" Value="[|ProductName] installer package." ValueLocId="*"/>
+    <ROW Property="ARPPRODUCTICON" Value="favicon_1.exe" Type="8"/>
+    <ROW Property="ARPSYSTEMCOMPONENT" Value="1"/>
+    <ROW Property="ARPURLINFOABOUT" Value="http://www.zettabox.com"/>
+    <ROW Property="AppLogoIcon" Value="applogoicon" MultiBuildValue="DefaultBuild:favicon.ico_1" Type="1" MsiKey="AppLogoIcon"/>
+    <ROW Property="CTRLS" Value="2"/>
+    <ROW Property="IS_CUSTOM_INSTALL_SELECTED" Value="0"/>
+    <ROW Property="MICROSOFT_NODE" Value="Microsoft"/>
+    <ROW Property="Manufacturer" Value="Zettabox Holdings Limited"/>
+    <ROW Property="MsiLogging" MultiBuildValue="MsiBuild:v"/>
+    <ROW Property="ProductCode" Value="2057:{2B8F9583-46F0-4FD3-8E05-9088E3C27100} " Type="16"/>
+    <ROW Property="ProductLanguage" Value="2057"/>
+    <ROW Property="ProductName" Value="Zettabox"/>
+    <ROW Property="ProductNameUpper" Value="ZettaBox"/>
+    <ROW Property="ProductVersion" Value="0.9.138" Type="32"/>
+    <ROW Property="RADIOBUTTONGROUP_1_PROP" Value="RadioButton_1" Type="4"/>
+    <ROW Property="RUN" Value="Run"/>
+    <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND;AI_SETUPEXEPATH;SETUPEXEDIR"/>
+    <ROW Property="UpgradeCode" Value="{0601EEE2-1E3A-48C7-893F-D6B38B8B074D}"/>
+    <ROW Property="WIMinVersion" MultiBuildValue="DefaultBuild:4.05" ValueLocId="-"/>
+    <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME#MsiBuild:Windows 9x/ME" ValueLocId="-"/>
+    <ROW Property="WindowsType9XDisplay" MultiBuildValue="DefaultBuild:Windows 9x/ME#MsiBuild:Windows 9x/ME" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT" MultiBuildValue="DefaultBuild:Windows 2000, Windows 2000 Service Pack 1, Windows 2000 Service Pack 2, Windows 2000 Service Pack 3" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT40" MultiBuildValue="DefaultBuild:Windows NT 4.0#MsiBuild:Windows NT 4.0" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT40Display" MultiBuildValue="DefaultBuild:Windows NT 4.0#MsiBuild:Windows NT 4.0" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT64Display" MultiBuildValue="DefaultBuild:Windows Server 2003 x64, Windows Server 2008 x64, Windows Server 2012 x64" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNTDisplay" MultiBuildValue="DefaultBuild:Windows 2000, Windows 2000 Service Pack 1, Windows 2000 Service Pack 2, Windows 2000 Service Pack 3" ValueLocId="-"/>
+    <ROW Property="ZBWWW" Value="http://zettatest.zettabox.com:8081"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiDirsComponent">
+    <ROW Directory="APPDIR" Directory_Parent="TARGETDIR" DefaultDir="APPDIR:." IsPseudoRoot="1"/>
+    <ROW Directory="Addins_Dir" Directory_Parent="APPDIR" DefaultDir="Addins"/>
+    <ROW Directory="DesktopFolder" Directory_Parent="TARGETDIR" DefaultDir="Deskto~1|DesktopFolder" IsPseudoRoot="1"/>
+    <ROW Directory="Images_Dir" Directory_Parent="APPDIR" DefaultDir="Images"/>
+    <ROW Directory="OverlayIcons_Dir" Directory_Parent="Images_Dir" DefaultDir="OVERLA~1|OverlayIcons"/>
+    <ROW Directory="SHORTCUTDIR" Directory_Parent="TARGETDIR" DefaultDir="SHORTC~1|SHORTCUTDIR" IsPseudoRoot="1"/>
+    <ROW Directory="TARGETDIR" DefaultDir="SourceDir"/>
+    <ROW Directory="Upgraded_Dir" Directory_Parent="APPDIR" DefaultDir="Upgraded"/>
+    <ROW Directory="x64_Dir" Directory_Parent="APPDIR" DefaultDir="x64"/>
+    <ROW Directory="x86_Dir" Directory_Parent="APPDIR" DefaultDir="x86"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
+    <ROW Component="AI_CustomARPName" ComponentId="{378DED56-886F-4550-AC55-974059F390EE}" Directory_="APPDIR" Attributes="4" KeyPath="DisplayName" Options="1"/>
+    <ROW Component="AI_ExePath" ComponentId="{EF64051B-F726-455F-951F-32EB52E48E82}" Directory_="APPDIR" Attributes="260" KeyPath="AI_ExePath"/>
+    <ROW Component="AZettaBoxOverlay_Base.dll" ComponentId="{B2F4F3C9-3AB2-4B98-A99B-761D93631E5F}" Directory_="APPDIR" Attributes="0" KeyPath="AZettaBoxOverlay_Base.dll"/>
+    <ROW Component="AZettaBoxOverlay_Base.dll_1" ComponentId="{A6BD73F4-DF1C-4052-BB06-022F2334CC13}" Directory_="Upgraded_Dir" Attributes="0" KeyPath="AZettaBoxOverlay_Base.dll_1"/>
+    <ROW Component="AZettaBoxOverlay_Ignored.dll" ComponentId="{6D03ED93-1608-4381-8490-58C03CA5FD61}" Directory_="APPDIR" Attributes="0" KeyPath="AZettaBoxOverlay_Ignored.dll"/>
+    <ROW Component="AZettaBoxOverlay_Ignored.dll_1" ComponentId="{7667C808-54C2-4279-A31C-A0FFBB744CF4}" Directory_="Upgraded_Dir" Attributes="0" KeyPath="AZettaBoxOverlay_Ignored.dll_1"/>
+    <ROW Component="AZettaBoxOverlay_Shared.dll" ComponentId="{C1933A0A-CD38-4CFC-9B8C-D4D2C61ECFFA}" Directory_="APPDIR" Attributes="0" KeyPath="AZettaBoxOverlay_Shared.dll"/>
+    <ROW Component="AZettaBoxOverlay_Shared.dll_1" ComponentId="{AF112B3D-1C30-4D21-9C66-89D6DB3F147E}" Directory_="Upgraded_Dir" Attributes="0" KeyPath="AZettaBoxOverlay_Shared.dll_1"/>
+    <ROW Component="AZettaBoxOverlay_Synchronized.dll" ComponentId="{95F93179-FEA9-41D5-94D8-35C237C33B0A}" Directory_="APPDIR" Attributes="0" KeyPath="AZettaBoxOverlay_Synchronized.dll"/>
+    <ROW Component="AZettaBoxOverlay_Synchronized.dll_1" ComponentId="{AC0BA9CE-38ED-4510-A5D5-2D5AEBFFE1DE}" Directory_="Upgraded_Dir" Attributes="0" KeyPath="AZettaBoxOverlay_Synchronized.dll_1"/>
+    <ROW Component="AZettaBoxOverlay_Synchronizing.dll" ComponentId="{0554AAFE-68C6-4501-90E2-4CD85EA31F41}" Directory_="APPDIR" Attributes="0" KeyPath="AZettaBoxOverlay_Synchronizing.dll"/>
+    <ROW Component="AZettaBoxOverlay_Synchronizing.dll_1" ComponentId="{69D2E9C9-B048-49B4-A95E-2930898E135C}" Directory_="Upgraded_Dir" Attributes="0" KeyPath="AZettaBoxOverlay_Synchronizing.dll_1"/>
+    <ROW Component="ActiproSoftware.Shared.Wpf.dll" ComponentId="{32F1C886-AF00-435C-85CE-1A79A9D9C6CE}" Directory_="APPDIR" Attributes="0" KeyPath="ActiproSoftware.Shared.Wpf.dll"/>
+    <ROW Component="ActiproSoftware.Wizard.Wpf.dll" ComponentId="{D26AB491-FDDD-4501-9CDE-3FF53B7C029B}" Directory_="APPDIR" Attributes="0" KeyPath="ActiproSoftware.Wizard.Wpf.dll"/>
+    <ROW Component="CloudMonitoring.dll" ComponentId="{EA13B297-59F9-4AC3-A27B-169A4125A031}" Directory_="APPDIR" Attributes="0" KeyPath="CloudMonitoring.dll"/>
+    <ROW Component="CloudPushNotifications.dll" ComponentId="{BD5AF8E6-8850-4A35-98B8-B9EE55A22E68}" Directory_="APPDIR" Attributes="0" KeyPath="CloudPushNotifications.dll"/>
+    <ROW Component="CloudRestClient.dll" ComponentId="{77D1EA22-F18B-49D2-8DE4-46A23B3E853D}" Directory_="APPDIR" Attributes="0" KeyPath="CloudRestClient.dll"/>
+    <ROW Component="CommandFlags" ComponentId="{D1D8ED60-53D3-4547-BCB8-29D270167759}" Directory_="APPDIR" Attributes="260" KeyPath="CommandFlags"/>
+    <ROW Component="CommandFlags_1" ComponentId="{F26E1F11-C9D9-4129-A32E-4964027243E1}" Directory_="APPDIR" Attributes="260" KeyPath="CommandFlags_1"/>
+    <ROW Component="CommandFlags_2" ComponentId="{0AF36ECF-0A90-4285-BFC7-976AF8AFF96C}" Directory_="APPDIR" Attributes="260" KeyPath="CommandFlags_2"/>
+    <ROW Component="CommandFlags_3" ComponentId="{A93E8940-4881-453C-A825-7A9588554F38}" Directory_="APPDIR" Attributes="260" KeyPath="CommandFlags_3"/>
+    <ROW Component="Delimon.Win32.IO.dll" ComponentId="{5C1AD962-9F81-4DCC-AE26-227D52451FFE}" Directory_="APPDIR" Attributes="0" KeyPath="Delimon.Win32.IO.dll"/>
+    <ROW Component="Description_12" ComponentId="{B44CB562-CF62-4DEE-84E5-5BBF38614270}" Directory_="APPDIR" Attributes="260" KeyPath="Description_12"/>
+    <ROW Component="Description_13" ComponentId="{FA8B8FC5-8AB3-4973-8E3C-488DC498D89D}" Directory_="APPDIR" Attributes="260" KeyPath="Description_13"/>
+    <ROW Component="Description_14" ComponentId="{175AA958-BE39-48F3-B717-689256E70D9E}" Directory_="APPDIR" Attributes="260" KeyPath="Description_14"/>
+    <ROW Component="Description_15" ComponentId="{7B017F16-D891-43FC-A2D3-FE60396B3571}" Directory_="APPDIR" Attributes="260" KeyPath="Description_15"/>
+    <ROW Component="Description_16" ComponentId="{8331F7F0-792D-431D-B3F1-2A4A24D0C172}" Directory_="APPDIR" Attributes="260" KeyPath="Description_16"/>
+    <ROW Component="Description_17" ComponentId="{8C18FF8B-1D30-402D-99C9-B5BF359F358B}" Directory_="APPDIR" Attributes="260" KeyPath="Description_17"/>
+    <ROW Component="Description_18" ComponentId="{DA2A5BBF-7842-4D45-B151-73BA32374A33}" Directory_="APPDIR" Attributes="260" KeyPath="Description_18"/>
+    <ROW Component="Description_19" ComponentId="{F8B5716E-64D2-4616-BE8E-F53E9BBB396C}" Directory_="APPDIR" Attributes="260" KeyPath="Description_19"/>
+    <ROW Component="Description_20" ComponentId="{4522D564-A11C-4D16-9C4E-70B9455AD104}" Directory_="APPDIR" Attributes="260" KeyPath="Description_20"/>
+    <ROW Component="Description_21" ComponentId="{CA2988A3-5E0C-42E0-A779-3B0EA3E0282E}" Directory_="APPDIR" Attributes="260" KeyPath="Description_21"/>
+    <ROW Component="Description_22" ComponentId="{7DB57FC7-69FE-4DCF-9168-0F51441D40A2}" Directory_="APPDIR" Attributes="260" KeyPath="Description_22"/>
+    <ROW Component="Description_23" ComponentId="{FABF6B9D-19F1-45F7-81A2-B81EC4E16B29}" Directory_="APPDIR" Attributes="260" KeyPath="Description_23"/>
+    <ROW Component="FileSyncLogic.dll" ComponentId="{1EFF0BA1-AE72-4C5B-86E8-5A82B3F3E4AE}" Directory_="APPDIR" Attributes="0" KeyPath="FileSyncLogic.dll"/>
+    <ROW Component="FileSystemMonitoring.dll" ComponentId="{390670B5-19B9-470B-9D41-64A4FE94B65F}" Directory_="APPDIR" Attributes="0" KeyPath="FileSystemMonitoring.dll"/>
+    <ROW Component="FriendlyName_12" ComponentId="{C85FCD42-A706-4225-B33A-A7D417743BAD}" Directory_="APPDIR" Attributes="260" KeyPath="FriendlyName_12"/>
+    <ROW Component="FriendlyName_13" ComponentId="{5CB865D7-FB0B-4478-A586-BE9A31B8E590}" Directory_="APPDIR" Attributes="260" KeyPath="FriendlyName_13"/>
+    <ROW Component="FriendlyName_14" ComponentId="{AD6D5A42-F6A0-4F9F-B2EF-599C86A57CA9}" Directory_="APPDIR" Attributes="260" KeyPath="FriendlyName_14"/>
+    <ROW Component="FriendlyName_15" ComponentId="{DC792281-BC51-4C4B-AD90-CE32538B0B6B}" Directory_="APPDIR" Attributes="260" KeyPath="FriendlyName_15"/>
+    <ROW Component="FriendlyName_16" ComponentId="{1553CE4F-7462-4FC0-8875-02B02CA6E6D6}" Directory_="APPDIR" Attributes="260" KeyPath="FriendlyName_16"/>
+    <ROW Component="FriendlyName_17" ComponentId="{15DD97DC-3C3D-4F07-B39C-2A7C30EA5E01}" Directory_="APPDIR" Attributes="260" KeyPath="FriendlyName_17"/>
+    <ROW Component="FriendlyName_18" ComponentId="{72A4E58B-6352-4724-B292-C5BC922789E1}" Directory_="APPDIR" Attributes="260" KeyPath="FriendlyName_18"/>
+    <ROW Component="FriendlyName_19" ComponentId="{8BAA36DA-72B8-4817-9961-807F9423D9A2}" Directory_="APPDIR" Attributes="260" KeyPath="FriendlyName_19"/>
+    <ROW Component="FriendlyName_20" ComponentId="{2DBF0347-2EC5-43F4-8D77-B1960F250841}" Directory_="APPDIR" Attributes="260" KeyPath="FriendlyName_20"/>
+    <ROW Component="FriendlyName_21" ComponentId="{BF42865B-4633-4430-ACF8-D1D5A1460B7E}" Directory_="APPDIR" Attributes="260" KeyPath="FriendlyName_21"/>
+    <ROW Component="FriendlyName_22" ComponentId="{37AFF031-69E2-4335-A085-159E0F434C5D}" Directory_="APPDIR" Attributes="260" KeyPath="FriendlyName_22"/>
+    <ROW Component="FriendlyName_23" ComponentId="{8D4FF2B2-7333-4F19-B26E-FBBEDD9F59B5}" Directory_="APPDIR" Attributes="260" KeyPath="FriendlyName_23"/>
+    <ROW Component="GalaSoft.MvvmLight.Extras.WPF4.dll" ComponentId="{F163BFA7-A45E-4A51-88F3-AEFB2A04CA6B}" Directory_="APPDIR" Attributes="0" KeyPath="GalaSoft.MvvmLight.Extras.WPF4.dll"/>
+    <ROW Component="GalaSoft.MvvmLight.WPF4.dll" ComponentId="{93599F32-05D6-4026-B619-D163BCD2BB11}" Directory_="APPDIR" Attributes="0" KeyPath="GalaSoft.MvvmLight.WPF4.dll"/>
+    <ROW Component="Hardcodet.Wpf.TaskbarNotification.dll" ComponentId="{6F74EE66-93CE-4CD5-8762-A46C45920EFA}" Directory_="APPDIR" Attributes="0" KeyPath="Hardcodet.Wpf.TaskbarNotification.dll"/>
+    <ROW Component="ICSharpCode.AvalonEdit.dll" ComponentId="{0D8BA166-78FE-4270-9776-5F245AD5ADAE}" Directory_="APPDIR" Attributes="0" KeyPath="ICSharpCode.AvalonEdit.dll"/>
+    <ROW Component="Icon_3" ComponentId="{58F9219A-374A-4512-9A03-481060BF874C}" Directory_="APPDIR" Attributes="260" KeyPath="Icon_3"/>
+    <ROW Component="Icon_4" ComponentId="{8A58656C-2677-4DFF-B13D-6CE8E04E23B6}" Directory_="APPDIR" Attributes="260" KeyPath="Icon_4"/>
+    <ROW Component="IgnoredOverlay.ico" ComponentId="{AB3CF59B-2A35-4A9D-9805-13BF53078A7D}" Directory_="OverlayIcons_Dir" Attributes="0" KeyPath="IgnoredOverlay.ico" Type="0"/>
+    <ROW Component="InstallDir" ComponentId="{2BC8C4C7-683B-4DA4-89C3-3CF35BF03291}" Directory_="APPDIR" Attributes="2308" KeyPath="InstallDir"/>
+    <ROW Component="InstallDir_1" ComponentId="{A0F91050-C750-4232-806E-C8D831A98754}" Directory_="APPDIR" Attributes="260" KeyPath="InstallDir_1"/>
+    <ROW Component="InstallRenameActions.exe" ComponentId="{BC72A58F-4705-4AAF-B742-C023298C9A49}" Directory_="APPDIR" Attributes="0" KeyPath="InstallRenameActions.exe"/>
+    <ROW Component="InstalledNewVersion" ComponentId="{EB779765-8945-4413-B3B6-AA3BE320D275}" Directory_="APPDIR" Attributes="260" Condition="%ZettaBox &lt;&gt; &quot;Installed&quot;" KeyPath="InstalledNewVersion"/>
+    <ROW Component="Interfaces.dll" ComponentId="{72705D96-075C-4216-872E-27E6F5B74184}" Directory_="APPDIR" Attributes="0" KeyPath="Interfaces.dll"/>
+    <ROW Component="Interfaces.dll_1" ComponentId="{F27F96F0-B7AD-40BB-8CF7-8DA99067B3A4}" Directory_="Upgraded_Dir" Attributes="0" KeyPath="Interfaces.dll_1"/>
+    <ROW Component="Interop.IWshRuntimeLibrary.dll" ComponentId="{0074FE5C-AE89-41BF-B685-9EA714CDA7C1}" Directory_="APPDIR" Attributes="0" KeyPath="Interop.IWshRuntimeLibrary.dll"/>
+    <ROW Component="LoadBehavior_12" ComponentId="{93FE76F0-BF2F-4380-AAC1-4A0C7C5DCFAC}" Directory_="APPDIR" Attributes="260" KeyPath="LoadBehavior_12"/>
+    <ROW Component="LoadBehavior_13" ComponentId="{B802FD60-4740-4944-8860-428D2B02BF75}" Directory_="APPDIR" Attributes="260" KeyPath="LoadBehavior_13"/>
+    <ROW Component="LoadBehavior_14" ComponentId="{DE671B9D-7FDF-4249-AE34-576DCE44C101}" Directory_="APPDIR" Attributes="260" KeyPath="LoadBehavior_14"/>
+    <ROW Component="LoadBehavior_15" ComponentId="{83768A5E-DCE7-483A-BE41-1443CD563AAC}" Directory_="APPDIR" Attributes="260" KeyPath="LoadBehavior_15"/>
+    <ROW Component="LoadBehavior_16" ComponentId="{3BF0790C-91F1-4F1A-98A7-794B423EE2C1}" Directory_="APPDIR" Attributes="260" KeyPath="LoadBehavior_16"/>
+    <ROW Component="LoadBehavior_17" ComponentId="{594841B2-178A-451F-A398-DE8607690A3C}" Directory_="APPDIR" Attributes="260" KeyPath="LoadBehavior_17"/>
+    <ROW Component="LoadBehavior_18" ComponentId="{A48E0EF8-C652-4FDF-A37B-69EDFAE92C4F}" Directory_="APPDIR" Attributes="260" KeyPath="LoadBehavior_18"/>
+    <ROW Component="LoadBehavior_19" ComponentId="{175E3E87-FCA5-4B66-A400-CFF42AC90A5F}" Directory_="APPDIR" Attributes="260" KeyPath="LoadBehavior_19"/>
+    <ROW Component="LoadBehavior_20" ComponentId="{84261A4E-104C-40D5-AB73-F28503FDEE23}" Directory_="APPDIR" Attributes="260" KeyPath="LoadBehavior_20"/>
+    <ROW Component="LoadBehavior_21" ComponentId="{040ABDEF-0304-4244-92DE-E4FF8990F58D}" Directory_="APPDIR" Attributes="260" KeyPath="LoadBehavior_21"/>
+    <ROW Component="LoadBehavior_22" ComponentId="{FD0DBF8F-43AB-4E1F-B5BA-4ACE5F711469}" Directory_="APPDIR" Attributes="260" KeyPath="LoadBehavior_22"/>
+    <ROW Component="LoadBehavior_23" ComponentId="{011C14DF-224B-47CA-836B-43CE7BBC36E4}" Directory_="APPDIR" Attributes="260" KeyPath="LoadBehavior_23"/>
+    <ROW Component="Logo.ico" ComponentId="{CFD3451E-C024-479E-B9FF-F82266EF9580}" Directory_="APPDIR" Attributes="0" KeyPath="upgradeLockedDlls.bat" Type="0"/>
+    <ROW Component="MahApps.Metro.dll" ComponentId="{7347F5CF-61AC-4A5A-8674-EA4CC937714C}" Directory_="APPDIR" Attributes="0" KeyPath="MahApps.Metro.dll"/>
+    <ROW Component="Manifest_12" ComponentId="{B49BAFF3-B471-461C-9F49-367179E559D8}" Directory_="APPDIR" Attributes="260" KeyPath="Manifest_12"/>
+    <ROW Component="Manifest_13" ComponentId="{49AB2E21-FA3D-410D-AF3E-0F42397A48A6}" Directory_="APPDIR" Attributes="260" KeyPath="Manifest_13"/>
+    <ROW Component="Manifest_14" ComponentId="{D4CB6D25-B5F6-483A-B8F8-05A8D9EA443C}" Directory_="APPDIR" Attributes="260" KeyPath="Manifest_14"/>
+    <ROW Component="Manifest_15" ComponentId="{78E8E766-AAB4-4470-B7D5-72A4D790B2A8}" Directory_="APPDIR" Attributes="260" KeyPath="Manifest_15"/>
+    <ROW Component="Manifest_16" ComponentId="{5A7AA1E1-68A1-4C87-863F-77791ED50DE2}" Directory_="APPDIR" Attributes="260" KeyPath="Manifest_16"/>
+    <ROW Component="Manifest_17" ComponentId="{E7FA6B97-0737-4658-954E-98437A1FA57C}" Directory_="APPDIR" Attributes="260" KeyPath="Manifest_17"/>
+    <ROW Component="Manifest_18" ComponentId="{0F3096CC-61C5-46DB-95F7-63DC5FE92E83}" Directory_="APPDIR" Attributes="260" KeyPath="Manifest_18"/>
+    <ROW Component="Manifest_19" ComponentId="{58E2451B-2A95-48E0-8FA4-E7BBB2E73C25}" Directory_="APPDIR" Attributes="260" KeyPath="Manifest_19"/>
+    <ROW Component="Manifest_20" ComponentId="{4D9C19FC-24CF-4DB4-A6AC-BC5752B77D6F}" Directory_="APPDIR" Attributes="260" KeyPath="Manifest_20"/>
+    <ROW Component="Manifest_21" ComponentId="{BC7CFCFA-0761-4411-A389-615C9842771B}" Directory_="APPDIR" Attributes="260" KeyPath="Manifest_21"/>
+    <ROW Component="Manifest_22" ComponentId="{B614393C-C83B-48D6-BB1A-D92D595405E7}" Directory_="APPDIR" Attributes="260" KeyPath="Manifest_22"/>
+    <ROW Component="Manifest_23" ComponentId="{3BEA336F-D5B3-4965-A011-8DFC3B2C51F2}" Directory_="APPDIR" Attributes="260" KeyPath="Manifest_23"/>
+    <ROW Component="MetaDataStoreSqLite.dll" ComponentId="{678A6AB1-3E3A-43CF-9F64-858CF0295FE3}" Directory_="APPDIR" Attributes="0" KeyPath="MetaDataStoreSqLite.dll"/>
+    <ROW Component="Microsoft.AspNet.SignalR.Client.dll" ComponentId="{ABE5369B-2C43-414B-A860-6EECD280D36A}" Directory_="APPDIR" Attributes="0" KeyPath="Microsoft.AspNet.SignalR.Client.dll"/>
+    <ROW Component="Microsoft.Office.Tools.Common.v4.0.Utili" ComponentId="{3776EE69-EA1E-4BF3-865C-2CCE310F94A5}" Directory_="Addins_Dir" Attributes="0" KeyPath="Microsoft.Office.Tools.Common.v4.0.Utilities.dll"/>
+    <ROW Component="Microsoft.Office.Tools.Excel.v4.0.Utilit" ComponentId="{CFC75C87-5C45-4CC8-91C0-94954CBCE1F9}" Directory_="Addins_Dir" Attributes="0" KeyPath="Microsoft.Office.Tools.Excel.v4.0.Utilities.dll"/>
+    <ROW Component="Microsoft.Office.Tools.Outlook.v4.0.Util" ComponentId="{33B38873-723A-4216-AFB9-1273C51F8CED}" Directory_="Addins_Dir" Attributes="0" KeyPath="Microsoft.Office.Tools.Outlook.v4.0.Utilities.dll"/>
+    <ROW Component="Microsoft.Office.Tools.Word.v4.0.Utiliti" ComponentId="{5503CB18-2D31-4CD3-B954-861A33C999BA}" Directory_="Addins_Dir" Attributes="0" KeyPath="Microsoft.Office.Tools.Word.v4.0.Utilities.dll"/>
+    <ROW Component="Microsoft.Practices.ServiceLocation.dll" ComponentId="{1A69B597-8FC8-47F9-BD52-1C0D1FFD94E2}" Directory_="APPDIR" Attributes="0" KeyPath="Microsoft.Practices.ServiceLocation.dll"/>
+    <ROW Component="Microsoft.Threading.Tasks.Extensions.Des" ComponentId="{05A944DB-5421-403F-B84E-ED47821275B3}" Directory_="APPDIR" Attributes="0" KeyPath="Microsoft.Threading.Tasks.Extensions.Desktop.dll"/>
+    <ROW Component="Microsoft.Threading.Tasks.Extensions.dll" ComponentId="{A02632C6-CA14-492B-B397-F2C8C1C90904}" Directory_="APPDIR" Attributes="0" KeyPath="Microsoft.Threading.Tasks.Extensions.dll"/>
+    <ROW Component="Microsoft.Threading.Tasks.dll" ComponentId="{2FE94251-13C2-4D7D-A5EE-5C09DBF66245}" Directory_="APPDIR" Attributes="0" KeyPath="Microsoft.Threading.Tasks.dll"/>
+    <ROW Component="Newtonsoft.Json.dll" ComponentId="{D31774B8-675C-465D-8413-057924E3533B}" Directory_="APPDIR" Attributes="0" KeyPath="Newtonsoft.Json.dll"/>
+    <ROW Component="Ninject.dll" ComponentId="{1FD36212-12BC-4143-9C55-48E725E228EA}" Directory_="APPDIR" Attributes="0" KeyPath="Ninject.dll"/>
+    <ROW Component="ProductName" ComponentId="{1F78007C-EA22-491F-A746-DC7E414F9BBF}" Directory_="APPDIR" Attributes="4" KeyPath="ProductName"/>
+    <ROW Component="ProductNameUpper" ComponentId="{8A7093DF-80E3-49AF-9E85-2333E0A88C45}" Directory_="APPDIR" Attributes="260" KeyPath="ProductNameUpper" Options="1"/>
+    <ROW Component="ProductName_1" ComponentId="{449ACABD-B1EC-4BA6-9359-653263020228}" Directory_="APPDIR" Attributes="260" KeyPath="ProductName_1"/>
+    <ROW Component="ProductVersion" ComponentId="{D3A658AE-CF20-46FD-BCA0-0358675196AC}" Directory_="APPDIR" Attributes="276" KeyPath="ProductVersion_2"/>
+    <ROW Component="RUN_1" ComponentId="{B081F71E-5F31-4153-803C-FCC8658800EE}" Directory_="APPDIR" Attributes="260" KeyPath="RUN_1"/>
+    <ROW Component="RequiredApplication_1" ComponentId="{271752DF-E17C-470B-BD60-74918394E720}" Directory_="APPDIR" Attributes="260" KeyPath="RequiredApplication_1" Options="2"/>
+    <ROW Component="RestartExplorer.exe" ComponentId="{1DAB4EBC-8682-4DEC-8790-F77D4F60BE4F}" Directory_="APPDIR" Attributes="0" KeyPath="RestartExplorer.exe"/>
+    <ROW Component="SHORTCUTDIR" ComponentId="{8821EF6E-90BF-44F2-931D-B75156B60302}" Directory_="SHORTCUTDIR" Attributes="0"/>
+    <ROW Component="SQLite.Interop.dll" ComponentId="{4A1110A1-1E16-4DCC-BAD5-AC39006DDB26}" Directory_="x64_Dir" Attributes="256" KeyPath="SQLite.Interop.dll"/>
+    <ROW Component="SQLite.Interop.dll_1" ComponentId="{168E044E-7C6A-41DC-B97D-8FD0D33DCFE6}" Directory_="x86_Dir" Attributes="0" KeyPath="SQLite.Interop.dll_1"/>
+    <ROW Component="SafeBoxx.Common.dll" ComponentId="{97BD03CF-6334-4E6A-945A-BD9F7B17459C}" Directory_="APPDIR" Attributes="0" KeyPath="SafeBoxx.Common.dll"/>
+    <ROW Component="SafeBoxx.Diff.dll" ComponentId="{3405FBBF-BA8B-4B15-842B-B938B5C1EC32}" Directory_="APPDIR" Attributes="0" KeyPath="SafeBoxx.Diff.dll"/>
+    <ROW Component="SafeBoxx.Sync.Librsync.dll" ComponentId="{ABCC2159-B70E-4395-A8B1-5344DB1F831D}" Directory_="APPDIR" Attributes="0" KeyPath="SafeBoxx.Sync.Librsync.dll"/>
+    <ROW Component="SafeBoxx.Sync.dll" ComponentId="{4ADC7245-1907-4554-8E0A-DF64BB0ECEF7}" Directory_="APPDIR" Attributes="0" KeyPath="SafeBoxx.Sync.dll"/>
+    <ROW Component="Safeboxx.Sync.LibrsyncNative.dll" ComponentId="{C92386DD-4C06-45EE-BF62-63B9C7B0B482}" Directory_="APPDIR" Attributes="256" KeyPath="Safeboxx.Sync.LibrsyncNative.dll"/>
+    <ROW Component="Safeboxx.Sync.LibrsyncNative_x64.dll" ComponentId="{2E9EFA9B-2457-4A3D-BB8A-DC24CB865C34}" Directory_="APPDIR" Attributes="256" KeyPath="Safeboxx.Sync.LibrsyncNative_x64.dll"/>
+    <ROW Component="Safeboxx.Sync.LibrsyncNative_x86.dll" ComponentId="{D700FF79-EFE2-4E5B-8C53-5EF38A433DFE}" Directory_="APPDIR" Attributes="0" KeyPath="Safeboxx.Sync.LibrsyncNative_x86.dll"/>
+    <ROW Component="ShareFolder" ComponentId="{470C149B-99D5-43DE-8875-35D7AE0BC35C}" Directory_="APPDIR" Attributes="260" KeyPath="ShareFolder"/>
+    <ROW Component="SharedObjects.dll" ComponentId="{33DEFA32-C9AA-4788-92CF-84BD16163A8A}" Directory_="APPDIR" Attributes="0" KeyPath="SharedObjects.dll"/>
+    <ROW Component="SharedObjects.dll_1" ComponentId="{FB9C3146-43CB-4CFF-BBCF-BB570F97A90F}" Directory_="Upgraded_Dir" Attributes="0" KeyPath="SharedObjects.dll_1"/>
+    <ROW Component="Software" ComponentId="{CBCFC091-6EB0-4267-9938-39D1D096E5D7}" Directory_="APPDIR" Attributes="260" KeyPath="Software_3"/>
+    <ROW Component="System.Core.dll" ComponentId="{FDAA62B3-B772-40F5-BC2D-48BBD7EAAD5B}" Directory_="APPDIR" Attributes="0" KeyPath="System.Core.dll"/>
+    <ROW Component="System.Data.SQLite.dll" ComponentId="{28DB09A1-CB7A-4333-A159-EF0F799CF33D}" Directory_="APPDIR" Attributes="0" KeyPath="System.Data.SQLite.dll"/>
+    <ROW Component="System.IO.dll" ComponentId="{F835D808-E664-48E2-A470-2A3208C9FA3C}" Directory_="APPDIR" Attributes="0" KeyPath="System.IO.dll"/>
+    <ROW Component="System.Net.Http.dll" ComponentId="{A99B414E-57AE-4E1C-8227-0EF3D6B33CF9}" Directory_="APPDIR" Attributes="0" KeyPath="System.Net.Http.dll"/>
+    <ROW Component="System.Runtime.dll" ComponentId="{0728D464-D875-4E0D-B5AE-9363C34E1910}" Directory_="APPDIR" Attributes="0" KeyPath="System.Runtime.dll"/>
+    <ROW Component="System.Threading.Tasks.dll" ComponentId="{7E3E6648-EDC2-48C6-AE70-0FEF8AA13AC3}" Directory_="APPDIR" Attributes="0" KeyPath="System.Threading.Tasks.dll"/>
+    <ROW Component="System.Windows.Interactivity.dll" ComponentId="{26B67E9B-F9EA-4BCD-BCF9-209A64162762}" Directory_="APPDIR" Attributes="0" KeyPath="System.Windows.Interactivity.dll"/>
+    <ROW Component="UpgradeInstalled" ComponentId="{43DF88DE-ABFE-4739-9341-5ACF66108C42}" Directory_="APPDIR" Attributes="276" KeyPath="UpgradeInstalled"/>
+    <ROW Component="User" ComponentId="{268A4FCC-E0B4-4E50-A9EE-E88CB360969C}" Directory_="APPDIR" Attributes="20" KeyPath="User"/>
+    <ROW Component="Username" ComponentId="{C039014A-F258-4809-8E31-ECEC3345262D}" Directory_="APPDIR" Attributes="260" KeyPath="Username"/>
+    <ROW Component="Username_1" ComponentId="{A804C6A4-7873-4B80-9E7C-833909D0A5D6}" Directory_="APPDIR" Attributes="260" KeyPath="Username_1"/>
+    <ROW Component="Version" ComponentId="{CF550818-74AD-4DAD-953B-5D5761E8A228}" Directory_="APPDIR" Attributes="2308" KeyPath="Version"/>
+    <ROW Component="Version_1" ComponentId="{6BFAF51B-94C8-423E-B65C-3C7293F8350A}" Directory_="APPDIR" Attributes="260" KeyPath="Version_1"/>
+    <ROW Component="WPFToolkit.Extended.dll" ComponentId="{147042AC-C77C-44FF-916A-E761071F18E0}" Directory_="APPDIR" Attributes="0" KeyPath="WPFToolkit.Extended.dll"/>
+    <ROW Component="WpfAnimatedGif.dll" ComponentId="{AE6B5C39-3B8F-4146-9793-5E43E7BF07F2}" Directory_="APPDIR" Attributes="0" KeyPath="WpfAnimatedGif.dll"/>
+    <ROW Component="ZettaBox.ZettaBoxForOfficeBackstage_10" ComponentId="{A52F3434-6BA3-4795-A458-D0FB71E89C43}" Directory_="APPDIR" Attributes="260" KeyPath="ZettaBox.ZettaBoxForOfficeBackstage_10"/>
+    <ROW Component="ZettaBox.ZettaBoxForOfficeBackstage_11" ComponentId="{54CD1214-36E6-455A-9232-E7019F40286A}" Directory_="APPDIR" Attributes="260" KeyPath="ZettaBox.ZettaBoxForOfficeBackstage_11"/>
+    <ROW Component="ZettaBox.ZettaBoxForOfficeBackstage_6" ComponentId="{39EC229F-043D-429C-9BC8-D5BA11D3698E}" Directory_="APPDIR" Attributes="260" KeyPath="ZettaBox.ZettaBoxForOfficeBackstage_6"/>
+    <ROW Component="ZettaBox.ZettaBoxForOfficeBackstage_7" ComponentId="{E854B586-76D6-46FD-BA94-F0038310D709}" Directory_="APPDIR" Attributes="260" KeyPath="ZettaBox.ZettaBoxForOfficeBackstage_7"/>
+    <ROW Component="ZettaBox.ZettaBoxForOfficeBackstage_8" ComponentId="{9F38F3DA-469E-45EA-B382-806DB2576042}" Directory_="APPDIR" Attributes="260" KeyPath="ZettaBox.ZettaBoxForOfficeBackstage_8"/>
+    <ROW Component="ZettaBox.ZettaBoxForOfficeBackstage_9" ComponentId="{3FAEC831-BBAE-40FB-847C-45F72A91E393}" Directory_="APPDIR" Attributes="260" KeyPath="ZettaBox.ZettaBoxForOfficeBackstage_9"/>
+    <ROW Component="ZettaBox.ZettaBoxForOfficeTab_10" ComponentId="{6F56B18B-DA88-4302-A3BB-FCB0030D9C89}" Directory_="APPDIR" Attributes="260" KeyPath="ZettaBox.ZettaBoxForOfficeTab_10"/>
+    <ROW Component="ZettaBox.ZettaBoxForOfficeTab_11" ComponentId="{F4F2ACB3-3784-43DA-848B-9A3EC137D365}" Directory_="APPDIR" Attributes="260" KeyPath="ZettaBox.ZettaBoxForOfficeTab_11"/>
+    <ROW Component="ZettaBox.ZettaBoxForOfficeTab_6" ComponentId="{B498253C-4D0F-4584-A43E-B9464DA32B64}" Directory_="APPDIR" Attributes="260" KeyPath="ZettaBox.ZettaBoxForOfficeTab_6"/>
+    <ROW Component="ZettaBox.ZettaBoxForOfficeTab_7" ComponentId="{7A54498B-3C5F-48AA-9D88-5225396CB971}" Directory_="APPDIR" Attributes="260" KeyPath="ZettaBox.ZettaBoxForOfficeTab_7"/>
+    <ROW Component="ZettaBox.ZettaBoxForOfficeTab_8" ComponentId="{A7C084AD-C39A-4363-BA62-C1848F84F40A}" Directory_="APPDIR" Attributes="260" KeyPath="ZettaBox.ZettaBoxForOfficeTab_8"/>
+    <ROW Component="ZettaBox.ZettaBoxForOfficeTab_9" ComponentId="{268A3E0D-841D-4650-8CC0-024AE5E287D6}" Directory_="APPDIR" Attributes="260" KeyPath="ZettaBox.ZettaBoxForOfficeTab_9"/>
+    <ROW Component="ZettaBox.exe" ComponentId="{01F63091-BC5C-489C-9A66-B25B0A7FF23A}" Directory_="APPDIR" Attributes="0" KeyPath="ZettaBox.exe"/>
+    <ROW Component="ZettaBoxAddInForOffice.dll" ComponentId="{BD137017-50F1-4F7B-870B-14802E68CAE9}" Directory_="Addins_Dir" Attributes="0" KeyPath="ZettaBoxAddInForOffice.dll"/>
+    <ROW Component="ZettaBoxAddInForOffice.dll.config" ComponentId="{25DF2407-5D63-4DC3-A587-68D1A4E586AC}" Directory_="Addins_Dir" Attributes="0" KeyPath="ZettaBoxAddInForOffice.dll.config" Type="0"/>
+    <ROW Component="ZettaBoxAddInForOfficeShared.dll" ComponentId="{75FC5D5B-7846-43A6-92EE-F3DDF5C10C9A}" Directory_="Addins_Dir" Attributes="0" KeyPath="ZettaBoxAddInForOfficeShared.dll"/>
+    <ROW Component="ZettaBoxForExcelAddIn.dll" ComponentId="{6C300934-E2F3-49E1-9898-4D4F7D584445}" Directory_="Addins_Dir" Attributes="0" KeyPath="ZettaBoxForExcelAddIn.dll"/>
+    <ROW Component="ZettaBoxForExcelBackstageAddIn.dll" ComponentId="{BBC79D76-622D-40E7-B3F0-2D1BF8AD0CFA}" Directory_="Addins_Dir" Attributes="0" KeyPath="ZettaBoxForExcelBackstageAddIn.dll"/>
+    <ROW Component="ZettaBoxForPowerPointAddIn.dll" ComponentId="{CBFFBC9E-513D-4A37-AACD-C8A9E8F76DBE}" Directory_="Addins_Dir" Attributes="0" KeyPath="ZettaBoxForPowerPointAddIn.dll"/>
+    <ROW Component="ZettaBoxForPowerPointBackstageAddIn.dll" ComponentId="{BA9732E5-8D45-4382-A96C-D28093D91D0F}" Directory_="Addins_Dir" Attributes="0" KeyPath="ZettaBoxForPowerPointBackstageAddIn.dll"/>
+    <ROW Component="ZettaBoxForWordAddIn.dll" ComponentId="{45D42395-137F-438D-AA92-94F090D40385}" Directory_="Addins_Dir" Attributes="0" KeyPath="ZettaBoxForWordAddIn.dll"/>
+    <ROW Component="ZettaBoxForWordBackstageAddIn.dll" ComponentId="{B5B20D94-F3C0-4E1E-9F97-880C4F801C32}" Directory_="Addins_Dir" Attributes="0" KeyPath="ZettaBoxForWordBackstageAddIn.dll"/>
+    <ROW Component="ZettaBoxInstallActions.exe" ComponentId="{3828E4C9-90AB-4111-8774-74F16EDF43F6}" Directory_="APPDIR" Attributes="0" KeyPath="ZettaBoxInstallActions.exe_1"/>
+    <ROW Component="ZettaBoxProjectLog.dll" ComponentId="{EF8EE63A-5A78-4726-866C-4D733DD3A90F}" Directory_="Addins_Dir" Attributes="0" KeyPath="ZettaBoxProjectLog.dll"/>
+    <ROW Component="ZettaBoxSendToHandler.exe" ComponentId="{66A077A4-A077-458B-898D-B1034E4AB8D6}" Directory_="APPDIR" Attributes="0" KeyPath="ZettaBoxSendToHandler.exe"/>
+    <ROW Component="ZettaBoxTerminate.dll" ComponentId="{7283CA82-65D4-412B-A4C5-CA8D563FDFF8}" Directory_="Addins_Dir" Attributes="0" KeyPath="ZettaBoxTerminate.dll"/>
+    <ROW Component="ZettaBoxUnInstallActions.exe" ComponentId="{A2D98DA4-245A-4DFC-8B1B-7AC7DA3A73F9}" Directory_="APPDIR" Attributes="0" KeyPath="ZettaBoxUnInstallActions.exe_1"/>
+    <ROW Component="ZettaBoxUpdater_2" ComponentId="{755C77FA-EF53-4430-842A-B910D1037822}" Directory_="APPDIR" Attributes="260" KeyPath="ZettaBoxUpdater_2"/>
+    <ROW Component="ZettaBoxUpdater_3" ComponentId="{F2D07278-0AD9-40E7-A41B-7BEFD1FC986F}" Directory_="APPDIR" Attributes="260" KeyPath="ZettaBoxUpdater_3"/>
+    <ROW Component="ZettaBoxWaitToCheckForUpdates.exe" ComponentId="{3FA4E4CB-4DA0-44B0-BAD0-1BED5B39BA24}" Directory_="APPDIR" Attributes="0" KeyPath="ZettaBoxWaitToCheckForUpdates.exe"/>
+    <ROW Component="ZettaBoxWaitToCheckForUpdatesRestarter.e" ComponentId="{7475FD85-B054-4043-BB59-61805637D35F}" Directory_="APPDIR" Attributes="0" KeyPath="ZettaBoxWaitToCheckForUpdatesRestarter.exe"/>
+    <ROW Component="Zettabox.Enumerations.dll" ComponentId="{4A896D95-0A66-4BFC-9499-1AAD76B23EC7}" Directory_="APPDIR" Attributes="0" KeyPath="Zettabox.Enumerations.dll"/>
+    <ROW Component="Zettabox.Messaging.dll" ComponentId="{F47C7DAF-C8B9-4FF4-921F-863FFFE4049D}" Directory_="APPDIR" Attributes="0" KeyPath="Zettabox.Messaging.dll"/>
+    <ROW Component="Zettabox.WcfContracts.dll" ComponentId="{7D5D2FAC-47BC-4157-9557-EE0E5C2E28C7}" Directory_="APPDIR" Attributes="0" KeyPath="Zettabox.WcfContracts.dll"/>
+    <ROW Component="_" ComponentId="{2BB58265-DA34-489C-A9C3-361912BD1B9C}" Directory_="APPDIR" Attributes="260" KeyPath="__1"/>
+    <ROW Component="__1" ComponentId="{CDF2B31E-8136-48AF-B730-7D18BBD7A251}" Directory_="APPDIR" Attributes="260" KeyPath="__2"/>
+    <ROW Component="__2" ComponentId="{84114BB6-775F-4BDB-8AD4-62F9C6026D8D}" Directory_="APPDIR" Attributes="260" KeyPath="__3"/>
+    <ROW Component="__3" ComponentId="{AF64E760-FA08-4CD2-8EFC-4BA3E72D2DE1}" Directory_="APPDIR" Attributes="260" KeyPath="__4"/>
+    <ROW Component="__4" ComponentId="{3E376027-AB7D-4FDD-B010-DB4034643A82}" Directory_="APPDIR" Attributes="260" KeyPath="__5"/>
+    <ROW Component="librsync.dll" ComponentId="{5512D751-C0B4-4E02-AA5E-99D535CF36CD}" Directory_="APPDIR" Attributes="256" KeyPath="librsync.dll"/>
+    <ROW Component="librsync_x64.dll" ComponentId="{0F55E9FC-B092-4110-B4E8-7B636D5F49D4}" Directory_="APPDIR" Attributes="256" KeyPath="librsync_x64.dll"/>
+    <ROW Component="librsync_x86.dll" ComponentId="{2AC4FAC7-3B44-48A6-8C19-8221E42B2E01}" Directory_="APPDIR" Attributes="0" KeyPath="librsync_x86.dll"/>
+    <ROW Component="log4net.dll" ComponentId="{69ABEC92-5A56-4476-B3EB-B8E77078569D}" Directory_="APPDIR" Attributes="0" KeyPath="log4net.dll"/>
+    <ROW Component="log4net.dll_1" ComponentId="{9F75A433-167B-4671-BFAD-B598A78AF232}" Directory_="Upgraded_Dir" Attributes="0" KeyPath="log4net.dll_1"/>
+    <ROW Component="msvcr100d.dll" ComponentId="{EF3B24FC-0B2B-4D6A-AD5E-7506A1E5F643}" Directory_="APPDIR" Attributes="256" KeyPath="msvcr100d.dll"/>
+    <ROW Component="msvcr100d_x64.dll" ComponentId="{20525F39-544D-4305-A8BA-B44559345139}" Directory_="APPDIR" Attributes="256" KeyPath="msvcr100d_x64.dll"/>
+    <ROW Component="msvcr100d_x86.dll" ComponentId="{B1C4CA7F-1583-4113-AF9D-CFE34F57BF40}" Directory_="APPDIR" Attributes="0" KeyPath="msvcr100d_x86.dll"/>
+    <ROW Component="updater.exe" ComponentId="{C713E8BB-FF49-4DE2-9B0B-78CB8620E25E}" Directory_="APPDIR" Attributes="0" KeyPath="updater.exe"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
+    <ROW Feature="AI32BitFiles" Feature_Parent="MainFeature" Title="32-bit" Description="32-bit Executables and Libraries" Display="0" Level="1" Directory_="APPDIR" Attributes="16" Components="AI_CustomARPName AI_ExePath"/>
+    <ROW Feature="AI64BitFiles" Feature_Parent="MainFeature" Title="64-bit" Description="64-bit Executables and Libraries" Display="0" Level="1" Directory_="APPDIR" Attributes="16" Components="AI_CustomARPName AI_ExePath"/>
+    <ROW Feature="Feature_2" Title="Office 2013 Addin" Description="Description" Display="5" Level="1" Directory_="APPDIR" Attributes="8" Components="AI_CustomARPName AI_ExePath Description_12 Description_13 Description_14 Description_15 Description_16 Description_17 Description_18 Description_19 Description_20 Description_21 Description_22 Description_23 FriendlyName_12 FriendlyName_13 FriendlyName_14 FriendlyName_15 FriendlyName_16 FriendlyName_17 FriendlyName_18 FriendlyName_19 FriendlyName_20 FriendlyName_21 FriendlyName_22 FriendlyName_23 LoadBehavior_12 LoadBehavior_13 LoadBehavior_14 LoadBehavior_15 LoadBehavior_16 LoadBehavior_17 LoadBehavior_18 LoadBehavior_19 LoadBehavior_20 LoadBehavior_21 LoadBehavior_22 LoadBehavior_23 Manifest_12 Manifest_13 Manifest_14 Manifest_15 Manifest_16 Manifest_17 Manifest_18 Manifest_19 Manifest_20 Manifest_21 Manifest_22 Manifest_23 ZettaBox.ZettaBoxForOfficeBackstage_10 ZettaBox.ZettaBoxForOfficeBackstage_11 ZettaBox.ZettaBoxForOfficeBackstage_6 ZettaBox.ZettaBoxForOfficeBackstage_7 ZettaBox.ZettaBoxForOfficeBackstage_8 ZettaBox.ZettaBoxForOfficeBackstage_9 ZettaBox.ZettaBoxForOfficeTab_10 ZettaBox.ZettaBoxForOfficeTab_11 ZettaBox.ZettaBoxForOfficeTab_6 ZettaBox.ZettaBoxForOfficeTab_7 ZettaBox.ZettaBoxForOfficeTab_8 ZettaBox.ZettaBoxForOfficeTab_9"/>
+    <ROW Feature="MainFeature" Title="ZettaBox" Description="Description" Display="3" Level="1" Directory_="APPDIR" Attributes="16" Components="AI_CustomARPName AI_ExePath AZettaBoxOverlay_Base.dll AZettaBoxOverlay_Base.dll_1 AZettaBoxOverlay_Ignored.dll AZettaBoxOverlay_Ignored.dll_1 AZettaBoxOverlay_Shared.dll AZettaBoxOverlay_Shared.dll_1 AZettaBoxOverlay_Synchronized.dll AZettaBoxOverlay_Synchronized.dll_1 AZettaBoxOverlay_Synchronizing.dll AZettaBoxOverlay_Synchronizing.dll_1 ActiproSoftware.Shared.Wpf.dll ActiproSoftware.Wizard.Wpf.dll CloudMonitoring.dll CloudPushNotifications.dll CloudRestClient.dll CommandFlags CommandFlags_1 CommandFlags_2 CommandFlags_3 Delimon.Win32.IO.dll FileSyncLogic.dll FileSystemMonitoring.dll GalaSoft.MvvmLight.Extras.WPF4.dll GalaSoft.MvvmLight.WPF4.dll Hardcodet.Wpf.TaskbarNotification.dll ICSharpCode.AvalonEdit.dll Icon_3 Icon_4 IgnoredOverlay.ico InstallDir InstallDir_1 InstallRenameActions.exe InstalledNewVersion Interfaces.dll Interfaces.dll_1 Interop.IWshRuntimeLibrary.dll Logo.ico MahApps.Metro.dll MetaDataStoreSqLite.dll Microsoft.AspNet.SignalR.Client.dll Microsoft.Office.Tools.Common.v4.0.Utili Microsoft.Office.Tools.Excel.v4.0.Utilit Microsoft.Office.Tools.Outlook.v4.0.Util Microsoft.Office.Tools.Word.v4.0.Utiliti Microsoft.Practices.ServiceLocation.dll Microsoft.Threading.Tasks.Extensions.Des Microsoft.Threading.Tasks.Extensions.dll Microsoft.Threading.Tasks.dll Newtonsoft.Json.dll Ninject.dll ProductName ProductNameUpper ProductName_1 ProductVersion RUN_1 RestartExplorer.exe SHORTCUTDIR SQLite.Interop.dll SQLite.Interop.dll_1 SafeBoxx.Common.dll SafeBoxx.Diff.dll SafeBoxx.Sync.Librsync.dll SafeBoxx.Sync.dll Safeboxx.Sync.LibrsyncNative.dll Safeboxx.Sync.LibrsyncNative_x64.dll Safeboxx.Sync.LibrsyncNative_x86.dll ShareFolder SharedObjects.dll SharedObjects.dll_1 Software System.Core.dll System.Data.SQLite.dll System.IO.dll System.Net.Http.dll System.Runtime.dll System.Threading.Tasks.dll System.Windows.Interactivity.dll UpgradeInstalled User Username Username_1 Version Version_1 WPFToolkit.Extended.dll WpfAnimatedGif.dll ZettaBox.exe ZettaBoxAddInForOffice.dll ZettaBoxAddInForOffice.dll.config ZettaBoxAddInForOfficeShared.dll ZettaBoxForExcelAddIn.dll ZettaBoxForExcelBackstageAddIn.dll ZettaBoxForPowerPointAddIn.dll ZettaBoxForPowerPointBackstageAddIn.dll ZettaBoxForWordAddIn.dll ZettaBoxForWordBackstageAddIn.dll ZettaBoxInstallActions.exe ZettaBoxProjectLog.dll ZettaBoxSendToHandler.exe ZettaBoxTerminate.dll ZettaBoxUnInstallActions.exe ZettaBoxUpdater_2 ZettaBoxUpdater_3 ZettaBoxWaitToCheckForUpdates.exe ZettaBoxWaitToCheckForUpdatesRestarter.e Zettabox.Enumerations.dll Zettabox.Messaging.dll Zettabox.WcfContracts.dll _ __1 __2 __3 __4 librsync.dll librsync_x64.dll librsync_x86.dll log4net.dll log4net.dll_1 msvcr100d.dll msvcr100d_x64.dll msvcr100d_x86.dll updater.exe"/>
+    <ROW Feature="RequiredApplication_1" Title="Restart explorer" Description="Restart explorer" Display="0" Level="1" Attributes="0" Components="AI_CustomARPName AI_ExePath RequiredApplication_1"/>
+    <ATTRIBUTE name="CurrentFeature" value="MainFeature"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
+    <ROW File="AZettaBoxOverlay_Base.dll" Component_="AZettaBoxOverlay_Base.dll" FileName="AZETTA~1.DLL|AZettaBoxOverlay_Base.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\AZettaBoxOverlay_Base.dll" SelfReg="false" NextFile="AZettaBoxOverlay_Ignored.dll"/>
+    <ROW File="AZettaBoxOverlay_Base.dll_1" Component_="AZettaBoxOverlay_Base.dll_1" FileName="AZETTA~1.DLL|AZettaBoxOverlay_Base.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\AZettaBoxOverlay_Base.dll" SelfReg="false" NextFile="AZettaBoxOverlay_Ignored.dll_1"/>
+    <ROW File="AZettaBoxOverlay_Ignored.dll" Component_="AZettaBoxOverlay_Ignored.dll" FileName="AZETTA~2.DLL|AZettaBoxOverlay_Ignored.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\AZettaBoxOverlay_Ignored.dll" SelfReg="false" NextFile="AZettaBoxOverlay_Shared.dll"/>
+    <ROW File="AZettaBoxOverlay_Ignored.dll_1" Component_="AZettaBoxOverlay_Ignored.dll_1" FileName="AZETTA~2.DLL|AZettaBoxOverlay_Ignored.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\AZettaBoxOverlay_Ignored.dll" SelfReg="false" NextFile="AZettaBoxOverlay_Shared.dll_1"/>
+    <ROW File="AZettaBoxOverlay_Shared.dll" Component_="AZettaBoxOverlay_Shared.dll" FileName="AZETTA~3.DLL|AZettaBoxOverlay_Shared.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\AZettaBoxOverlay_Shared.dll" SelfReg="false" NextFile="AZettaBoxOverlay_Synchronized.dll"/>
+    <ROW File="AZettaBoxOverlay_Shared.dll_1" Component_="AZettaBoxOverlay_Shared.dll_1" FileName="AZETTA~3.DLL|AZettaBoxOverlay_Shared.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\AZettaBoxOverlay_Shared.dll" SelfReg="false" NextFile="AZettaBoxOverlay_Synchronized.dll_1"/>
+    <ROW File="AZettaBoxOverlay_Synchronized.dll" Component_="AZettaBoxOverlay_Synchronized.dll" FileName="AZETTA~4.DLL|AZettaBoxOverlay_Synchronized.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\AZettaBoxOverlay_Synchronized.dll" SelfReg="false" NextFile="AZettaBoxOverlay_Synchronizing.dll"/>
+    <ROW File="AZettaBoxOverlay_Synchronized.dll_1" Component_="AZettaBoxOverlay_Synchronized.dll_1" FileName="AZETTA~4.DLL|AZettaBoxOverlay_Synchronized.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\AZettaBoxOverlay_Synchronized.dll" SelfReg="false" NextFile="AZettaBoxOverlay_Synchronizing.dll_1"/>
+    <ROW File="AZettaBoxOverlay_Synchronizing.dll" Component_="AZettaBoxOverlay_Synchronizing.dll" FileName="AZETTA~5.DLL|AZettaBoxOverlay_Synchronizing.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\AZettaBoxOverlay_Synchronizing.dll" SelfReg="false" NextFile="CloudMonitoring.dll"/>
+    <ROW File="AZettaBoxOverlay_Synchronizing.dll_1" Component_="AZettaBoxOverlay_Synchronizing.dll_1" FileName="AZETTA~5.DLL|AZettaBoxOverlay_Synchronizing.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\AZettaBoxOverlay_Synchronizing.dll" SelfReg="false" NextFile="Interfaces.dll_1"/>
+    <ROW File="ActiproSoftware.Shared.Wpf.dll" Component_="ActiproSoftware.Shared.Wpf.dll" FileName="ACTIPR~1.DLL|ActiproSoftware.Shared.Wpf.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\ActiproSoftware.Shared.Wpf.dll" SelfReg="false" NextFile="ActiproSoftware.Wizard.Wpf.dll"/>
+    <ROW File="ActiproSoftware.Wizard.Wpf.dll" Component_="ActiproSoftware.Wizard.Wpf.dll" FileName="ACTIPR~2.DLL|ActiproSoftware.Wizard.Wpf.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\ActiproSoftware.Wizard.Wpf.dll" SelfReg="false" NextFile="Microsoft.Office.Tools.Common.v4.0.Utilities.dll"/>
+    <ROW File="CloudMonitoring.dll" Component_="CloudMonitoring.dll" FileName="CLOUDM~1.DLL|CloudMonitoring.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\CloudMonitoring.dll" SelfReg="false" NextFile="CloudPushNotifications.dll"/>
+    <ROW File="CloudPushNotifications.dll" Component_="CloudPushNotifications.dll" FileName="CLOUDP~1.DLL|CloudPushNotifications.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\CloudPushNotifications.dll" SelfReg="false" NextFile="CloudRestClient.dll"/>
+    <ROW File="CloudRestClient.dll" Component_="CloudRestClient.dll" FileName="CLOUDR~1.DLL|CloudRestClient.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\CloudRestClient.dll" SelfReg="false" NextFile="Delimon.Win32.IO.dll"/>
+    <ROW File="ConnectedVia.txt" Component_="Logo.ico" FileName="CONNEC~1.TXT|ConnectedVia.txt" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\ConnectedVia.txt" SelfReg="false"/>
+    <ROW File="Delimon.Win32.IO.dll" Component_="Delimon.Win32.IO.dll" FileName="DELIMO~1.DLL|Delimon.Win32.IO.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\Delimon.Win32.IO.dll" SelfReg="false" NextFile="FileSyncLogic.dll"/>
+    <ROW File="FileSyncLogic.dll" Component_="FileSyncLogic.dll" FileName="FILESY~1.DLL|FileSyncLogic.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\FileSyncLogic.dll" SelfReg="false" NextFile="FileSystemMonitoring.dll"/>
+    <ROW File="FileSystemMonitoring.dll" Component_="FileSystemMonitoring.dll" FileName="FILESY~2.DLL|FileSystemMonitoring.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\FileSystemMonitoring.dll" SelfReg="false" NextFile="GalaSoft.MvvmLight.Extras.WPF4.dll"/>
+    <ROW File="GalaSoft.MvvmLight.Extras.WPF4.dll" Component_="GalaSoft.MvvmLight.Extras.WPF4.dll" FileName="GALASO~1.DLL|GalaSoft.MvvmLight.Extras.WPF4.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\GalaSoft.MvvmLight.Extras.WPF4.dll" SelfReg="false" NextFile="GalaSoft.MvvmLight.WPF4.dll"/>
+    <ROW File="GalaSoft.MvvmLight.WPF4.dll" Component_="GalaSoft.MvvmLight.WPF4.dll" FileName="GALASO~2.DLL|GalaSoft.MvvmLight.WPF4.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\GalaSoft.MvvmLight.WPF4.dll" SelfReg="false" NextFile="Hardcodet.Wpf.TaskbarNotification.dll"/>
+    <ROW File="Hardcodet.Wpf.TaskbarNotification.dll" Component_="Hardcodet.Wpf.TaskbarNotification.dll" FileName="HARDCO~1.DLL|Hardcodet.Wpf.TaskbarNotification.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\Hardcodet.Wpf.TaskbarNotification.dll" SelfReg="false" NextFile="IgnoredOverlay.ico"/>
+    <ROW File="ICSharpCode.AvalonEdit.dll" Component_="ICSharpCode.AvalonEdit.dll" FileName="ICSHAR~1.DLL|ICSharpCode.AvalonEdit.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\ICSharpCode.AvalonEdit.dll" SelfReg="false" NextFile="Zettabox.Enumerations.dll"/>
+    <ROW File="IgnoredOverlay.ico" Component_="IgnoredOverlay.ico" FileName="IGNORE~1.ICO|IgnoredOverlay.ico" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\Images\OverlayIcons\IgnoredOverlay.ico" SelfReg="false" NextFile="SharedOverlay.ico"/>
+    <ROW File="InstallRenameActions.exe" Component_="InstallRenameActions.exe" FileName="INSTAL~1.EXE|InstallRenameActions.exe" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\InstallRenameActions.exe" SelfReg="false" NextFile="Interfaces.dll" DigSign="true"/>
+    <ROW File="Interfaces.dll" Component_="Interfaces.dll" FileName="INTERF~1.DLL|Interfaces.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\Interfaces.dll" SelfReg="false" NextFile="Interop.IWshRuntimeLibrary.dll"/>
+    <ROW File="Interfaces.dll_1" Component_="Interfaces.dll_1" FileName="INTERF~1.DLL|Interfaces.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\Interfaces.dll" SelfReg="false" NextFile="log4net.dll_1"/>
+    <ROW File="Interop.IWshRuntimeLibrary.dll" Component_="Interop.IWshRuntimeLibrary.dll" FileName="INTERO~1.DLL|Interop.IWshRuntimeLibrary.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\Interop.IWshRuntimeLibrary.dll" SelfReg="false" NextFile="librsync.dll"/>
+    <ROW File="Logo.ico" Component_="Logo.ico" FileName="Logo.ico" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\Logo.ico" SelfReg="false" NextFile="logo_70px.png"/>
+    <ROW File="MahApps.Metro.dll" Component_="MahApps.Metro.dll" FileName="MAHAPP~1.DLL|MahApps.Metro.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\MahApps.Metro.dll" SelfReg="false" NextFile="MetaDataStoreSqLite.dll"/>
+    <ROW File="MetaDataStoreSqLite.dll" Component_="MetaDataStoreSqLite.dll" FileName="METADA~1.DLL|MetaDataStoreSqLite.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\MetaDataStoreSqLite.dll" SelfReg="false" NextFile="Microsoft.AspNet.SignalR.Client.dll"/>
+    <ROW File="Microsoft.AspNet.SignalR.Client.dll" Component_="Microsoft.AspNet.SignalR.Client.dll" FileName="MICROS~1.DLL|Microsoft.AspNet.SignalR.Client.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\Microsoft.AspNet.SignalR.Client.dll" SelfReg="false" NextFile="Microsoft.Practices.ServiceLocation.dll"/>
+    <ROW File="Microsoft.Office.Tools.Common.v4.0.Utilities.dll" Component_="Microsoft.Office.Tools.Common.v4.0.Utili" FileName="MICROS~1.DLL|Microsoft.Office.Tools.Common.v4.0.Utilities.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\Addins\Microsoft.Office.Tools.Common.v4.0.Utilities.dll" SelfReg="false" NextFile="Microsoft.Office.Tools.Excel.v4.0.Utilities.dll"/>
+    <ROW File="Microsoft.Office.Tools.Excel.v4.0.Utilities.dll" Component_="Microsoft.Office.Tools.Excel.v4.0.Utilit" FileName="MICROS~2.DLL|Microsoft.Office.Tools.Excel.v4.0.Utilities.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\Addins\Microsoft.Office.Tools.Excel.v4.0.Utilities.dll" SelfReg="false" NextFile="Microsoft.Office.Tools.Outlook.v4.0.Utilities.dll"/>
+    <ROW File="Microsoft.Office.Tools.Outlook.v4.0.Utilities.dll" Component_="Microsoft.Office.Tools.Outlook.v4.0.Util" FileName="MICROS~3.DLL|Microsoft.Office.Tools.Outlook.v4.0.Utilities.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\Addins\Microsoft.Office.Tools.Outlook.v4.0.Utilities.dll" SelfReg="false" NextFile="Microsoft.Office.Tools.Word.v4.0.Utilities.dll"/>
+    <ROW File="Microsoft.Office.Tools.Word.v4.0.Utilities.dll" Component_="Microsoft.Office.Tools.Word.v4.0.Utiliti" FileName="MICROS~4.DLL|Microsoft.Office.Tools.Word.v4.0.Utilities.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\Addins\Microsoft.Office.Tools.Word.v4.0.Utilities.dll" SelfReg="false" NextFile="ZettaBoxAddInForOffice.dll"/>
+    <ROW File="Microsoft.Practices.ServiceLocation.dll" Component_="Microsoft.Practices.ServiceLocation.dll" FileName="MICROS~2.DLL|Microsoft.Practices.ServiceLocation.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\Microsoft.Practices.ServiceLocation.dll" SelfReg="false" NextFile="Microsoft.Threading.Tasks.dll"/>
+    <ROW File="Microsoft.Threading.Tasks.Extensions.Desktop.dll" Component_="Microsoft.Threading.Tasks.Extensions.Des" FileName="MICROS~4.DLL|Microsoft.Threading.Tasks.Extensions.Desktop.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\Microsoft.Threading.Tasks.Extensions.Desktop.dll" SelfReg="false" NextFile="Microsoft.Threading.Tasks.Extensions.dll"/>
+    <ROW File="Microsoft.Threading.Tasks.Extensions.dll" Component_="Microsoft.Threading.Tasks.Extensions.dll" FileName="MICROS~5.DLL|Microsoft.Threading.Tasks.Extensions.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\Microsoft.Threading.Tasks.Extensions.dll" SelfReg="false" NextFile="msvcr100d.dll"/>
+    <ROW File="Microsoft.Threading.Tasks.dll" Component_="Microsoft.Threading.Tasks.dll" FileName="MICROS~3.DLL|Microsoft.Threading.Tasks.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\Microsoft.Threading.Tasks.dll" SelfReg="false" NextFile="Microsoft.Threading.Tasks.Extensions.Desktop.dll"/>
+    <ROW File="Newtonsoft.Json.dll" Component_="Newtonsoft.Json.dll" FileName="NEWTON~1.DLL|Newtonsoft.Json.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\Newtonsoft.Json.dll" SelfReg="false" NextFile="Ninject.dll"/>
+    <ROW File="Ninject.dll" Component_="Ninject.dll" FileName="Ninject.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\Ninject.dll" SelfReg="false" NextFile="RestartExplorer.exe"/>
+    <ROW File="RestartExplorer.exe" Component_="RestartExplorer.exe" FileName="RESTAR~1.EXE|RestartExplorer.exe" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\RestartExplorer.exe" SelfReg="false" NextFile="RestartExplorer.exe.config" DigSign="true"/>
+    <ROW File="RestartExplorer.exe.config" Component_="Logo.ico" FileName="RESTAR~1.CON|RestartExplorer.exe.config" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\RestartExplorer.exe.config" SelfReg="false" NextFile="SafeBoxx.Common.dll"/>
+    <ROW File="SQLite.Interop.dll" Component_="SQLite.Interop.dll" FileName="SQLITE~1.DLL|SQLite.Interop.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\x64\SQLite.Interop.dll" SelfReg="false" NextFile="SQLite.Interop.dll_1"/>
+    <ROW File="SQLite.Interop.dll_1" Component_="SQLite.Interop.dll_1" FileName="SQLITE~1.DLL|SQLite.Interop.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\x86\SQLite.Interop.dll" SelfReg="false" NextFile="ZettaBox.exe.config"/>
+    <ROW File="SafeBoxx.Common.dll" Component_="SafeBoxx.Common.dll" FileName="SAFEBO~1.DLL|SafeBoxx.Common.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\SafeBoxx.Common.dll" SelfReg="false" NextFile="SafeBoxx.Diff.dll"/>
+    <ROW File="SafeBoxx.Diff.dll" Component_="SafeBoxx.Diff.dll" FileName="SAFEBO~2.DLL|SafeBoxx.Diff.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\SafeBoxx.Diff.dll" SelfReg="false" NextFile="SafeBoxx.Sync.dll"/>
+    <ROW File="SafeBoxx.Sync.Librsync.dll" Component_="SafeBoxx.Sync.Librsync.dll" FileName="SAFEBO~6.DLL|SafeBoxx.Sync.Librsync.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\SafeBoxx.Sync.Librsync.dll" SelfReg="false" NextFile="Safeboxx.Sync.LibrsyncNative.dll"/>
+    <ROW File="SafeBoxx.Sync.dll" Component_="SafeBoxx.Sync.dll" FileName="SAFEBO~5.DLL|SafeBoxx.Sync.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\SafeBoxx.Sync.dll" SelfReg="false" NextFile="SafeBoxx.Sync.Librsync.dll"/>
+    <ROW File="Safeboxx.Sync.LibrsyncNative.dll" Component_="Safeboxx.Sync.LibrsyncNative.dll" FileName="SAFEBO~7.DLL|Safeboxx.Sync.LibrsyncNative.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\Safeboxx.Sync.LibrsyncNative.dll" SelfReg="false" NextFile="Safeboxx.Sync.LibrsyncNative_x64.dll"/>
+    <ROW File="Safeboxx.Sync.LibrsyncNative_x64.dll" Component_="Safeboxx.Sync.LibrsyncNative_x64.dll" FileName="SAFEBO~8.DLL|Safeboxx.Sync.LibrsyncNative_x64.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\Safeboxx.Sync.LibrsyncNative_x64.dll" SelfReg="false" NextFile="Safeboxx.Sync.LibrsyncNative_x86.dll"/>
+    <ROW File="Safeboxx.Sync.LibrsyncNative_x86.dll" Component_="Safeboxx.Sync.LibrsyncNative_x86.dll" FileName="SAFEBO~9.DLL|Safeboxx.Sync.LibrsyncNative_x86.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\Safeboxx.Sync.LibrsyncNative_x86.dll" SelfReg="false" NextFile="SharedObjects.dll"/>
+    <ROW File="SharedObjects.dll" Component_="SharedObjects.dll" FileName="SHARED~1.DLL|SharedObjects.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\SharedObjects.dll" SelfReg="false" NextFile="SharedObjects.dll.config"/>
+    <ROW File="SharedObjects.dll.config" Component_="Logo.ico" FileName="SHARED~1.CON|SharedObjects.dll.config" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\SharedObjects.dll.config" SelfReg="false" NextFile="System.Core.dll"/>
+    <ROW File="SharedObjects.dll_1" Component_="SharedObjects.dll_1" FileName="SHARED~1.DLL|SharedObjects.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\SharedObjects.dll" SelfReg="false" NextFile="upgradeLockedDlls.bat"/>
+    <ROW File="SharedOverlay.ico" Component_="IgnoredOverlay.ico" FileName="SHARED~1.ICO|SharedOverlay.ico" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\Images\OverlayIcons\SharedOverlay.ico" SelfReg="false" NextFile="SynchronizedOverlay.ico"/>
+    <ROW File="SynchronizedOverlay.ico" Component_="IgnoredOverlay.ico" FileName="SYNCHR~1.ICO|SynchronizedOverlay.ico" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\Images\OverlayIcons\SynchronizedOverlay.ico" SelfReg="false" NextFile="SynchronizingOverlay.ico"/>
+    <ROW File="SynchronizingOverlay.ico" Component_="IgnoredOverlay.ico" FileName="SYNCHR~2.ICO|SynchronizingOverlay.ico" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\Images\OverlayIcons\SynchronizingOverlay.ico" SelfReg="false" NextFile="InstallRenameActions.exe"/>
+    <ROW File="System.Core.dll" Component_="System.Core.dll" FileName="SYSTEM~1.DLL|System.Core.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\System.Core.dll" SelfReg="false" NextFile="System.Data.SQLite.dll"/>
+    <ROW File="System.Data.SQLite.dll" Component_="System.Data.SQLite.dll" FileName="SYSTEM~2.DLL|System.Data.SQLite.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\System.Data.SQLite.dll" SelfReg="false" NextFile="System.IO.dll"/>
+    <ROW File="System.IO.dll" Component_="System.IO.dll" FileName="SYSTEM~3.DLL|System.IO.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\System.IO.dll" SelfReg="false" NextFile="System.Net.Http.dll"/>
+    <ROW File="System.Net.Http.dll" Component_="System.Net.Http.dll" FileName="SYSTEM~4.DLL|System.Net.Http.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\System.Net.Http.dll" SelfReg="false" NextFile="System.Runtime.dll"/>
+    <ROW File="System.Runtime.dll" Component_="System.Runtime.dll" FileName="SYSTEM~5.DLL|System.Runtime.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\System.Runtime.dll" SelfReg="false" NextFile="System.Threading.Tasks.dll"/>
+    <ROW File="System.Threading.Tasks.dll" Component_="System.Threading.Tasks.dll" FileName="SYSTEM~6.DLL|System.Threading.Tasks.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\System.Threading.Tasks.dll" SelfReg="false" NextFile="System.Windows.Interactivity.dll"/>
+    <ROW File="System.Windows.Interactivity.dll" Component_="System.Windows.Interactivity.dll" FileName="SYSTEM~7.DLL|System.Windows.Interactivity.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\System.Windows.Interactivity.dll" SelfReg="false" NextFile="updater_logo_70px.png"/>
+    <ROW File="WPFToolkit.Extended.dll" Component_="WPFToolkit.Extended.dll" FileName="WPFTOO~1.DLL|WPFToolkit.Extended.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\WPFToolkit.Extended.dll" SelfReg="false" NextFile="SQLite.Interop.dll"/>
+    <ROW File="WpfAnimatedGif.dll" Component_="WpfAnimatedGif.dll" FileName="WPFANI~1.DLL|WpfAnimatedGif.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\WpfAnimatedGif.dll" SelfReg="false" NextFile="WPFToolkit.Extended.dll"/>
+    <ROW File="ZettaBox.VisualElementsManifest.xml" Component_="Logo.ico" FileName="ZETTAB~1.XML|ZettaBox.VisualElementsManifest.xml" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\ZettaBox.VisualElementsManifest.xml" SelfReg="false" NextFile="ZettaBoxSendToHandler.exe"/>
+    <ROW File="ZettaBox.exe" Component_="ZettaBox.exe" FileName="ZettaBox.exe" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\ZettaBox.exe" SelfReg="false" NextFile="ZettaBoxInstallActions.exe_1" DigSign="true"/>
+    <ROW File="ZettaBox.exe.config" Component_="Logo.ico" FileName="ZETTAB~1.CON|ZettaBox.exe.config" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\ZettaBox.exe.config" SelfReg="false" NextFile="ZettaBox.VisualElementsManifest.xml"/>
+    <ROW File="ZettaBoxAddInForOffice.dll" Component_="ZettaBoxAddInForOffice.dll" FileName="ZETTAB~1.DLL|ZettaBoxAddInForOffice.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\Addins\ZettaBoxAddInForOffice.dll" SelfReg="false" NextFile="ZettaBoxAddInForOffice.dll.config"/>
+    <ROW File="ZettaBoxAddInForOffice.dll.config" Component_="ZettaBoxAddInForOffice.dll.config" FileName="ZETTAB~1.CON|ZettaBoxAddInForOffice.dll.config" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\Addins\ZettaBoxAddInForOffice.dll.config" SelfReg="false" NextFile="ZettaBoxAddInForOfficeShared.dll"/>
+    <ROW File="ZettaBoxAddInForOfficeShared.dll" Component_="ZettaBoxAddInForOfficeShared.dll" FileName="ZETTAB~2.DLL|ZettaBoxAddInForOfficeShared.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\Addins\ZettaBoxAddInForOfficeShared.dll" SelfReg="false" NextFile="ZettaBoxAddInForOfficeShared.dll.config"/>
+    <ROW File="ZettaBoxAddInForOfficeShared.dll.config" Component_="ZettaBoxAddInForOffice.dll.config" FileName="ZETTAB~2.CON|ZettaBoxAddInForOfficeShared.dll.config" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\Addins\ZettaBoxAddInForOfficeShared.dll.config" SelfReg="false" NextFile="ZettaBoxForExcelAddIn.dll"/>
+    <ROW File="ZettaBoxForExcelAddIn.dll" Component_="ZettaBoxForExcelAddIn.dll" FileName="ZETTAB~3.DLL|ZettaBoxForExcelAddIn.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\Addins\ZettaBoxForExcelAddIn.dll" SelfReg="false" NextFile="ZettaBoxForExcelAddIn.dll.manifest"/>
+    <ROW File="ZettaBoxForExcelAddIn.dll.manifest" Component_="ZettaBoxAddInForOffice.dll.config" FileName="ZETTAB~1.MAN|ZettaBoxForExcelAddIn.dll.manifest" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\Addins\ZettaBoxForExcelAddIn.dll.manifest" SelfReg="false" NextFile="ZettaBoxForExcelAddIn.vsto"/>
+    <ROW File="ZettaBoxForExcelAddIn.vsto" Component_="ZettaBoxAddInForOffice.dll.config" FileName="ZETTAB~1.VST|ZettaBoxForExcelAddIn.vsto" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\Addins\ZettaBoxForExcelAddIn.vsto" SelfReg="false" NextFile="ZettaBoxForExcelBackstageAddIn.dll"/>
+    <ROW File="ZettaBoxForExcelBackstageAddIn.dll" Component_="ZettaBoxForExcelBackstageAddIn.dll" FileName="ZETTAB~4.DLL|ZettaBoxForExcelBackstageAddIn.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\Addins\ZettaBoxForExcelBackstageAddIn.dll" SelfReg="false" NextFile="ZettaBoxForExcelBackstageAddIn.dll.manifest"/>
+    <ROW File="ZettaBoxForExcelBackstageAddIn.dll.manifest" Component_="ZettaBoxAddInForOffice.dll.config" FileName="ZETTAB~2.MAN|ZettaBoxForExcelBackstageAddIn.dll.manifest" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\Addins\ZettaBoxForExcelBackstageAddIn.dll.manifest" SelfReg="false" NextFile="ZettaBoxForExcelBackstageAddIn.vsto"/>
+    <ROW File="ZettaBoxForExcelBackstageAddIn.vsto" Component_="ZettaBoxAddInForOffice.dll.config" FileName="ZETTAB~2.VST|ZettaBoxForExcelBackstageAddIn.vsto" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\Addins\ZettaBoxForExcelBackstageAddIn.vsto" SelfReg="false" NextFile="ZettaBoxForPowerPointAddIn.dll"/>
+    <ROW File="ZettaBoxForPowerPointAddIn.dll" Component_="ZettaBoxForPowerPointAddIn.dll" FileName="ZETTAB~5.DLL|ZettaBoxForPowerPointAddIn.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\Addins\ZettaBoxForPowerPointAddIn.dll" SelfReg="false" NextFile="ZettaBoxForPowerPointAddIn.dll.manifest"/>
+    <ROW File="ZettaBoxForPowerPointAddIn.dll.manifest" Component_="ZettaBoxAddInForOffice.dll.config" FileName="ZETTAB~3.MAN|ZettaBoxForPowerPointAddIn.dll.manifest" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\Addins\ZettaBoxForPowerPointAddIn.dll.manifest" SelfReg="false" NextFile="ZettaBoxForPowerPointAddIn.vsto"/>
+    <ROW File="ZettaBoxForPowerPointAddIn.vsto" Component_="ZettaBoxAddInForOffice.dll.config" FileName="ZETTAB~3.VST|ZettaBoxForPowerPointAddIn.vsto" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\Addins\ZettaBoxForPowerPointAddIn.vsto" SelfReg="false" NextFile="ZettaBoxForPowerPointBackstageAddIn.dll"/>
+    <ROW File="ZettaBoxForPowerPointBackstageAddIn.dll" Component_="ZettaBoxForPowerPointBackstageAddIn.dll" FileName="ZETTAB~6.DLL|ZettaBoxForPowerPointBackstageAddIn.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\Addins\ZettaBoxForPowerPointBackstageAddIn.dll" SelfReg="false" NextFile="ZettaBoxForPowerPointBackstageAddIn.dll.manifest"/>
+    <ROW File="ZettaBoxForPowerPointBackstageAddIn.dll.manifest" Component_="ZettaBoxAddInForOffice.dll.config" FileName="ZETTAB~4.MAN|ZettaBoxForPowerPointBackstageAddIn.dll.manifest" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\Addins\ZettaBoxForPowerPointBackstageAddIn.dll.manifest" SelfReg="false" NextFile="ZettaBoxForPowerPointBackstageAddIn.vsto"/>
+    <ROW File="ZettaBoxForPowerPointBackstageAddIn.vsto" Component_="ZettaBoxAddInForOffice.dll.config" FileName="ZETTAB~4.VST|ZettaBoxForPowerPointBackstageAddIn.vsto" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\Addins\ZettaBoxForPowerPointBackstageAddIn.vsto" SelfReg="false" NextFile="ZettaBoxForWordAddIn.dll"/>
+    <ROW File="ZettaBoxForWordAddIn.dll" Component_="ZettaBoxForWordAddIn.dll" FileName="ZETTAB~7.DLL|ZettaBoxForWordAddIn.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\Addins\ZettaBoxForWordAddIn.dll" SelfReg="false" NextFile="ZettaBoxForWordAddIn.dll.manifest"/>
+    <ROW File="ZettaBoxForWordAddIn.dll.manifest" Component_="ZettaBoxAddInForOffice.dll.config" FileName="ZETTAB~5.MAN|ZettaBoxForWordAddIn.dll.manifest" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\Addins\ZettaBoxForWordAddIn.dll.manifest" SelfReg="false" NextFile="ZettaBoxForWordAddIn.vsto"/>
+    <ROW File="ZettaBoxForWordAddIn.vsto" Component_="ZettaBoxAddInForOffice.dll.config" FileName="ZETTAB~5.VST|ZettaBoxForWordAddIn.vsto" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\Addins\ZettaBoxForWordAddIn.vsto" SelfReg="false" NextFile="ZettaBoxForWordBackstageAddIn.dll"/>
+    <ROW File="ZettaBoxForWordBackstageAddIn.dll" Component_="ZettaBoxForWordBackstageAddIn.dll" FileName="ZETTAB~8.DLL|ZettaBoxForWordBackstageAddIn.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\Addins\ZettaBoxForWordBackstageAddIn.dll" SelfReg="false" NextFile="ZettaBoxForWordBackstageAddIn.dll.manifest"/>
+    <ROW File="ZettaBoxForWordBackstageAddIn.dll.manifest" Component_="ZettaBoxAddInForOffice.dll.config" FileName="ZETTAB~6.MAN|ZettaBoxForWordBackstageAddIn.dll.manifest" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\Addins\ZettaBoxForWordBackstageAddIn.dll.manifest" SelfReg="false" NextFile="ZettaBoxForWordBackstageAddIn.vsto"/>
+    <ROW File="ZettaBoxForWordBackstageAddIn.vsto" Component_="ZettaBoxAddInForOffice.dll.config" FileName="ZETTAB~6.VST|ZettaBoxForWordBackstageAddIn.vsto" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\Addins\ZettaBoxForWordBackstageAddIn.vsto" SelfReg="false" NextFile="ZettaBoxProjectLog.dll"/>
+    <ROW File="ZettaBoxInstallActions.exe_1" Component_="ZettaBoxInstallActions.exe" FileName="ZettaB~5.exe|ZettaBoxInstallActions.exe" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\ZettaBoxInstallActions.exe" SelfReg="false" NextFile="ZettaBoxUnInstallActions.exe_1" DigSign="true"/>
+    <ROW File="ZettaBoxProjectLog.dll" Component_="ZettaBoxProjectLog.dll" FileName="ZETTAB~9.DLL|ZettaBoxProjectLog.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\Addins\ZettaBoxProjectLog.dll" SelfReg="false" NextFile="ZettaBoxTerminate.dll"/>
+    <ROW File="ZettaBoxSendToHandler.exe" Component_="ZettaBoxSendToHandler.exe" FileName="ZETTAB~1.EXE|ZettaBoxSendToHandler.exe" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\ZettaBoxSendToHandler.exe" SelfReg="false" NextFile="ZettaBoxUpdater.VisualElementsManifest.xml" DigSign="true"/>
+    <ROW File="ZettaBoxTerminate.dll" Component_="ZettaBoxTerminate.dll" FileName="ZETTA~10.DLL|ZettaBoxTerminate.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\Addins\ZettaBoxTerminate.dll" SelfReg="false" NextFile="AZettaBoxOverlay_Base.dll"/>
+    <ROW File="ZettaBoxUnInstallActions.exe_1" Component_="ZettaBoxUnInstallActions.exe" FileName="ZettaB~4.exe|ZettaBoxUnInstallActions.exe" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\ZettaBoxUnInstallActions.exe" SelfReg="false" NextFile="updater.exe" DigSign="true"/>
+    <ROW File="ZettaBoxUpdater.VisualElementsManifest.xml" Component_="Logo.ico" FileName="ZETTAB~2.XML|ZettaBoxUpdater.VisualElementsManifest.xml" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\ZettaBoxUpdater.VisualElementsManifest.xml" SelfReg="false" NextFile="ZettaBoxWaitToCheckForUpdates.exe"/>
+    <ROW File="ZettaBoxWaitToCheckForUpdates.exe" Component_="ZettaBoxWaitToCheckForUpdates.exe" FileName="ZETTAB~3.EXE|ZettaBoxWaitToCheckForUpdates.exe" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\ZettaBoxWaitToCheckForUpdates.exe" SelfReg="false" NextFile="ZettaBoxWaitToCheckForUpdates.exe.config" DigSign="true"/>
+    <ROW File="ZettaBoxWaitToCheckForUpdates.exe.config" Component_="Logo.ico" FileName="ZETTAB~2.CON|ZettaBoxWaitToCheckForUpdates.exe.config" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\ZettaBoxWaitToCheckForUpdates.exe.config" SelfReg="false" NextFile="ZettaBoxWaitToCheckForUpdatesKill.bat"/>
+    <ROW File="ZettaBoxWaitToCheckForUpdatesKill.bat" Component_="Logo.ico" FileName="ZETTAB~1.BAT|ZettaBoxWaitToCheckForUpdatesKill.bat" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\ZettaBoxWaitToCheckForUpdatesKill.bat" SelfReg="false" NextFile="ZettaBoxWaitToCheckForUpdatesKill.lnk"/>
+    <ROW File="ZettaBoxWaitToCheckForUpdatesKill.lnk" Component_="Logo.ico" FileName="ZETTAB~1.LNK|ZettaBoxWaitToCheckForUpdatesKill.lnk" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\ZettaBoxWaitToCheckForUpdatesKill.lnk" SelfReg="false" NextFile="ZettaBoxWaitToCheckForUpdatesRestarter.exe"/>
+    <ROW File="ZettaBoxWaitToCheckForUpdatesRestarter.exe" Component_="ZettaBoxWaitToCheckForUpdatesRestarter.e" FileName="ZETTAB~6.EXE|ZettaBoxWaitToCheckForUpdatesRestarter.exe" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\ZettaBoxWaitToCheckForUpdatesRestarter.exe" SelfReg="false" NextFile="ZettaBoxWaitToCheckForUpdatesRestarter.exe.config" DigSign="true"/>
+    <ROW File="ZettaBoxWaitToCheckForUpdatesRestarter.exe.config" Component_="Logo.ico" FileName="ZETTAB~3.CON|ZettaBoxWaitToCheckForUpdatesRestarter.exe.config" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\ZettaBoxWaitToCheckForUpdatesRestarter.exe.config" SelfReg="false" NextFile="ICSharpCode.AvalonEdit.dll"/>
+    <ROW File="Zettabox.Enumerations.dll" Component_="Zettabox.Enumerations.dll" FileName="ZETTAB~1.DLL|Zettabox.Enumerations.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\Zettabox.Enumerations.dll" SelfReg="false" NextFile="Zettabox.Messaging.dll"/>
+    <ROW File="Zettabox.Messaging.dll" Component_="Zettabox.Messaging.dll" FileName="ZETTAB~2.DLL|Zettabox.Messaging.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\Zettabox.Messaging.dll" SelfReg="false" NextFile="Zettabox.WcfContracts.dll"/>
+    <ROW File="Zettabox.WcfContracts.dll" Component_="Zettabox.WcfContracts.dll" FileName="ZETTAB~3.DLL|Zettabox.WcfContracts.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\Zettabox.WcfContracts.dll" SelfReg="false" NextFile="ConnectedVia.txt"/>
+    <ROW File="librsync.dll" Component_="librsync.dll" FileName="librsync.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\librsync.dll" SelfReg="false" NextFile="librsync_x64.dll"/>
+    <ROW File="librsync_x64.dll" Component_="librsync_x64.dll" FileName="LIBRSY~1.DLL|librsync_x64.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\librsync_x64.dll" SelfReg="false" NextFile="librsync_x86.dll"/>
+    <ROW File="librsync_x86.dll" Component_="librsync_x86.dll" FileName="LIBRSY~2.DLL|librsync_x86.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\librsync_x86.dll" SelfReg="false" NextFile="log4net.dll"/>
+    <ROW File="log4net.dll" Component_="log4net.dll" FileName="log4net.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\log4net.dll" SelfReg="false" NextFile="Logo.ico"/>
+    <ROW File="log4net.dll_1" Component_="log4net.dll_1" FileName="log4net.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\log4net.dll" SelfReg="false" NextFile="SharedObjects.dll_1"/>
+    <ROW File="logo_70px.png" Component_="Logo.ico" FileName="LOGO_7~1.PNG|logo_70px.png" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\logo_70px.png" SelfReg="false" NextFile="logo_950px.png"/>
+    <ROW File="logo_950px.png" Component_="Logo.ico" FileName="LOGO_9~1.PNG|logo_950px.png" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\logo_950px.png" SelfReg="false" NextFile="MahApps.Metro.dll"/>
+    <ROW File="msvcr100d.dll" Component_="msvcr100d.dll" FileName="MSVCR1~1.DLL|msvcr100d.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\msvcr100d.dll" SelfReg="false" NextFile="msvcr100d_x64.dll"/>
+    <ROW File="msvcr100d_x64.dll" Component_="msvcr100d_x64.dll" FileName="MSVCR1~2.DLL|msvcr100d_x64.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\msvcr100d_x64.dll" SelfReg="false" NextFile="msvcr100d_x86.dll"/>
+    <ROW File="msvcr100d_x86.dll" Component_="msvcr100d_x86.dll" FileName="MSVCR1~3.DLL|msvcr100d_x86.dll" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\msvcr100d_x86.dll" SelfReg="false" NextFile="Newtonsoft.Json.dll"/>
+    <ROW File="updater.exe" Component_="updater.exe" FileName="ZETTAB~2.EXE|ZettaBoxUpdater.exe" Version="65535.65535.65535.65535" Attributes="0" SourcePath="&lt;AI_STUBS&gt;updater.exe" SelfReg="false" NextFile="AZettaBoxOverlay_Base.dll_1" DigSign="true"/>
+    <ROW File="updater_logo_70px.png" Component_="Logo.ico" FileName="UPDATE~1.PNG|updater_logo_70px.png" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\updater_logo_70px.png" SelfReg="false" NextFile="updater_logo_upper_150px.png"/>
+    <ROW File="updater_logo_upper_150px.png" Component_="Logo.ico" FileName="UPDATE~2.PNG|updater_logo_upper_150px.png" Attributes="0" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\updater_logo_upper_150px.png" SelfReg="false" NextFile="WpfAnimatedGif.dll"/>
+    <ROW File="upgradeLockedDlls.bat" Component_="Logo.ico" FileName="UPGRAD~1.BAT|upgradeLockedDlls.bat" Attributes="0" SourcePath="upgradeLockedDlls.bat" SelfReg="false" NextFile="ActiproSoftware.Shared.Wpf.dll"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.custcomp.AiInstallUISequenceAliasComponent">
+    <ROW AliasRowId="AI_MoveProgressDlg" AliasRowOperation="2" Condition="#DefaultBuild:[~]"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.AiPersistentPropComponent">
+    <ROW Property="ProductNameUpper" Registry="ProductNameUpper" HklmSearch="ProductNameUpper" HkcuSearch="ProductNameUpper_1" Hklm64Search="ProductNameUpper_2" Hkcu64Search="ProductNameUpper_3"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BackgroundImagesComponent">
+    <ROW Name="img_01.png" Data="01.png" Sequence="0" DisplayTime="6"/>
+    <ROW Name="img_02.png" Data="02.png" Sequence="1" DisplayTime="4"/>
+    <ROW Name="img_03.png" Data="03.png" Sequence="2" DisplayTime="7"/>
+    <ROW Name="img_04.png" Data="04.png" Sequence="3" DisplayTime="35"/>
+    <ATTRIBUTE name="StartOption" value="2"/>
+    <ATTRIBUTE name="StopOption" value="3"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BootstrOptComponent">
+    <ROW BootstrOptKey="GlobalOptions" GeneralOptions="b" DownloadFolder="[AppDataFolder][|Manufacturer]\[|ProductName]\prerequisites" EulaPathLocId="*" IntroTextPathLocId="*"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BuildComponent">
+    <ROW BuildKey="DefaultBuild" BuildName="DefaultBuild" BuildOrder="1" BuildType="1" PackageFolder="Setup_FilesZETTATEST" PackageFileName="[|ProductNameUpper]Setup_v[|ProductVersion]" Languages="en_GB" InstallationType="4" CabsLocation="1" PackageType="1" FilesInsideExe="true" ExeIconPath="LatestBuild\ZettaBoxWindows\favicon.ico" ExtractionFolder="[AppDataFolder][|Manufacturer]\[|ProductName] [|ProductVersion]\install" ExtUI="true" Options="9" UseLargeSchema="true" Unicode="true" MsiPackageType="AI_ALL" UACExecutionLevel="2"/>
+    <ROW BuildKey="MsiBuild" BuildName="MsiBuild" BuildOrder="2" BuildType="1" PackageFolder="MsiBuildSetupFilesZETTATEST" PackageFileName="[|ProductName]Setup_v[|ProductVersion]" Languages="en_GB" InstallationType="4" ExtUI="true" UseLargeSchema="true" Unicode="true"/>
+    <ATTRIBUTE name="CurrentBuild" value="DefaultBuild"/>
+    <ATTRIBUTE name="ShareDatabase" value="true"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BuildEventsComponent">
+    <ROW EventId="0" EventRun="xcopy" EventCmdLine="/y /i &quot;F:\Radim\Zettabox\ZettaBox.Clients\Win\ZettaBoxWindows.DevStream1\Deployment\AdvancedInstaller\Setup Files\[|ProductName]Setup_v[|ProductVersion].exe&quot; &quot;\\tsclient\Z\Shared&quot;" EventDescription="Trying to copy the build file [|ProductName]Setup_v[|ProductVersion].exe to Z:\Shared - this can be a shared drive if you connect via remote desktop.  (iexist &quot;\\tsclient\Z\Shared&quot; (xcopy /y &quot;F:\Radim\Zettabox\ZettaBox.Clients\Win\ZettaBoxWindows.DevStream1\Deployment\AdvancedInstaller\Setup Files\[|ProductName]Setup_v[|ProductVersion].exe&quot; &quot;\\tsclient\Z\Shared&quot;))" EventOrder="1" EventType="2" EventInterupt="false" EventEnabled="true" EventPrecompression="false" EventBuild="DefaultBuild"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.CacheComponent">
+    <ATTRIBUTE name="Enable" value="false"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.DictionaryComponent">
+    <ROW Path="&lt;AI_DICTS&gt;ui.ail"/>
+    <ROW Path="&lt;AI_DICTS&gt;ui_en_GB.ail"/>
+    <ROW Path="&lt;AI_DICTS&gt;ui_en.ail"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.DigCertStoreComponent">
+    <ROW DigitalCertificate="OS201504079423.pfx" TimeStampUrl="http://timestamp.comodoca.com/authenticode" SignerDescription="Zettabox" DescriptionUrl="http://www.zettabox.com/download/description" SignOptions="7" SignTool="0" EnableLUAPatching="1" UseSha256="1" Password="75999CA49093E7033080A453B842F411F8FB4C7AB5803600"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.FragmentComponent">
+    <ROW Fragment="CommonUI.aip" Path="&lt;AI_FRAGS&gt;CommonUI.aip"/>
+    <ROW Fragment="FolderDlg.aip" Path="&lt;AI_THEMES&gt;azure\fragments\FolderDlg.aip"/>
+    <ROW Fragment="LicenseAgreementDlg.aip" Path="&lt;AI_THEMES&gt;azure\fragments\LicenseAgreementDlg.aip"/>
+    <ROW Fragment="MaintenanceTypeDlg.aip" Path="&lt;AI_THEMES&gt;azure\fragments\MaintenanceTypeDlg.aip"/>
+    <ROW Fragment="MaintenanceWelcomeDlg.aip" Path="&lt;AI_THEMES&gt;azure\fragments\MaintenanceWelcomeDlg.aip"/>
+    <ROW Fragment="MinProgressDlg.aip" Path="&lt;AI_THEMES&gt;azure\fragments\MinProgressDlg.aip"/>
+    <ROW Fragment="ReadmeDlg.aip" Path="&lt;AI_THEMES&gt;azure\fragments\ReadmeDlg.aip"/>
+    <ROW Fragment="SequenceDialogs.aip" Path="&lt;AI_THEMES&gt;azure\fragments\SequenceDialogs.aip"/>
+    <ROW Fragment="Sequences.aip" Path="&lt;AI_FRAGS&gt;Sequences.aip"/>
+    <ROW Fragment="SetupTypeDlg.aip" Path="&lt;AI_THEMES&gt;azure\fragments\SetupTypeDlg.aip"/>
+    <ROW Fragment="StaticUIStrings.aip" Path="&lt;AI_FRAGS&gt;StaticUIStrings.aip"/>
+    <ROW Fragment="UI.aip" Path="&lt;AI_THEMES&gt;azure\fragments\UI.aip"/>
+    <ROW Fragment="Validation.aip" Path="&lt;AI_FRAGS&gt;Validation.aip"/>
+    <ROW Fragment="VerifyRemoveDlg.aip" Path="&lt;AI_THEMES&gt;azure\fragments\VerifyRemoveDlg.aip"/>
+    <ROW Fragment="VerifyRepairDlg.aip" Path="&lt;AI_THEMES&gt;azure\fragments\VerifyRepairDlg.aip"/>
+    <ROW Fragment="WelcomeDlg.aip" Path="&lt;AI_THEMES&gt;azure\fragments\WelcomeDlg.aip"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiActionTextComponent">
+    <ROW Action="AI_ConfigureChainer" Description="Configuring prerequisites launcher" Template="Configure Launcher" DescriptionLocId="ActionText.Description.AI_ConfigureChainer" TemplateLocId="ActionText.Template.AI_ConfigureChainer"/>
+    <ROW Action="AI_DeleteLzma" Description="Deleting files extracted from archive" DescriptionLocId="ActionText.Description.AI_DeleteLzma" TemplateLocId="-"/>
+    <ROW Action="AI_DeleteRLzma" Description="Deleting files extracted from archive" DescriptionLocId="ActionText.Description.AI_DeleteLzma" TemplateLocId="-"/>
+    <ROW Action="AI_DownloadPrereq" Description="Downloading prerequisite software" Template="Downloading [1]{[2] completed}" DescriptionLocId="ActionText.Description.AI_DownloadPrereq" TemplateLocId="ActionText.Template.AI_DownloadPrereq"/>
+    <ROW Action="AI_ExtractFiles" Description="Extracting files from archive" DescriptionLocId="ActionText.Description.AI_ExtractLzma" TemplateLocId="-"/>
+    <ROW Action="AI_ExtractLzma" Description="Extracting files from archive" DescriptionLocId="ActionText.Description.AI_ExtractLzma" TemplateLocId="-"/>
+    <ROW Action="AI_ExtractPrereq" Description="Extracting prerequisite software" Template="Extracting [1]{[2] completed}" DescriptionLocId="ActionText.Description.AI_ExtractPrereq" TemplateLocId="ActionText.Template.AI_ExtractPrereq"/>
+    <ROW Action="AI_InstallPostPrerequisite" Description="Installing prerequisite software" Template="Installing [1]{[2] completed}" DescriptionLocId="ActionText.Description.AI_InstallPrerequisite" TemplateLocId="ActionText.Template.AI_InstallPrerequisite"/>
+    <ROW Action="AI_InstallPrerequisite" Description="Installing prerequisite software" Template="Installing [1]{[2] completed}" DescriptionLocId="ActionText.Description.AI_InstallPrerequisite" TemplateLocId="ActionText.Template.AI_InstallPrerequisite"/>
+    <ROW Action="AI_VerifyPrereq" Description="Verifying prerequisites" Template="[1] was not installed correctly." DescriptionLocId="ActionText.Description.AI_VerifyPrereq" TemplateLocId="ActionText.Template.AI_VerifyPrereq"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiAppSearchComponent">
+    <ROW Property="AI_DOTNET40_SEARCH" Signature_="AI_DotNet40SearchSgn" Builds="DefaultBuild"/>
+    <ROW Property="AI_DOTNET451_SEARCH" Signature_="AI_DotNet451SearchSgn" Builds="DefaultBuild"/>
+    <ROW Property="AI_DOTNET452_SEARCH" Signature_="AI_DotNet452SearchSgn" Builds="DefaultBuild"/>
+    <ROW Property="AI_DOTNET45_SEARCH" Signature_="AI_DotNet45SearchSgn" Builds="DefaultBuild"/>
+    <ROW Property="AI_SETUPEXEPATH" Signature_="AI_EXE_PATH_CU" Builds="DefaultBuild"/>
+    <ROW Property="AI_SETUPEXEPATH" Signature_="AI_EXE_PATH_LM" Builds="DefaultBuild"/>
+    <ROW Property="ProductNameUpper" Signature_="ProductNameUpper"/>
+    <ROW Property="ProductNameUpper" Signature_="ProductNameUpper_1"/>
+    <ROW Property="ProductNameUpper" Signature_="ProductNameUpper_2"/>
+    <ROW Property="ProductNameUpper" Signature_="ProductNameUpper_3"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiBinaryComponent">
+    <ROW Name="ExternalUICleaner.dll" SourcePath="&lt;AI_CUSTACTS&gt;ExternalUICleaner.dll"/>
+    <ROW Name="InstallRenameActions.exe_1" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release\InstallRenameActions.exe"/>
+    <ROW Name="Prereq.dll" SourcePath="&lt;AI_CUSTACTS&gt;Prereq.dll"/>
+    <ROW Name="ShowBackgroundImages.dll" SourcePath="&lt;AI_CUSTACTS&gt;ShowBackgroundImages.dll"/>
+    <ROW Name="aicustact.dll" SourcePath="&lt;AI_CUSTACTS&gt;aicustact.dll"/>
+    <ROW Name="aipackagechainer.exe" SourcePath="&lt;AI_CUSTACTS&gt;aipackagechainer.exe"/>
+    <ROW Name="closeexplorer.vbs" SourcePath="close explorer.vbs"/>
+    <ROW Name="favicon.ico_1" SourcePath="LatestBuild\ZettaBoxWindows\favicon.ico"/>
+    <ROW Name="lzmaextractor.dll" SourcePath="&lt;AI_CUSTACTS&gt;lzmaextractor.dll"/>
+    <ROW Name="viewer.exe" SourcePath="&lt;AI_CUSTACTS&gt;viewer.exe"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiControlComponent">
+    <ROW Dialog_="AdminBrowseDlg" Control="Bitmap" Type="Bitmap" X="0" Y="1" Width="450" Height="360" Attributes="1048577" Text="[Background]" Order="100" MsiKey="AdminBrowseDlg#Bitmap"/>
+    <ROW Dialog_="AdminInstallPointDlg" Control="Bitmap" Type="Bitmap" X="0" Y="1" Width="450" Height="360" Attributes="1048577" Text="[Background]" Order="100" MsiKey="AdminInstallPointDlg#Bitmap"/>
+    <ROW Dialog_="AdminWelcomeDlg" Control="Bitmap" Type="Bitmap" X="0" Y="1" Width="450" Height="360" Attributes="1048577" Text="[Background]" Order="100" MsiKey="AdminWelcomeDlg#Bitmap"/>
+    <ROW Dialog_="BrowseDlg" Control="Bitmap" Type="Bitmap" X="0" Y="1" Width="450" Height="360" Attributes="1048577" Text="[Background]" Order="100" MsiKey="BrowseDlg#Bitmap"/>
+    <ROW Dialog_="CustomizeDlg" Control="Bitmap" Type="Bitmap" X="0" Y="1" Width="450" Height="360" Attributes="1048577" Text="[Background]" Order="100" MsiKey="CustomizeDlg#Bitmap"/>
+    <ROW Dialog_="DiskCostDlg" Control="Bitmap" Type="Bitmap" X="0" Y="1" Width="450" Height="360" Attributes="1048577" Text="[Background]" Order="100" MsiKey="DiskCostDlg#Bitmap"/>
+    <ROW Dialog_="ExitDialog" Control="Bitmap" Type="Bitmap" X="0" Y="1" Width="450" Height="360" Attributes="1048577" Text="[ExitBackground]" Order="100" MsiKey="ExitDialog#Bitmap"/>
+    <ROW Dialog_="ExitDialog" Control="LaunchProdCheckBox" Type="PushButton" X="380" Y="330" Width="62" Height="17" Attributes="3" Property="RUNAPPLICATION" Text="Run [ProductName]" Order="200" TextLocId="Azure.Control.Text.ExitDialog#LaunchProdCheckBox" MsiKey="ExitDialog#LaunchProdCheckBox" Options="1"/>
+    <ROW Dialog_="ExitDialog" Control="ViewReadmeCheckBox" Type="PushButton" X="178" Y="222" Width="95" Height="26" Attributes="3" Property="VIEWREADME" Text="View Readme File" Order="300" TextLocId="Azure.Control.Text.ExitDialog#ViewReadmeCheckBox" MsiKey="ExitDialog#ViewReadmeCheckBox" Options="1"/>
+    <ROW Dialog_="ExitDialog" Control="Finish" Type="PushButton" X="319" Y="330" Width="56" Height="17" Attributes="3" Text="&amp;Close" Order="400" TextLocId="Azure.Control.Text.ExitDialog#Finish" MsiKey="ExitDialog#Finish" Options="1"/>
+    <ROW Dialog_="ExitDialog" Control="Back" Type="PushButton" X="258" Y="330" Width="56" Height="17" Attributes="0" Text="[ButtonText_Back]" Order="600" TextLocId="-" MsiKey="ExitDialog#Back" Options="1"/>
+    <ROW Dialog_="ExitDialog" Control="DialogIcon" Type="Icon" X="177" Y="94" Width="96" Height="96" Attributes="1048577" Text="[AppLogoIcon]" Order="700" MsiKey="ExitDialog#DialogIcon"/>
+    <ROW Dialog_="ExitDialog" Control="DescriptionConfigured" Type="Text" X="146" Y="203" Width="230" Height="20" Attributes="196611" Text="[ProductName] has been successfully configured." Order="800" TextLocId="Azure.Control.Text.ExitDialog#DescriptionConfigured" MsiKey="ExitDialog#DescriptionConfigured"/>
+    <ROW Dialog_="ExitDialog" Control="DescriptionInstalled" Type="Text" X="159" Y="203" Width="230" Height="20" Attributes="196611" Text="[ProductName] has been successfully installed." Order="900" TextLocId="Azure.Control.Text.ExitDialog#DescriptionInstalled" MsiKey="ExitDialog#DescriptionInstalled"/>
+    <ROW Dialog_="ExitDialog" Control="HorizontalLine" Type="Line" X="193" Y="251" Width="68" Height="2" Attributes="0" Order="1000" MsiKey="ExitDialog#HorizontalLine"/>
+    <ROW Dialog_="FatalError" Control="Bitmap" Type="Bitmap" X="0" Y="1" Width="450" Height="360" Attributes="1048577" Text="[Background]" Order="100" MsiKey="FatalError#Bitmap"/>
+    <ROW Dialog_="FilesInUse" Control="Bitmap" Type="Bitmap" X="0" Y="1" Width="450" Height="360" Attributes="1048577" Text="[Background]" Order="100" MsiKey="FilesInUse#Bitmap"/>
+    <ROW Dialog_="FolderDlg" Control="Bitmap" Type="Bitmap" X="0" Y="1" Width="450" Height="360" Attributes="1048577" Text="[Background]" Order="100" MsiKey="FolderDlg#Bitmap"/>
+    <ROW Dialog_="LicenseAgreementDlg" Control="Bitmap" Type="Bitmap" X="0" Y="1" Width="450" Height="360" Attributes="1048577" Text="[Background]" Order="100" MsiKey="LicenseAgreementDlg#Bitmap"/>
+    <ROW Dialog_="LicenseAgreementDlg" Control="Title" Type="Text" X="55" Y="23" Width="378" Height="21" Attributes="196611" Text="Read the Zettabox Licence Terms" TextStyle="TitleFont" Order="500" TextLocId="Azure.Control.Text.LicenseAgreementDlg#Title" MsiKey="LicenseAgreementDlg#Title"/>
+    <ROW Dialog_="LicenseAgreementDlg" Control="AgreementText" Type="ScrollableText" X="55" Y="110" Width="372" Height="180" Attributes="3" Property="EulaRead" Text="LatestBuild\ZettaBoxWindows\ZettaBox EULA.rtf" Order="800" MsiKey="LicenseAgreementDlg#AgreementText"/>
+    <ROW Dialog_="LicenseAgreementDlg" Control="EulaAgreeCheckBox" Type="CheckBox" X="55" Y="300" Width="230" Height="13" Attributes="3" Property="IAgree" Text="I &amp;accept the terms of this agreement." Order="1000" TextLocId="Azure.Control.Text.LicenseAgreementDlg#EulaAgreeCheckBox" MsiKey="LicenseAgreementDlg#EulaAgreeCheckBox"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control="Bitmap" Type="Bitmap" X="0" Y="1" Width="450" Height="360" Attributes="1048577" Text="[Background]" Order="100" MsiKey="MaintenanceTypeDlg#Bitmap"/>
+    <ROW Dialog_="MaintenanceWelcomeDlg" Control="Bitmap" Type="Bitmap" X="0" Y="1" Width="450" Height="360" Attributes="1048577" Text="[Background]" Order="100" MsiKey="MaintenanceWelcomeDlg#Bitmap"/>
+    <ROW Dialog_="MsiRMFilesInUse" Control="Bitmap" Type="Bitmap" X="0" Y="1" Width="450" Height="360" Attributes="1048577" Text="[Background]" Order="100" MsiKey="MsiRMFilesInUse#Bitmap"/>
+    <ROW Dialog_="OutOfDiskDlg" Control="Bitmap" Type="Bitmap" X="0" Y="1" Width="450" Height="360" Attributes="1048577" Text="[Background]" Order="100" MsiKey="OutOfDiskDlg#Bitmap"/>
+    <ROW Dialog_="OutOfRbDiskDlg" Control="Bitmap" Type="Bitmap" X="0" Y="1" Width="450" Height="360" Attributes="1048577" Text="[Background]" Order="100" MsiKey="OutOfRbDiskDlg#Bitmap"/>
+    <ROW Dialog_="PatchWelcomeDlg" Control="Bitmap" Type="Bitmap" X="0" Y="1" Width="450" Height="360" Attributes="1048577" Text="[Background]" Order="100" MsiKey="PatchWelcomeDlg#Bitmap"/>
+    <ROW Dialog_="PrepareDlg" Control="Bitmap" Type="Bitmap" X="0" Y="1" Width="450" Height="360" Attributes="1048577" Text="[Background]" Order="100" MsiKey="PrepareDlg#Bitmap"/>
+    <ROW Dialog_="ProgressDlg" Control="Bitmap" Type="Bitmap" X="0" Y="1" Width="450" Height="360" Attributes="1048577" Text="[Background]" Order="100" MsiKey="ProgressDlg#Bitmap"/>
+    <ROW Dialog_="ReadmeDlg" Control="Bitmap" Type="Bitmap" X="0" Y="1" Width="450" Height="360" Attributes="1048577" Text="[Background]" Order="100" MsiKey="ReadmeDlg#Bitmap"/>
+    <ROW Dialog_="ReadmeDlg" Control="ReadmeText" Type="ScrollableText" X="55" Y="100" Width="360" Height="200" Attributes="7" Text="LatestBuild\ZettaBoxWindows\Version Release Notes.rtf" Order="400" TextLocId="Control.Text.ReadmeDlg#ReadmeText_2" MsiKey="ReadmeDlg#ReadmeText"/>
+    <ROW Dialog_="ResumeDlg" Control="Bitmap" Type="Bitmap" X="0" Y="1" Width="450" Height="360" Attributes="1048577" Text="[Background]" Order="100" MsiKey="ResumeDlg#Bitmap"/>
+    <ROW Dialog_="SetupTypeDlg" Control="Bitmap" Type="Bitmap" X="0" Y="1" Width="450" Height="360" Attributes="1048577" Text="[Background]" Order="100" MsiKey="SetupTypeDlg#Bitmap"/>
+    <ROW Dialog_="SetupTypeDlg" Control="CompleteText" Type="Text" X="110" Y="128" Width="230" Height="20" Attributes="65538" Text="All program features will be installed.  (Requires most disk space)" Order="500" TextLocId="Control.Text.SetupTypeDlg#CompleteText" MsiKey="SetupTypeDlg#CompleteText"/>
+    <ROW Dialog_="SetupTypeDlg" Control="TypicalText" Type="Text" X="110" Y="243" Width="230" Height="20" Attributes="65536" Text="Installs the most common program features. Recommended for most users." Order="600" TextLocId="Control.Text.SetupTypeDlg#TypicalText" MsiKey="SetupTypeDlg#TypicalText"/>
+    <ROW Dialog_="SetupTypeDlg" Control="TypicalLabel" Type="Text" X="110" Y="230" Width="100" Height="11" Attributes="65536" Text="&amp;Typical" TextStyle="[DlgTitleFont]" Order="900" TextLocId="Control.Text.SetupTypeDlg#TypicalLabel" MsiKey="SetupTypeDlg#TypicalLabel"/>
+    <ROW Dialog_="SetupTypeDlg" Control="TypicalButton" Type="PushButton" X="55" Y="230" Width="38" Height="38" Attributes="5767168" Property="AI_TypicalBtn" Text="[InstallerIcon]" Help="Typical Installation|" Order="1000" HelpLocId="Control.Help.SetupTypeDlg#TypicalButton" MsiKey="SetupTypeDlg#TypicalButton"/>
+    <ROW Dialog_="SetupTypeDlg" Control="CompleteLabel" Type="Text" X="110" Y="115" Width="100" Height="11" Attributes="65538" Text="C&amp;omplete" TextStyle="[DlgTitleFont]" Order="1300" TextLocId="Control.Text.SetupTypeDlg#CompleteLabel" MsiKey="SetupTypeDlg#CompleteLabel"/>
+    <ROW Dialog_="SetupTypeDlg" Control="CompleteButton" Type="PushButton" X="55" Y="115" Width="38" Height="38" Attributes="5767170" Property="AI_CompleteBtn" Text="[CompleteSetupIcon]" Help="Complete Installation|" Order="1400" HelpLocId="Control.Help.SetupTypeDlg#CompleteButton" MsiKey="SetupTypeDlg#CompleteButton"/>
+    <ROW Dialog_="SetupTypeDlg" Control="Back" Type="PushButton" X="320" Y="330" Width="56" Height="17" Attributes="3" Text="[ButtonText_Back]" Order="1500" TextLocId="-" MsiKey="SetupTypeDlg#Back" Options="1"/>
+    <ROW Dialog_="SetupTypeDlg" Control="TypicalCommand" Type="CommandLinkButton" X="55" Y="274" Width="280" Height="48" Attributes="4718594" Property="AI_TypicalBtn" Text="[InstallerIcon]" Help="Start installation of default features.|" Order="1600" HelpLocId="Azure.Control.Help.SetupTypeDlg#TypicalCommand" MsiKey="SetupTypeDlg#TypicalCommand" ExtType="CommandLinkButton" ExtData="&amp;Typical" ExtDataLocId="Azure.Control.ExtData.SetupTypeDlg#TypicalCommand"/>
+    <ROW Dialog_="SetupTypeDlg" Control="CustomCommand" Type="CommandLinkButton" X="55" Y="173" Width="280" Height="48" Attributes="6815747" Property="AI_CustomBtn" Text="[CustomSetupIcon]" Help="Select which features are installed.|" Order="1700" HelpLocId="Azure.Control.Help.SetupTypeDlg#CustomCommand" MsiKey="SetupTypeDlg#CustomCommand" ExtType="CommandLinkButton" ExtData="&amp;Custom" ExtDataLocId="Azure.Control.ExtData.SetupTypeDlg#CustomCommand"/>
+    <ROW Dialog_="SetupTypeDlg" Control="CompleteCommand" Type="CommandLinkButton" X="55" Y="111" Width="284" Height="44" Attributes="6815751" Property="AI_CompleteBtn" Text="[CompleteSetupIcon]" Help="Start installation of all features including add-in.|" Order="1800" HelpLocId="Azure.Control.Help.SetupTypeDlg#CompleteCommand" MsiKey="SetupTypeDlg#CompleteCommand" ExtType="CommandLinkButton" ExtData="C&amp;omplete (recommended)" ExtDataLocId="Azure.Control.ExtData.SetupTypeDlg#CompleteCommand"/>
+    <ROW Dialog_="SetupTypeDlg" Control="PushButton_1" Type="PushButton" X="380" Y="330" Width="56" Height="17" Attributes="3" Text="[ButtonText_Next]" Order="1900" TextLocId="-"/>
+    <ROW Dialog_="SetupTypeDlg" Control="RadioButtonGroup_1" Type="RadioButtonGroup" X="23" Y="110" Width="31" Height="152" Attributes="3" Property="RADIOBUTTONGROUP_1_PROP" Text="RadioButtonGroup" Order="2000"/>
+    <ROW Dialog_="UserExit" Control="Bitmap" Type="Bitmap" X="0" Y="1" Width="450" Height="360" Attributes="1048577" Text="[Background]" Order="100" MsiKey="UserExit#Bitmap"/>
+    <ROW Dialog_="VerifyReadyDlg" Control="Bitmap" Type="Bitmap" X="0" Y="1" Width="450" Height="360" Attributes="1048577" Text="[Background]" Order="100" MsiKey="VerifyReadyDlg#Bitmap"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control="Bitmap" Type="Bitmap" X="0" Y="1" Width="450" Height="360" Attributes="1048577" Text="[Background]" Order="100" MsiKey="VerifyRemoveDlg#Bitmap"/>
+    <ROW Dialog_="VerifyRepairDlg" Control="Bitmap" Type="Bitmap" X="0" Y="1" Width="450" Height="360" Attributes="1048577" Text="[Background]" Order="100" MsiKey="VerifyRepairDlg#Bitmap"/>
+    <ROW Dialog_="WelcomeDlg" Control="Bitmap" Type="Bitmap" X="0" Y="1" Width="450" Height="360" Attributes="1048577" Text="[Background]" Order="100" MsiKey="WelcomeDlg#Bitmap"/>
+    <ROW Dialog_="WelcomeDlg" Control="Title" Type="Text" X="33" Y="23" Width="380" Height="26" Attributes="196611" Text="Welcome to [ProductName] [Wizard]" TextStyle="TitleFont" Order="600" TextLocId="Control.Text.WelcomeDlg#Title" MsiKey="WelcomeDlg#Title"/>
+    <ROW Dialog_="WelcomeDlg" Control="Description" Type="Text" X="46" Y="270" Width="380" Height="60" Attributes="196611" Text="The [Wizard] will install [ProductName] on your computer. Click [Text_Next] to continue or close the window to exit the [Wizard]." Order="700" TextLocId="Control.Text.WelcomeDlg#DescriptionNoClose" MsiKey="WelcomeDlg#Description"/>
+    <ROW Dialog_="WelcomeDlg" Control="VersionText" Type="Text" X="46" Y="330" Width="203" Height="24" Attributes="196611" Text="ver. [ProductVersion]" TextStyle="CfTitleFont" Order="800" TextLocId="Control.Text.WelcomeDlg#DescriptionNoClose"/>
+    <ROW Dialog_="WelcomeDlg" Control="UpgradeInfo" Type="Text" X="46" Y="62" Width="380" Height="60" Attributes="196610" Text="[ProductName] is ready to install a new upgrade version [ProductVersion]." Order="900" TextLocId="Control.Text.WelcomeDlg#DescriptionNoClose"/>
+    <ROW Dialog_="WelcomeDlg" Control="Text_1" Type="Text" X="33" Y="23" Width="361" Height="40" Attributes="196610" Text="Welcome to Zettabox Upgrade [Wizard]" TextStyle="TitleFont" Order="1000" TextLocId="Control.Text.WelcomeDlg#Title"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiControlConditionComponent">
+    <ROW Dialog_="WelcomeDlg" Control_="UpgradeInfo" Action="Show" Condition="%ZettaBox =&quot;Installed&quot;"/>
+    <ROW Dialog_="WelcomeDlg" Control_="VersionText" Action="Hide" Condition="%ZettaBox =&quot;Installed&quot;"/>
+    <ROW Dialog_="WelcomeDlg" Control_="Title" Action="Hide" Condition="%ZettaBox =&quot;Installed&quot;"/>
+    <ROW Dialog_="WelcomeDlg" Control_="Text_1" Action="Show" Condition="%ZettaBox =&quot;Installed&quot;"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiControlEventComponent">
+    <ROW Dialog_="WelcomeDlg" Control_="Next" Event="NewDialog" Argument="LicenseAgreementDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="LicenseAgreementDlg" Control_="Next" Event="NewDialog" Argument="SetupTypeDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="LicenseAgreementDlg" Control_="Back" Event="NewDialog" Argument="WelcomeDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="FolderDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_INSTALL" Ordering="201"/>
+    <ROW Dialog_="FolderDlg" Control_="Back" Event="NewDialog" Argument="SetupTypeDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_INSTALL" Ordering="197"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="201"/>
+    <ROW Dialog_="MaintenanceWelcomeDlg" Control_="Next" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="99"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_MAINT" Ordering="101"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_MAINT" Ordering="198"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="202"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="ChangeButton" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="501"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceWelcomeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="RemoveButton" Event="NewDialog" Argument="VerifyRemoveDlg" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="601"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="RepairButton" Event="NewDialog" Argument="VerifyRepairDlg" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="601"/>
+    <ROW Dialog_="VerifyRepairDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="1"/>
+    <ROW Dialog_="VerifyRepairDlg" Control_="Repair" Event="EndDialog" Argument="Return" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="399" Options="1"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control_="Remove" Event="EndDialog" Argument="Return" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="299" Options="1"/>
+    <ROW Dialog_="PatchWelcomeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_PATCH" Ordering="201"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_PATCH" Ordering="199"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="PatchWelcomeDlg" Condition="AI_PATCH" Ordering="203"/>
+    <ROW Dialog_="ResumeDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_RESUME" Ordering="299"/>
+    <ROW Dialog_="ExitDialog" Control_="Finish" Event="DoAction" Argument="AI_CleanPrereq" Condition="1" Ordering="101"/>
+    <ROW Dialog_="FatalError" Control_="Finish" Event="DoAction" Argument="AI_CleanPrereq" Condition="1" Ordering="102"/>
+    <ROW Dialog_="UserExit" Control_="Finish" Event="DoAction" Argument="AI_CleanPrereq" Condition="1" Ordering="101"/>
+    <ROW Dialog_="SetupTypeDlg" Control_="TypicalButton" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="201"/>
+    <ROW Dialog_="SetupTypeDlg" Control_="Back" Event="NewDialog" Argument="LicenseAgreementDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="SetupTypeDlg" Control_="CustomButton" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_INSTALL AND InstallMode=InstallModeCustom" Ordering="101"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Back" Event="NewDialog" Argument="SetupTypeDlg" Condition="AI_INSTALL AND InstallMode=InstallModeCustom" Ordering="2"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Next" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL AND InstallMode=InstallModeCustom" Ordering="102"/>
+    <ROW Dialog_="SetupTypeDlg" Control_="CompleteButton" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL AND InstallMode=InstallModeComplete" Ordering="201"/>
+    <ROW Dialog_="FolderDlg" Control_="Back" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_INSTALL AND InstallMode=InstallModeCustom" Ordering="4"/>
+    <ROW Dialog_="FolderDlg" Control_="Back" Event="NewDialog" Argument="SetupTypeDlg" Condition="AI_INSTALL AND InstallMode=InstallModeComplete" Ordering="3"/>
+    <ROW Dialog_="SetupTypeDlg" Control_="TypicalButton" Event="[ReadmeDlg_Cond]" Argument="1" Condition="%OS = &quot;OSWhereWeShowReadme&quot;" Ordering="2"/>
+    <ROW Dialog_="SetupTypeDlg" Control_="TypicalButton" Event="[ReadmeDlg_Cond]" Argument="{}" Condition="1" Ordering="1"/>
+    <ROW Dialog_="SetupTypeDlg" Control_="TypicalButton" Event="NewDialog" Argument="ReadmeDlg" Condition="AI_INSTALL AND ReadmeDlg_Cond" Ordering="202"/>
+    <ROW Dialog_="FolderDlg" Control_="Back" Event="NewDialog" Argument="ReadmeDlg" Condition="AI_INSTALL AND ReadmeDlg_Cond" Ordering="2"/>
+    <ROW Dialog_="ReadmeDlg" Control_="Next" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL AND ReadmeDlg_Cond" Ordering="1"/>
+    <ROW Dialog_="ReadmeDlg" Control_="Back" Event="NewDialog" Argument="SetupTypeDlg" Condition="AI_INSTALL AND ReadmeDlg_Cond" Ordering="1"/>
+    <ROW Dialog_="CancelDlg" Control_="Yes" Event="DoAction" Argument="AI_RestoreProgressDlg" Condition="(AI_SLIDESHOW_RUNNING)" Ordering="101"/>
+    <ROW Dialog_="ErrorDlg" Control_="A" Event="DoAction" Argument="AI_RestoreProgressDlg" Condition="(AI_SLIDESHOW_RUNNING)" Ordering="101"/>
+    <ROW Dialog_="ErrorDlg" Control_="C" Event="DoAction" Argument="AI_RestoreProgressDlg" Condition="(AI_SLIDESHOW_RUNNING)" Ordering="101"/>
+    <ROW Dialog_="ErrorDlg" Control_="I" Event="DoAction" Argument="AI_RestoreProgressDlg" Condition="(AI_SLIDESHOW_RUNNING)" Ordering="101"/>
+    <ROW Dialog_="ErrorDlg" Control_="N" Event="DoAction" Argument="AI_RestoreProgressDlg" Condition="(AI_SLIDESHOW_RUNNING)" Ordering="101"/>
+    <ROW Dialog_="ErrorDlg" Control_="O" Event="DoAction" Argument="AI_RestoreProgressDlg" Condition="(AI_SLIDESHOW_RUNNING)" Ordering="101"/>
+    <ROW Dialog_="ErrorDlg" Control_="R" Event="DoAction" Argument="AI_RestoreProgressDlg" Condition="(AI_SLIDESHOW_RUNNING)" Ordering="101"/>
+    <ROW Dialog_="ErrorDlg" Control_="Y" Event="DoAction" Argument="AI_RestoreProgressDlg" Condition="(AI_SLIDESHOW_RUNNING)" Ordering="101"/>
+    <ROW Dialog_="ExitDialog" Control_="Finish" Event="DoAction" Argument="AI_StopImageSlideshow" Condition="(VersionNT &gt;= 500)" Ordering="102"/>
+    <ROW Dialog_="UserExit" Control_="Finish" Event="DoAction" Argument="AI_StopImageSlideshow" Condition="(VersionNT &gt;= 500)" Ordering="103"/>
+    <ROW Dialog_="FatalError" Control_="Finish" Event="DoAction" Argument="AI_StopImageSlideshow" Condition="(VersionNT &gt;= 500)" Ordering="104"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="DoAction" Argument="AI_StartImageSlideshow" Condition="AI_INSTALL AND (VersionNT &gt;= 500)" Ordering="501" Options="2"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="[AI_SLIDESHOW_RUNNING]" Argument="1" Condition="AI_INSTALL AND (VersionNT &gt;= 500)" Ordering="502" Options="2"/>
+    <ROW Dialog_="SetupTypeDlg" Control_="PushButton_1" Event="[AiEventsControl]" Argument="CompleteButton" Condition="RADIOBUTTONGROUP_1_PROP= &quot;RadioButton_1&quot;" Ordering="0"/>
+    <ROW Dialog_="SetupTypeDlg" Control_="PushButton_1" Event="[AiEventsControl]" Argument="CustomButton" Condition="RADIOBUTTONGROUP_1_PROP= &quot;RadioButton_2&quot;" Ordering="1"/>
+    <ATTRIBUTE name="InstallChainInstallEvents" value="DoAction#AI_StartImageSlideshow#(VersionNT &gt;= 500)@[AI_SLIDESHOW_RUNNING]#1#(VersionNT &gt;= 500)"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCreateFolderComponent">
+    <ROW Directory_="SHORTCUTDIR" Component_="SHORTCUTDIR" ManualDelete="false"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCustActComponent">
+    <ROW Action="AI_AppSearchEx" Type="1" Source="Prereq.dll" Target="DoAppSearchEx"/>
+    <ROW Action="AI_BACKUP_AI_SETUPEXEPATH" Type="51" Source="AI_SETUPEXEPATH_ORIGINAL" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_CleanPrereq" Type="65" Source="Prereq.dll" Target="CleanPrereq" WithoutSeq="true"/>
+    <ROW Action="AI_ConfigureChainer" Type="1" Source="Prereq.dll" Target="ConfigurePrereqLauncher"/>
+    <ROW Action="AI_DATA_SETTER" Type="51" Source="AI_ExtractFiles" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_DATA_SETTER_4" Type="51" Source="CustomActionData" Target="ZettaBox.exe"/>
+    <ROW Action="AI_DATA_SETTER_5" Type="51" Source="CustomActionData" Target="explorer.exe"/>
+    <ROW Action="AI_DOWNGRADE" Type="19" Target="4010"/>
+    <ROW Action="AI_DeleteCadLzma" Type="51" Source="AI_DeleteLzma" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_DeleteLzma" Type="1025" Source="lzmaextractor.dll" Target="DeleteLZMAFiles"/>
+    <ROW Action="AI_DeleteRCadLzma" Type="51" Source="AI_DeleteRLzma" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_DeleteRLzma" Type="1281" Source="lzmaextractor.dll" Target="DeleteLZMAFiles"/>
+    <ROW Action="AI_DoRemoveExternalUIStub" Type="3585" Source="ExternalUICleaner.dll" Target="DoRemoveExternalUIStub" WithoutSeq="true"/>
+    <ROW Action="AI_DownloadPrereq" Type="1" Source="Prereq.dll" Target="DownloadPrereq"/>
+    <ROW Action="AI_DpiContentScale" Type="1" Source="aicustact.dll" Target="DpiContentScale"/>
+    <ROW Action="AI_EstimateExtractFiles" Type="1" Source="Prereq.dll" Target="EstimateExtractFiles"/>
+    <ROW Action="AI_ExtractCadLzma" Type="51" Source="AI_ExtractLzma" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_ExtractFiles" Type="1025" Source="Prereq.dll" Target="ExtractSourceFiles" AdditionalSeq="AI_DATA_SETTER"/>
+    <ROW Action="AI_ExtractLzma" Type="1025" Source="lzmaextractor.dll" Target="ExtractLZMAFiles"/>
+    <ROW Action="AI_ExtractPrereq" Type="65" Source="Prereq.dll" Target="ExtractPrereq"/>
+    <ROW Action="AI_FindExeLzma" Type="1" Source="lzmaextractor.dll" Target="FindEXE"/>
+    <ROW Action="AI_GetArpIconPath" Type="1" Source="aicustact.dll" Target="GetArpIconPath"/>
+    <ROW Action="AI_InstallModeCheck" Type="1" Source="aicustact.dll" Target="UpdateInstallMode" WithoutSeq="true"/>
+    <ROW Action="AI_InstallPostPrerequisite" Type="1" Source="Prereq.dll" Target="InstallPostPrereq"/>
+    <ROW Action="AI_InstallPrerequisite" Type="65" Source="Prereq.dll" Target="InstallPrereq"/>
+    <ROW Action="AI_LaunchApp" Type="1" Source="aicustact.dll" Target="[APPDIR]ZettaBox.exe"/>
+    <ROW Action="AI_LaunchChainer" Type="3314" Source="AI_PREREQ_CHAINER"/>
+    <ROW Action="AI_MoveProgressDlg" Type="1" Source="ShowBackgroundImages.dll" Target="MoveProgressDlg"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Type="65" Source="aicustact.dll" Target="PrepareUpgrade"/>
+    <ROW Action="AI_REDIRECT_32BIT_FOLDER" Type="51" Source="AI_Bin32_Dir" Target="[APPDIR]"/>
+    <ROW Action="AI_REDIRECT_32BIT_SH_FOLDER" Type="51" Source="AI_Sh32_Dir" Target="[SHORTCUTDIR]"/>
+    <ROW Action="AI_REDIRECT_32BIT_SH_FOLDER_1" Type="51" Source="AI_Sh32_Dir" Target="[SHORTCUTDIR]"/>
+    <ROW Action="AI_REDIRECT_32BIT_SH_FOLDER_2" Type="51" Source="AI_Sh32_Dir" Target="[SHORTCUTDIR]"/>
+    <ROW Action="AI_REDIRECT_32BIT_SH_FOLDER_3" Type="51" Source="AI_Sh32_Dir" Target="[SHORTCUTDIR]"/>
+    <ROW Action="AI_REDIRECT_32BIT_SH_FOLDER_4" Type="51" Source="AI_Sh32_Dir" Target="[SHORTCUTDIR]"/>
+    <ROW Action="AI_REDIRECT_32BIT_SH_FOLDER_5" Type="51" Source="AI_Sh32_Dir" Target="[SHORTCUTDIR]"/>
+    <ROW Action="AI_RESTORE_AI_SETUPEXEPATH" Type="51" Source="AI_SETUPEXEPATH" Target="[AI_SETUPEXEPATH_ORIGINAL]"/>
+    <ROW Action="AI_RESTORE_LOCATION" Type="65" Source="aicustact.dll" Target="RestoreLocation"/>
+    <ROW Action="AI_RemoveExternalUIStub" Type="1" Source="ExternalUICleaner.dll" Target="RemoveExternalUIStub"/>
+    <ROW Action="AI_ResolveKnownFolders" Type="1" Source="aicustact.dll" Target="AI_ResolveKnownFolders"/>
+    <ROW Action="AI_RestoreProgressDlg" Type="1" Source="ShowBackgroundImages.dll" Target="RestoreProgressDlg"/>
+    <ROW Action="AI_RunFinishActions" Type="1" Source="aicustact.dll" Target="RunFinishActions" WithoutSeq="true"/>
+    <ROW Action="AI_SETPROGRAMFILES" Type="51" Source="AI_ProgramFiles" Target="[ProgramFilesFolder]"/>
+    <ROW Action="AI_SETPROGRAMFILES64" Type="51" Source="AI_ProgramFiles" Target="[ProgramFiles64Folder]"/>
+    <ROW Action="AI_SHOW_LOG" Type="65" Source="aicustact.dll" Target="LaunchLogFile" WithoutSeq="true"/>
+    <ROW Action="AI_STORE_LOCATION" Type="51" Source="ARPINSTALLLOCATION" Target="[APPDIR]"/>
+    <ROW Action="AI_StartImageSlideshow" Type="193" Source="ShowBackgroundImages.dll" Target="StartImageSlideshow" WithoutSeq="true"/>
+    <ROW Action="AI_StopImageSlideshow" Type="1" Source="ShowBackgroundImages.dll" Target="StopImageSlideshow" WithoutSeq="true"/>
+    <ROW Action="AI_UPDATER_SERVICE_CONFIG" Type="3090" Source="updater.exe" Target="/configservice -name &quot;aij8676&quot;"/>
+    <ROW Action="AI_UPDATER_UNINSTALL" Type="82" Source="updater.exe" Target="/clean silent"/>
+    <ROW Action="AI_VerifyPrereq" Type="1" Source="Prereq.dll" Target="VerifyPrereq"/>
+    <ROW Action="IM_upgradeLockedDlls" Type="66" Source="viewer.exe" Target="/RunAsAdmin /HideWindow &quot;[APPDIR]upgradeLockedDlls.bat&quot;" Options="1"/>
+    <ROW Action="IUM_UninstallPreviousVersions" Type="1" Source="aicustact.dll" Target="UninstallPreviousVersions" Options="1"/>
+    <ROW Action="I_Kill_ZettaBoxWaitToCheckForUpdates.exe_before_copy_files" Type="66" Source="viewer.exe" Target="/HideWindow taskkill.exe /f /fi &quot;pid gt 0&quot; /im  ZettaBoxWaitToCheckForUpdates.exe" Options="1"/>
+    <ROW Action="I_RenameLockedFilesAndDeleteOld" Type="66" Source="InstallRenameActions.exe_1" Target="&quot;[APPDIR]&quot;"/>
+    <ROW Action="I_RunExplorerIfNotAlreadyRunning" Type="194" Source="viewer.exe" Target="/HideWindow tasklist.exe /nh /fi &quot;imagename eq explorer.exe&quot; | find /i &quot;explorer.exe&quot;  &amp;&amp; (echo Windows explorer is running) || (explorer.exe)" Options="1"/>
+    <ROW Action="I_RunExplorerIfNotAlreadyRunning_1" Type="1346" Source="viewer.exe" Target="/RunAsAdmin /HideWindow tasklist.exe /nh /fi &quot;imagename eq explorer.exe&quot; | find /i &quot;explorer.exe&quot;  &amp;&amp; (echo Windows explorer is running) || (explorer.exe)" Options="1"/>
+    <ROW Action="I_RunExplorerIfNotAlreadyRunning_2" Type="1666" Source="viewer.exe" Target="/HideWindow tasklist.exe /nh /fi &quot;imagename eq explorer.exe&quot; | find /i &quot;explorer.exe&quot;  &amp;&amp; (echo Windows explorer is running) || (explorer.exe)" Options="1"/>
+    <ROW Action="I_StopExplorerProcess_1_1" Type="65" Source="aicustact.dll" Target="StopProcess" AdditionalSeq="AI_DATA_SETTER_5"/>
+    <ROW Action="I_ZettaBoxInstallActions.exe" Type="82" Source="ZettaBoxInstallActions.exe_1"/>
+    <ROW Action="I_closeexplorer.vbs" Type="6" Source="closeexplorer.vbs"/>
+    <ROW Action="SET_APPDIR" Type="307" Source="APPDIR" Target="[ProgramFilesFolder][Manufacturer]\[ProductName]" MultiBuildTarget="DefaultBuild:[ProgramFilesFolder]\[ProductNameUpper]#MsiBuild:[ProgramFilesFolder]\[ProductNameUpper]"/>
+    <ROW Action="SET_SHORTCUTDIR" Type="307" Source="SHORTCUTDIR" Target="[ProgramMenuFolder][ProductName]" MultiBuildTarget="DefaultBuild:[ProgramMenuFolder][ProductNameUpper]#MsiBuild:[ProgramMenuFolder][ProductNameUpper]"/>
+    <ROW Action="SET_TARGETDIR_TO_APPDIR" Type="51" Source="TARGETDIR" Target="[APPDIR]"/>
+    <ROW Action="StartImageSlideshow" Type="193" Source="ShowBackgroundImages.dll" Target="StartImageSlideshow" Options="1"/>
+    <ROW Action="StopProcess_ZettaBox" Type="65" Source="aicustact.dll" Target="StopProcess" Options="1" AdditionalSeq="AI_DATA_SETTER_4"/>
+    <ROW Action="ZettaBoxUnInstallActions.exe" Type="18" Source="ZettaBoxUnInstallActions.exe_1"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiDialogComponent">
+    <ROW Dialog="WelcomeDlg" HCentering="50" VCentering="50" Width="450" Height="360" Attributes="3" Title="[ProductName] [Setup]" Control_Default="Next" Control_Cancel="Cancel" TitleLocId="Dialog.WelcomeDlg" MsiKey="WelcomeDlg"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiEnvComponent">
+    <ROW Environment="Path" Name="=-Path" Value="[APPDIR];[~]" Component_="Description_14"/>
+    <ROW Environment="ZettaBox" Name="=-ZettaBox" Value="Installed" Component_="ZettaBox.exe"/>
+    <ROW Environment="ZettaBoxVersion" Name="=-ZettaBoxVersion" Value="[ProductVersion]" Component_="Description_14"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiIconsComponent">
+    <ROW Name="Logo_1.exe" SourcePath="LatestBuild\ZettaBoxWindows\Logo.ico" Index="0"/>
+    <ROW Name="favicon_1.exe" SourcePath="LatestBuild\ZettaBoxWindows\favicon.ico" Index="0"/>
+    <ROW Name="updater.exe" SourcePath="LatestBuild\ZettaBoxWindows\Updater.ico" Index="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiIniFileComponent">
+    <ROW IniFile="AppDir" FileName="ZETTAB~1.INI|ZettaBoxUpdater.ini" DirProperty="APPDIR" Section="General" Key="AppDir" Value="[APPDIR]" Action="0" Component_="updater.exe"/>
+    <ROW IniFile="ApplicationName" FileName="ZETTAB~1.INI|ZettaBoxUpdater.ini" DirProperty="APPDIR" Section="General" Key="ApplicationName" Value="[ProductName]" Action="0" Component_="updater.exe"/>
+    <ROW IniFile="ApplicationVersion" FileName="ZETTAB~1.INI|ZettaBoxUpdater.ini" DirProperty="APPDIR" Section="General" Key="ApplicationVersion" Value="[ProductVersion]" Action="0" Component_="updater.exe"/>
+    <ROW IniFile="CheckFrequency" FileName="ZETTAB~1.INI|ZettaBoxUpdater.ini" DirProperty="APPDIR" Section="General" Key="CheckFrequency" Value="1" Action="0" Component_="updater.exe"/>
+    <ROW IniFile="CompanyName" FileName="ZETTAB~1.INI|ZettaBoxUpdater.ini" DirProperty="APPDIR" Section="General" Key="CompanyName" Value="[Manufacturer]" Action="0" Component_="updater.exe"/>
+    <ROW IniFile="DefaultCommandLine" FileName="ZETTAB~1.INI|ZettaBoxUpdater.ini" DirProperty="APPDIR" Section="General" Key="DefaultCommandLine" Value="/silentall" Action="0" Component_="updater.exe"/>
+    <ROW IniFile="DownloadsFolder" FileName="ZETTAB~1.INI|ZettaBoxUpdater.ini" DirProperty="APPDIR" Section="General" Key="DownloadsFolder" Value="[CommonAppDataFolder][Manufacturer]\[ProductName]\updates\" Action="0" Component_="updater.exe"/>
+    <ROW IniFile="Flags" FileName="ZETTAB~1.INI|ZettaBoxUpdater.ini" DirProperty="APPDIR" Section="General" Key="Flags" Value="PerMachine|ShowConfigOptionsButton" Action="0" Component_="updater.exe"/>
+    <ROW IniFile="ID" FileName="ZETTAB~1.INI|ZettaBoxUpdater.ini" DirProperty="APPDIR" Section="General" Key="ID" Value="[UpgradeCode]" Action="0" Component_="updater.exe"/>
+    <ROW IniFile="SupportServiceName" FileName="ZETTAB~1.INI|ZettaBoxUpdater.ini" DirProperty="APPDIR" Section="General" Key="SupportServiceName" Value="aij8676" Action="0" Component_="updater.exe"/>
+    <ROW IniFile="URL" FileName="ZETTAB~1.INI|ZettaBoxUpdater.ini" DirProperty="APPDIR" Section="General" Key="URL" Value="[ZBWWW]/download/win/updates.txt" Action="0" Component_="updater.exe"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstExSeqComponent">
+    <ROW Action="AI_STORE_LOCATION" Condition="(Not Installed) OR REINSTALL" Sequence="1502"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Condition="AI_UPGRADE=&quot;No&quot; AND (Not Installed)" Sequence="1399"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="51"/>
+    <ROW Action="AI_BACKUP_AI_SETUPEXEPATH" Sequence="99" Builds="DefaultBuild"/>
+    <ROW Action="AI_RESTORE_AI_SETUPEXEPATH" Condition="AI_SETUPEXEPATH_ORIGINAL" Sequence="102" Builds="DefaultBuild"/>
+    <ROW Action="AI_DeleteCadLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;) AND (NOT PATCH)" Sequence="199" Builds="DefaultBuild"/>
+    <ROW Action="AI_DeleteRCadLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;) AND (NOT PATCH)" Sequence="198" Builds="DefaultBuild"/>
+    <ROW Action="AI_ExtractCadLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;) AND (NOT PATCH)" Sequence="197" Builds="DefaultBuild"/>
+    <ROW Action="AI_FindExeLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;) AND (NOT PATCH)" Sequence="196" Builds="DefaultBuild"/>
+    <ROW Action="AI_ExtractLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;) AND (NOT PATCH)" Sequence="1549" Builds="DefaultBuild"/>
+    <ROW Action="AI_DeleteRLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;) AND (NOT PATCH)" Sequence="1548" Builds="DefaultBuild"/>
+    <ROW Action="AI_DeleteLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;) AND (NOT PATCH)" Sequence="6579" Builds="DefaultBuild"/>
+    <ROW Action="AI_REDIRECT_32BIT_FOLDER" Condition="NOT VersionNT64 AND NOT AI_Disable32BitRedirection" Sequence="707"/>
+    <ROW Action="AI_REDIRECT_32BIT_SH_FOLDER" Condition="NOT VersionNT64 AND NOT AI_Disable32BitRedirection" Sequence="706"/>
+    <ROW Action="ZettaBoxUnInstallActions.exe" Condition="( Installed AND ( REMOVE = &quot;ALL&quot; OR AI_INSTALL_MODE = &quot;Remove&quot; ) ) AND ( (REMOVE=&quot;ALL&quot; AND (NOT UPGRADINGPRODUCTCODE)) )" Sequence="1651"/>
+    <ROW Action="AI_REDIRECT_32BIT_SH_FOLDER_1" Condition="NOT VersionNT64 AND NOT AI_Disable32BitRedirection" Sequence="705"/>
+    <ROW Action="AI_ExtractFiles" Sequence="3998" Builds="DefaultBuild"/>
+    <ROW Action="AI_DATA_SETTER" Sequence="3997"/>
+    <ROW Action="AI_EstimateExtractFiles" Sequence="3999" Builds="DefaultBuild"/>
+    <ROW Action="AI_REDIRECT_32BIT_SH_FOLDER_2" Condition="NOT VersionNT64 AND NOT AI_Disable32BitRedirection" Sequence="704"/>
+    <ROW Action="AI_REDIRECT_32BIT_SH_FOLDER_3" Condition="NOT VersionNT64 AND NOT AI_Disable32BitRedirection" Sequence="703"/>
+    <ROW Action="AI_REDIRECT_32BIT_SH_FOLDER_4" Condition="NOT VersionNT64 AND NOT AI_Disable32BitRedirection" Sequence="702"/>
+    <ROW Action="AI_SETPROGRAMFILES64" Condition="VersionNT64" Sequence="746"/>
+    <ROW Action="AI_SETPROGRAMFILES" Condition="NOT VersionNT64" Sequence="747"/>
+    <ROW Action="AI_REDIRECT_32BIT_SH_FOLDER_5" Condition="NOT VersionNT64 AND NOT AI_Disable32BitRedirection" Sequence="701"/>
+    <ROW Action="InstallFinalize" Sequence="6586" SeqType="0" MsiKey="InstallFinalize"/>
+    <ROW Action="AI_RemoveExternalUIStub" Condition="(REMOVE=&quot;ALL&quot;) AND ((VersionNT &gt; 500) OR((VersionNT = 500) AND (ServicePackLevel &gt;= 4)))" Sequence="1501"/>
+    <ROW Action="AI_UPDATER_UNINSTALL" Condition="($updater.exe = 2) AND (?updater.exe = 3) AND NOT (UPGRADINGPRODUCTCODE)" Sequence="1551"/>
+    <ROW Action="AI_DOWNGRADE" Condition="AI_NEWERPRODUCTFOUND AND (UILevel &lt;&gt; 5)" Sequence="201"/>
+    <ROW Action="AI_UPDATER_SERVICE_CONFIG" Condition="( ( ( NOT Installed AND VersionNT) OR ( Installed AND REMOVE &lt;&gt; &quot;ALL&quot; AND AI_INSTALL_MODE &lt;&gt; &quot;Remove&quot; AND VersionNT) ) AND ($updater.exe = 3) )" Sequence="5801"/>
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
+    <ROW Action="AI_AppSearchEx" Sequence="101"/>
+    <ROW Action="AI_GetArpIconPath" Sequence="1401"/>
+    <ROW Action="I_RunExplorerIfNotAlreadyRunning_1" Condition="( NOT Installed )" Sequence="1601"/>
+    <ROW Action="I_RunExplorerIfNotAlreadyRunning_2" Condition="( Installed AND ( REMOVE = &quot;ALL&quot; OR AI_INSTALL_MODE = &quot;Remove&quot; ) )" Sequence="3601"/>
+    <ROW Action="AI_VerifyPrereq" Sequence="1101"/>
+    <ROW Action="AI_ConfigureChainer" Condition="((UILevel = 2) OR (UILevel = 3)) AND (NOT UPGRADINGPRODUCTCODE)" Sequence="6581"/>
+    <ROW Action="AI_LaunchChainer" Condition="AI_PREREQ_CHAINER AND (NOT UPGRADINGPRODUCTCODE)" Sequence="6582"/>
+    <ROW Action="IM_upgradeLockedDlls" Condition="( ( NOT Installed ) OR ( Installed AND REMOVE &lt;&gt; &quot;ALL&quot; AND AI_INSTALL_MODE &lt;&gt; &quot;Remove&quot; ) )" Sequence="6584"/>
+    <ROW Action="I_ZettaBoxInstallActions.exe" Condition="( NOT Installed ) AND ( (Not Installed) )" Sequence="6583"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstallUISequenceComponent">
+    <ROW Action="AI_ResolveKnownFolders" Sequence="52"/>
+    <ROW Action="AI_BACKUP_AI_SETUPEXEPATH" Sequence="99"/>
+    <ROW Action="AI_RESTORE_AI_SETUPEXEPATH" Condition="AI_SETUPEXEPATH_ORIGINAL" Sequence="102"/>
+    <ROW Action="AI_SETPROGRAMFILES64" Condition="VersionNT64" Sequence="746"/>
+    <ROW Action="AI_SETPROGRAMFILES" Condition="NOT VersionNT64" Sequence="747"/>
+    <ROW Action="AI_DpiContentScale" Sequence="51"/>
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
+    <ROW Action="ExecuteAction" Sequence="1292" SeqType="0" MsiKey="ExecuteAction"/>
+    <ROW Action="AI_AppSearchEx" Sequence="101"/>
+    <ROW Action="IUM_UninstallPreviousVersions" Condition="%ZettaBox &lt;&gt; &quot;Installed&quot;" Sequence="1288"/>
+    <ROW Action="I_Kill_ZettaBoxWaitToCheckForUpdates.exe_before_copy_files" Condition="( NOT Installed )" Sequence="1287"/>
+    <ROW Action="I_closeexplorer.vbs" Condition="( NOT Installed ) AND ( %ZettaBox = &quot;InstalledNotEqualInstalledShouldBeInThisConditionIfWantedToTurnOnThisStepAgainConsiderThisAsTurnOff&quot; )" Sequence="1285"/>
+    <ROW Action="StopProcess_ZettaBox" Sequence="1286"/>
+    <ROW Action="AI_DATA_SETTER_4" Sequence="1283"/>
+    <ROW Action="I_StopExplorerProcess_1_1" Condition="( ( Installed AND REMOVE &lt;&gt; &quot;ALL&quot; AND AI_INSTALL_MODE &lt;&gt; &quot;Remove&quot; ) OR ( Installed AND ( REMOVE = &quot;ALL&quot; OR AI_INSTALL_MODE = &quot;Remove&quot; ) ) ) AND ( %ZettaBox &lt;&gt; &quot;Installed&quot; )" Sequence="1296"/>
+    <ROW Action="AI_DATA_SETTER_5" Condition="( ( Installed AND REMOVE &lt;&gt; &quot;ALL&quot; AND AI_INSTALL_MODE &lt;&gt; &quot;Remove&quot; ) OR ( Installed AND ( REMOVE = &quot;ALL&quot; OR AI_INSTALL_MODE = &quot;Remove&quot; ) ) ) AND ( %ZettaBox &lt;&gt; &quot;Installed&quot; )" Sequence="1295"/>
+    <ROW Action="I_RunExplorerIfNotAlreadyRunning" Condition="( ( Installed AND REMOVE &lt;&gt; &quot;ALL&quot; AND AI_INSTALL_MODE &lt;&gt; &quot;Remove&quot; ) OR ( Installed AND ( REMOVE = &quot;ALL&quot; OR AI_INSTALL_MODE = &quot;Remove&quot; ) ) ) AND ( %ZettaBox &lt;&gt; &quot;Installed&quot; )" Sequence="1297"/>
+    <ROW Action="AI_DownloadPrereq" Sequence="1289"/>
+    <ROW Action="AI_ExtractPrereq" Sequence="1290"/>
+    <ROW Action="AI_InstallPrerequisite" Sequence="1291"/>
+    <ROW Action="AI_InstallPostPrerequisite" Sequence="1294"/>
+    <ROW Action="I_RenameLockedFilesAndDeleteOld" Condition="( ( NOT Installed ) OR ( Installed AND REMOVE &lt;&gt; &quot;ALL&quot; AND AI_INSTALL_MODE &lt;&gt; &quot;Remove&quot; ) )" Sequence="1284"/>
+    <ROW Action="ProgressDlg" Condition="(NOT AI_SLIDESHOW_RUNNING)" Sequence="1280" SeqType="3" MsiKey="ProgressDlg"/>
+    <ROW Action="AI_MoveProgressDlg" Condition="(AI_SLIDESHOW_RUNNING)" Sequence="1282"/>
+    <ROW Action="AI_RestoreProgressDlg" Sequence="1293"/>
+    <ROW Action="MinProgressDlg" Condition="(AI_SLIDESHOW_RUNNING)" Sequence="1281" SeqType="3"/>
+    <ROW Action="StartImageSlideshow" Sequence="1261"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiLaunchConditionsComponent">
+    <ROW Condition="( Version9X OR VersionNT64 OR ( VersionNT AND ((VersionNT &lt;&gt; 500) OR ((VersionNT = 500) AND (ServicePackLevel &gt;= 1))) AND ((VersionNT &lt;&gt; 500) OR ((VersionNT = 500) AND (ServicePackLevel &lt;&gt; 1))) AND ((VersionNT &lt;&gt; 500) OR ((VersionNT = 500) AND (ServicePackLevel &lt;&gt; 2))) AND ((VersionNT &lt;&gt; 500) OR ((VersionNT = 500) AND (ServicePackLevel &lt;&gt; 3))) ) )" Description="[ProductName] cannot be installed on the following Windows versions: [WindowsTypeNTDisplay]" DescriptionLocId="AI.LaunchCondition.NoSpecificNT" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="(AI_DOTNET40_SEARCH = &quot;#1&quot;) OR (AI_DOTNET45_SEARCH &gt;= &quot;4.5&quot;) OR (AI_DOTNET451_SEARCH &gt;= &quot;#378675&quot;)" Description="[ProductName] can not be installed on systems with .NET Framework version lower than [AI_MINDOTNETVERSION]" DescriptionLocId="AI.LaunchCondition.DotNET" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="(VersionNT &lt;&gt; 400)" Description="[ProductName] cannot be installed on the following Windows versions: [WindowsTypeNT40Display]" DescriptionLocId="AI.LaunchCondition.NoNT40" IsPredefined="true" Builds="DefaultBuild;MsiBuild"/>
+    <ROW Condition="VersionMsi &gt;= WIMinVersion" Description="[ProductName] can not be installed on systems with Windows Installer version lower than [WIMinVersion]" DescriptionLocId="AI.LaunchCondition.WI" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="VersionNT" Description="[ProductName] cannot be installed on [WindowsType9XDisplay]" DescriptionLocId="AI.LaunchCondition.No9X" IsPredefined="true" Builds="DefaultBuild;MsiBuild"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiRadioButtonComponent">
+    <ROW Property="RADIOBUTTONGROUP_1_PROP" Order="1" Value="RadioButton_1" X="15" Y="23" Width="11" Height="10"/>
+    <ROW Property="RADIOBUTTONGROUP_1_PROP" Order="2" Value="RadioButton_2" X="15" Y="83" Width="11" Height="10"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiRegLocatorComponent">
+    <ROW Signature_="AI_DotNet40SearchSgn" Root="2" Key="SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full" Name="Install" Type="2"/>
+    <ROW Signature_="AI_DotNet451SearchSgn" Root="2" Key="SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full" Name="Release" Type="2"/>
+    <ROW Signature_="AI_DotNet452SearchSgn" Root="2" Key="SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full" Name="Release" Type="2"/>
+    <ROW Signature_="AI_DotNet45SearchSgn" Root="2" Key="SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full" Name="Version" Type="2"/>
+    <ROW Signature_="AI_EXE_PATH_CU" Root="1" Key="Software\Caphyon\Advanced Installer\LZMA\[ProductCode]\[ProductVersion]" Name="AI_ExePath" Type="2"/>
+    <ROW Signature_="AI_EXE_PATH_LM" Root="2" Key="Software\Caphyon\Advanced Installer\LZMA\[ProductCode]\[ProductVersion]" Name="AI_ExePath" Type="2"/>
+    <ROW Signature_="ProductNameUpper" Root="2" Key="Software\[Manufacturer]\[UpgradeCode]" Name="ProductNameUpper" Type="2"/>
+    <ROW Signature_="ProductNameUpper_1" Root="1" Key="Software\[Manufacturer]\[UpgradeCode]" Name="ProductNameUpper" Type="2"/>
+    <ROW Signature_="ProductNameUpper_2" Root="2" Key="Software\[Manufacturer]\[UpgradeCode]" Name="ProductNameUpper" Type="18"/>
+    <ROW Signature_="ProductNameUpper_3" Root="1" Key="Software\[Manufacturer]\[UpgradeCode]" Name="ProductNameUpper" Type="18"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiRegsComponent">
+    <ROW Registry="AI_ExePath" Root="-1" Key="Software\Caphyon\Advanced Installer\LZMA\[ProductCode]\[ProductVersion]" Name="AI_ExePath" Value="[AI_SETUPEXEPATH]" Component_="AI_ExePath"/>
+    <ROW Registry="CommandFlags" Root="0" Key="*\shell\Share L Separator" Name="CommandFlags" Value="#00000008" Component_="CommandFlags"/>
+    <ROW Registry="CommandFlags_1" Root="0" Key="Directory\shell\Share F Separator" Name="CommandFlags" Value="#00000008" Component_="CommandFlags_1"/>
+    <ROW Registry="CommandFlags_2" Root="0" Key="*\shell\Share Message Separator" Name="CommandFlags" Value="#00000008" Component_="CommandFlags_2"/>
+    <ROW Registry="CommandFlags_3" Root="0" Key="Directory\shell\Share Message Separator" Name="CommandFlags" Value="#00000008" Component_="CommandFlags_3"/>
+    <ROW Registry="Comments" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="Comments" Value="[ARPCOMMENTS]" Component_="AI_CustomARPName"/>
+    <ROW Registry="Contact" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="Contact" Value="[ARPCONTACT]" Component_="AI_CustomARPName"/>
+    <ROW Registry="Description_12" Root="1" Key="Software\Microsoft\Office\Word\AddIns\ZettaBox.ZettaBoxForOfficeBackstage" Name="Description" Value="ZettaBox Add-in for Office" Component_="Description_12"/>
+    <ROW Registry="Description_13" Root="1" Key="Software\Microsoft\Office\Word\AddIns\ZettaBox.ZettaBoxForOfficeTab" Name="Description" Value="ZettaBox Add-in for Office" Component_="Description_13"/>
+    <ROW Registry="Description_14" Root="1" Key="Software\Microsoft\Office\Excel\Addins\ZettaBox.ZettaBoxForOfficeBackstage" Name="Description" Value="ZettaBox Add-in for Office" Component_="Description_14"/>
+    <ROW Registry="Description_15" Root="1" Key="Software\Microsoft\Office\Excel\Addins\ZettaBox.ZettaBoxForOfficeTab" Name="Description" Value="ZettaBox Add-in for Office" Component_="Description_15"/>
+    <ROW Registry="Description_16" Root="1" Key="Software\Microsoft\Office\PowerPoint\Addins\ZettaBox.ZettaBoxForOfficeBackstage" Name="Description" Value="ZettaBox Add-in for Office" Component_="Description_16"/>
+    <ROW Registry="Description_17" Root="1" Key="Software\Microsoft\Office\PowerPoint\Addins\ZettaBox.ZettaBoxForOfficeTab" Name="Description" Value="ZettaBox Add-in for Office" Component_="Description_17"/>
+    <ROW Registry="Description_18" Root="1" Key="Software\[MICROSOFT_NODE]\Office\Excel\Addins\ZettaBox.ZettaBoxForOfficeBackstage" Name="Description" Value="ZettaBox Add-in for Office" Component_="Description_18"/>
+    <ROW Registry="Description_19" Root="1" Key="Software\[MICROSOFT_NODE]\Office\Excel\Addins\ZettaBox.ZettaBoxForOfficeTab" Name="Description" Value="ZettaBox Add-in for Office" Component_="Description_19"/>
+    <ROW Registry="Description_20" Root="1" Key="Software\[MICROSOFT_NODE]\Office\Word\AddIns\ZettaBox.ZettaBoxForOfficeBackstage" Name="Description" Value="ZettaBox Add-in for Office" Component_="Description_20"/>
+    <ROW Registry="Description_21" Root="1" Key="Software\[MICROSOFT_NODE]\Office\Word\AddIns\ZettaBox.ZettaBoxForOfficeTab" Name="Description" Value="ZettaBox Add-in for Office" Component_="Description_21"/>
+    <ROW Registry="Description_22" Root="1" Key="Software\[MICROSOFT_NODE]\Office\PowerPoint\Addins\ZettaBox.ZettaBoxForOfficeBackstage" Name="Description" Value="ZettaBox Add-in for Office" Component_="Description_22"/>
+    <ROW Registry="Description_23" Root="1" Key="Software\[MICROSOFT_NODE]\Office\PowerPoint\Addins\ZettaBox.ZettaBoxForOfficeTab" Name="Description" Value="ZettaBox Add-in for Office" Component_="Description_23"/>
+    <ROW Registry="DisplayIcon" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="DisplayIcon" Value="[ARP_ICON_PATH]" Component_="AI_CustomARPName"/>
+    <ROW Registry="DisplayName" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="DisplayName" Value="[AI_PRODUCTNAME_ARP]" Component_="AI_CustomARPName"/>
+    <ROW Registry="DisplayVersion" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="DisplayVersion" Value="[ProductVersion]" Component_="AI_CustomARPName"/>
+    <ROW Registry="FriendlyName_12" Root="1" Key="Software\Microsoft\Office\Word\AddIns\ZettaBox.ZettaBoxForOfficeBackstage" Name="FriendlyName" Value="ZettaBox Backstage Add-in for Word" Component_="FriendlyName_12"/>
+    <ROW Registry="FriendlyName_13" Root="1" Key="Software\Microsoft\Office\Word\AddIns\ZettaBox.ZettaBoxForOfficeTab" Name="FriendlyName" Value="ZettaBox Tab Add-in for Word" Component_="FriendlyName_13"/>
+    <ROW Registry="FriendlyName_14" Root="1" Key="Software\Microsoft\Office\Excel\Addins\ZettaBox.ZettaBoxForOfficeBackstage" Name="FriendlyName" Value="ZettaBox Backstage Add-in for Excel" Component_="FriendlyName_14"/>
+    <ROW Registry="FriendlyName_15" Root="1" Key="Software\Microsoft\Office\Excel\Addins\ZettaBox.ZettaBoxForOfficeTab" Name="FriendlyName" Value="ZettaBox Tab Add-in for Excel" Component_="FriendlyName_15"/>
+    <ROW Registry="FriendlyName_16" Root="1" Key="Software\Microsoft\Office\PowerPoint\Addins\ZettaBox.ZettaBoxForOfficeBackstage" Name="FriendlyName" Value="ZettaBox Backstage Add-in for PowerPoint" Component_="FriendlyName_16"/>
+    <ROW Registry="FriendlyName_17" Root="1" Key="Software\Microsoft\Office\PowerPoint\Addins\ZettaBox.ZettaBoxForOfficeTab" Name="FriendlyName" Value="ZettaBox Tab Add-in for PowerPoint" Component_="FriendlyName_17"/>
+    <ROW Registry="FriendlyName_18" Root="1" Key="Software\[MICROSOFT_NODE]\Office\Excel\Addins\ZettaBox.ZettaBoxForOfficeBackstage" Name="FriendlyName" Value="ZettaBox Backstage Add-in for Excel" Component_="FriendlyName_18"/>
+    <ROW Registry="FriendlyName_19" Root="1" Key="Software\[MICROSOFT_NODE]\Office\Excel\Addins\ZettaBox.ZettaBoxForOfficeTab" Name="FriendlyName" Value="ZettaBox Tab Add-in for Excel" Component_="FriendlyName_19"/>
+    <ROW Registry="FriendlyName_20" Root="1" Key="Software\[MICROSOFT_NODE]\Office\Word\AddIns\ZettaBox.ZettaBoxForOfficeBackstage" Name="FriendlyName" Value="ZettaBox Backstage Add-in for Word" Component_="FriendlyName_20"/>
+    <ROW Registry="FriendlyName_21" Root="1" Key="Software\[MICROSOFT_NODE]\Office\Word\AddIns\ZettaBox.ZettaBoxForOfficeTab" Name="FriendlyName" Value="ZettaBox Tab Add-in for Word" Component_="FriendlyName_21"/>
+    <ROW Registry="FriendlyName_22" Root="1" Key="Software\[MICROSOFT_NODE]\Office\PowerPoint\Addins\ZettaBox.ZettaBoxForOfficeBackstage" Name="FriendlyName" Value="ZettaBox Backstage Add-in for PowerPoint" Component_="FriendlyName_22"/>
+    <ROW Registry="FriendlyName_23" Root="1" Key="Software\[MICROSOFT_NODE]\Office\PowerPoint\Addins\ZettaBox.ZettaBoxForOfficeTab" Name="FriendlyName" Value="ZettaBox Tab Add-in for PowerPoint" Component_="FriendlyName_23"/>
+    <ROW Registry="HelpLink" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="HelpLink" Value="[ARPHELPLINK]" Component_="AI_CustomARPName"/>
+    <ROW Registry="HelpTelephone" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="HelpTelephone" Value="[ARPHELPTELEPHONE]" Component_="AI_CustomARPName"/>
+    <ROW Registry="Icon_3" Root="0" Key="*\shell\Share Link" Name="Icon" Value="#%[APPDIR]ZettaBox.exe,0" Component_="Icon_3"/>
+    <ROW Registry="Icon_4" Root="0" Key="Directory\shell\Share Folder" Name="Icon" Value="#%[APPDIR]ZettaBox.exe,0" Component_="Icon_4"/>
+    <ROW Registry="InstallDir" Root="2" Key="Software\[Manufacturer]\[ProductNameUpper]" Name="InstallDir" Value="[APPDIR]" Component_="InstallDir"/>
+    <ROW Registry="InstallDir_1" Root="1" Key="Software\[Manufacturer]\[ProductNameUpper]" Name="InstallDir" Value="[APPDIR]" Component_="InstallDir_1"/>
+    <ROW Registry="InstallLocation" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="InstallLocation" Value="[APPDIR]" Component_="AI_CustomARPName"/>
+    <ROW Registry="InstalledNewVersion" Root="2" Key="Software\[Manufacturer]\[ProductNameUpper]\NoUpgrades" Name="InstalledNewVersion" Value="[ProductVersion]" Component_="InstalledNewVersion"/>
+    <ROW Registry="LoadBehavior_12" Root="1" Key="Software\Microsoft\Office\Word\AddIns\ZettaBox.ZettaBoxForOfficeBackstage" Name="LoadBehavior" Value="#3" Component_="LoadBehavior_12"/>
+    <ROW Registry="LoadBehavior_13" Root="1" Key="Software\Microsoft\Office\Word\AddIns\ZettaBox.ZettaBoxForOfficeTab" Name="LoadBehavior" Value="#3" Component_="LoadBehavior_13"/>
+    <ROW Registry="LoadBehavior_14" Root="1" Key="Software\Microsoft\Office\Excel\Addins\ZettaBox.ZettaBoxForOfficeBackstage" Name="LoadBehavior" Value="#3" Component_="LoadBehavior_14"/>
+    <ROW Registry="LoadBehavior_15" Root="1" Key="Software\Microsoft\Office\Excel\Addins\ZettaBox.ZettaBoxForOfficeTab" Name="LoadBehavior" Value="#3" Component_="LoadBehavior_15"/>
+    <ROW Registry="LoadBehavior_16" Root="1" Key="Software\Microsoft\Office\PowerPoint\Addins\ZettaBox.ZettaBoxForOfficeBackstage" Name="LoadBehavior" Value="#3" Component_="LoadBehavior_16"/>
+    <ROW Registry="LoadBehavior_17" Root="1" Key="Software\Microsoft\Office\PowerPoint\Addins\ZettaBox.ZettaBoxForOfficeTab" Name="LoadBehavior" Value="#3" Component_="LoadBehavior_17"/>
+    <ROW Registry="LoadBehavior_18" Root="1" Key="Software\[MICROSOFT_NODE]\Office\Excel\Addins\ZettaBox.ZettaBoxForOfficeBackstage" Name="LoadBehavior" Value="#3" Component_="LoadBehavior_18"/>
+    <ROW Registry="LoadBehavior_19" Root="1" Key="Software\[MICROSOFT_NODE]\Office\Excel\Addins\ZettaBox.ZettaBoxForOfficeTab" Name="LoadBehavior" Value="#3" Component_="LoadBehavior_19"/>
+    <ROW Registry="LoadBehavior_20" Root="1" Key="Software\[MICROSOFT_NODE]\Office\Word\AddIns\ZettaBox.ZettaBoxForOfficeBackstage" Name="LoadBehavior" Value="#3" Component_="LoadBehavior_20"/>
+    <ROW Registry="LoadBehavior_21" Root="1" Key="Software\[MICROSOFT_NODE]\Office\Word\AddIns\ZettaBox.ZettaBoxForOfficeTab" Name="LoadBehavior" Value="#3" Component_="LoadBehavior_21"/>
+    <ROW Registry="LoadBehavior_22" Root="1" Key="Software\[MICROSOFT_NODE]\Office\PowerPoint\Addins\ZettaBox.ZettaBoxForOfficeBackstage" Name="LoadBehavior" Value="#3" Component_="LoadBehavior_22"/>
+    <ROW Registry="LoadBehavior_23" Root="1" Key="Software\[MICROSOFT_NODE]\Office\PowerPoint\Addins\ZettaBox.ZettaBoxForOfficeTab" Name="LoadBehavior" Value="#3" Component_="LoadBehavior_23"/>
+    <ROW Registry="Manifest_12" Root="1" Key="Software\Microsoft\Office\Word\AddIns\ZettaBox.ZettaBoxForOfficeBackstage" Name="Manifest" Value="[APPDIR]Addins\ZettaBoxForWordBackstageAddIn.vsto|vstolocal" Component_="Manifest_12"/>
+    <ROW Registry="Manifest_13" Root="1" Key="Software\Microsoft\Office\Word\AddIns\ZettaBox.ZettaBoxForOfficeTab" Name="Manifest" Value="[APPDIR]Addins\ZettaBoxForWordAddIn.vsto|vstolocal" Component_="Manifest_13"/>
+    <ROW Registry="Manifest_14" Root="1" Key="Software\Microsoft\Office\Excel\Addins\ZettaBox.ZettaBoxForOfficeBackstage" Name="Manifest" Value="[APPDIR]Addins\ZettaBoxForExcelBackstageAddIn.vsto|vstolocal" Component_="Manifest_14"/>
+    <ROW Registry="Manifest_15" Root="1" Key="Software\Microsoft\Office\Excel\Addins\ZettaBox.ZettaBoxForOfficeTab" Name="Manifest" Value="[APPDIR]Addins\ZettaBoxForExcelAddIn.vsto|vstolocal" Component_="Manifest_15"/>
+    <ROW Registry="Manifest_16" Root="1" Key="Software\Microsoft\Office\PowerPoint\Addins\ZettaBox.ZettaBoxForOfficeBackstage" Name="Manifest" Value="[APPDIR]Addins\ZettaBoxForPowerPointBackstageAddIn.vsto|vstolocal" Component_="Manifest_16"/>
+    <ROW Registry="Manifest_17" Root="1" Key="Software\Microsoft\Office\PowerPoint\Addins\ZettaBox.ZettaBoxForOfficeTab" Name="Manifest" Value="[APPDIR]Addins\ZettaBoxForPowerPointAddIn.vsto|vstolocal" Component_="Manifest_17"/>
+    <ROW Registry="Manifest_18" Root="1" Key="Software\[MICROSOFT_NODE]\Office\Excel\Addins\ZettaBox.ZettaBoxForOfficeBackstage" Name="Manifest" Value="[APPDIR]Addins\ZettaBoxForExcelBackstageAddIn.vsto|vstolocal" Component_="Manifest_18"/>
+    <ROW Registry="Manifest_19" Root="1" Key="Software\[MICROSOFT_NODE]\Office\Excel\Addins\ZettaBox.ZettaBoxForOfficeTab" Name="Manifest" Value="[APPDIR]Addins\ZettaBoxForExcelAddIn.vsto|vstolocal" Component_="Manifest_19"/>
+    <ROW Registry="Manifest_20" Root="1" Key="Software\[MICROSOFT_NODE]\Office\Word\AddIns\ZettaBox.ZettaBoxForOfficeBackstage" Name="Manifest" Value="[APPDIR]Addins\ZettaBoxForWordBackstageAddIn.vsto|vstolocal" Component_="Manifest_20"/>
+    <ROW Registry="Manifest_21" Root="1" Key="Software\[MICROSOFT_NODE]\Office\Word\AddIns\ZettaBox.ZettaBoxForOfficeTab" Name="Manifest" Value="[APPDIR]Addins\ZettaBoxForWordAddIn.vsto|vstolocal" Component_="Manifest_21"/>
+    <ROW Registry="Manifest_22" Root="1" Key="Software\[MICROSOFT_NODE]\Office\PowerPoint\Addins\ZettaBox.ZettaBoxForOfficeBackstage" Name="Manifest" Value="[APPDIR]Addins\ZettaBoxForPowerPointBackstageAddIn.vsto|vstolocal" Component_="Manifest_22"/>
+    <ROW Registry="Manifest_23" Root="1" Key="Software\[MICROSOFT_NODE]\Office\PowerPoint\Addins\ZettaBox.ZettaBoxForOfficeTab" Name="Manifest" Value="[APPDIR]Addins\ZettaBoxForPowerPointAddIn.vsto|vstolocal" Component_="Manifest_23"/>
+    <ROW Registry="ModifyPath" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="ModifyPath" Value="[AI_UNINSTALLER] /I [ProductCode]" Component_="AI_CustomARPName"/>
+    <ROW Registry="NoRepair" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="NoRepair" Value="#1" Component_="AI_CustomARPName"/>
+    <ROW Registry="ProductName" Root="2" Key="Software\[Manufacturer]\[ProductNameUpper]" Name="*" Component_="ProductName"/>
+    <ROW Registry="ProductNameUpper" Root="-1" Key="Software\[Manufacturer]\[UpgradeCode]" Name="ProductNameUpper" Value="[ProductNameUpper]" Component_="ProductNameUpper"/>
+    <ROW Registry="ProductName_1" Root="1" Key="Software\[Manufacturer]\[ProductNameUpper]" Name="+" Component_="ProductName_1"/>
+    <ROW Registry="ProductVersion_2" Root="2" Key="Software\[Manufacturer]\[ProductNameUpper]\Upgrades" Name="[ProductVersion]" Value="[APPDIR]" Component_="ProductVersion"/>
+    <ROW Registry="Publisher" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="Publisher" Value="[Manufacturer]" Component_="AI_CustomARPName"/>
+    <ROW Registry="RUN_1" Root="1" Key="Software\Microsoft\Windows\CurrentVersion\[RUN]" Name="+" Component_="RUN_1"/>
+    <ROW Registry="RequiredApplication_1" Root="-1" Key="Software\Caphyon\Advanced Installer\Prereqs\[ProductCode]\[ProductVersion]" Name="RequiredApplication_1" Value="1" Component_="RequiredApplication_1"/>
+    <ROW Registry="ShareFolder" Root="0" Key="Directory\shell\Share Folder" Name="+" Component_="ShareFolder"/>
+    <ROW Registry="Software_3" Root="0" Key="Software" Name="+" Component_="Software"/>
+    <ROW Registry="URLInfoAbout" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="URLInfoAbout" Value="[ARPURLINFOABOUT]" Component_="AI_CustomARPName"/>
+    <ROW Registry="URLUpdateInfo" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="URLUpdateInfo" Value="[ARPURLUPDATEINFO]" Component_="AI_CustomARPName"/>
+    <ROW Registry="UninstallPath" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="UninstallPath" Value="[AI_UNINSTALLER] /x [ProductCode]" Component_="AI_CustomARPName"/>
+    <ROW Registry="UninstallString" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="UninstallString" Value="[AI_UNINSTALLER] /x [ProductCode]" Component_="AI_CustomARPName"/>
+    <ROW Registry="UpgradeInstalled" Root="2" Key="Software\[Manufacturer]\[ProductNameUpper]\Upgrades" Name="UpgradeInstalled" Value="[APPDIR]" Component_="UpgradeInstalled"/>
+    <ROW Registry="User" Root="2" Key="Software\[Manufacturer]\[ProductNameUpper]\Upgrades\[ProductVersion]" Name="User" Value="[USERNAME]" Component_="User"/>
+    <ROW Registry="Username" Root="1" Key="Software\[Manufacturer]\[ProductNameUpper]" Name="Username" Value="[USERNAME]" Component_="Username"/>
+    <ROW Registry="Username_1" Root="2" Key="Software\[Manufacturer]\[ProductNameUpper]" Name="Username" Value="[USERNAME]" Component_="Username_1"/>
+    <ROW Registry="Version" Root="2" Key="Software\[Manufacturer]\[ProductNameUpper]" Name="Version" Value="[ProductVersion]" Component_="Version"/>
+    <ROW Registry="VersionMajor" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="VersionMajor" Value="#1" Component_="AI_CustomARPName"/>
+    <ROW Registry="VersionMinor" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="VersionMinor" Value="#0" Component_="AI_CustomARPName"/>
+    <ROW Registry="Version_1" Root="1" Key="Software\[Manufacturer]\[ProductNameUpper]" Name="Version" Value="[ProductVersion]" Component_="Version_1"/>
+    <ROW Registry="ZettaBox.ZettaBoxForOfficeBackstage_10" Root="1" Key="Software\[MICROSOFT_NODE]\Office\Word\AddIns\ZettaBox.ZettaBoxForOfficeBackstage" Name="*" Component_="ZettaBox.ZettaBoxForOfficeBackstage_10"/>
+    <ROW Registry="ZettaBox.ZettaBoxForOfficeBackstage_11" Root="1" Key="Software\[MICROSOFT_NODE]\Office\PowerPoint\Addins\ZettaBox.ZettaBoxForOfficeBackstage" Name="*" Component_="ZettaBox.ZettaBoxForOfficeBackstage_11"/>
+    <ROW Registry="ZettaBox.ZettaBoxForOfficeBackstage_6" Root="1" Key="Software\Microsoft\Office\Word\AddIns\ZettaBox.ZettaBoxForOfficeBackstage" Name="*" Component_="ZettaBox.ZettaBoxForOfficeBackstage_6"/>
+    <ROW Registry="ZettaBox.ZettaBoxForOfficeBackstage_7" Root="1" Key="Software\Microsoft\Office\Excel\Addins\ZettaBox.ZettaBoxForOfficeBackstage" Name="*" Component_="ZettaBox.ZettaBoxForOfficeBackstage_7"/>
+    <ROW Registry="ZettaBox.ZettaBoxForOfficeBackstage_8" Root="1" Key="Software\Microsoft\Office\PowerPoint\Addins\ZettaBox.ZettaBoxForOfficeBackstage" Name="*" Component_="ZettaBox.ZettaBoxForOfficeBackstage_8"/>
+    <ROW Registry="ZettaBox.ZettaBoxForOfficeBackstage_9" Root="1" Key="Software\[MICROSOFT_NODE]\Office\Excel\Addins\ZettaBox.ZettaBoxForOfficeBackstage" Name="*" Component_="ZettaBox.ZettaBoxForOfficeBackstage_9"/>
+    <ROW Registry="ZettaBox.ZettaBoxForOfficeTab_10" Root="1" Key="Software\[MICROSOFT_NODE]\Office\Word\AddIns\ZettaBox.ZettaBoxForOfficeTab" Name="*" Component_="ZettaBox.ZettaBoxForOfficeTab_10"/>
+    <ROW Registry="ZettaBox.ZettaBoxForOfficeTab_11" Root="1" Key="Software\[MICROSOFT_NODE]\Office\PowerPoint\Addins\ZettaBox.ZettaBoxForOfficeTab" Name="*" Component_="ZettaBox.ZettaBoxForOfficeTab_11"/>
+    <ROW Registry="ZettaBox.ZettaBoxForOfficeTab_6" Root="1" Key="Software\Microsoft\Office\Word\AddIns\ZettaBox.ZettaBoxForOfficeTab" Name="*" Component_="ZettaBox.ZettaBoxForOfficeTab_6"/>
+    <ROW Registry="ZettaBox.ZettaBoxForOfficeTab_7" Root="1" Key="Software\Microsoft\Office\Excel\Addins\ZettaBox.ZettaBoxForOfficeTab" Name="*" Component_="ZettaBox.ZettaBoxForOfficeTab_7"/>
+    <ROW Registry="ZettaBox.ZettaBoxForOfficeTab_8" Root="1" Key="Software\Microsoft\Office\PowerPoint\Addins\ZettaBox.ZettaBoxForOfficeTab" Name="*" Component_="ZettaBox.ZettaBoxForOfficeTab_8"/>
+    <ROW Registry="ZettaBox.ZettaBoxForOfficeTab_9" Root="1" Key="Software\[MICROSOFT_NODE]\Office\Excel\Addins\ZettaBox.ZettaBoxForOfficeTab" Name="*" Component_="ZettaBox.ZettaBoxForOfficeTab_9"/>
+    <ROW Registry="ZettaBoxUpdater_2" Root="1" Key="Software\Microsoft\Windows\CurrentVersion\[RUN]" Name="ZettaBoxUpdater" Value="[#updater.exe]" Component_="ZettaBoxUpdater_2"/>
+    <ROW Registry="ZettaBoxUpdater_3" Root="1" Key="Software\Microsoft\Windows\CurrentVersion\Run" Name="ZettaBoxUpdater" Value="[#updater.exe]" Component_="ZettaBoxUpdater_3"/>
+    <ROW Registry="__1" Root="0" Key="*\shell\Share Link\command" Value="[APPDIR]ZettaBoxSendToHandler.exe /d &quot;%1&quot;" Component_="_"/>
+    <ROW Registry="__2" Root="0" Key="Directory\shell\Share Folder\command" Value="[APPDIR]ZettaBoxSendToHandler.exe /F &quot;%1&quot;" Component_="__1"/>
+    <ROW Registry="__3" Root="0" Key="Directory\shell\Share Link\command" Value="[APPDIR]ZettaBoxSendToHandler.exe /D &quot;%1&quot;" Component_="__2"/>
+    <ROW Registry="__4" Root="0" Key="*\shell\Share Message\command" Value="[APPDIR]ZettaBoxSendToHandler.exe /m &quot;%1&quot;" Component_="__3"/>
+    <ROW Registry="__5" Root="0" Key="Directory\shell\Share Message\command" Value="[APPDIR]ZettaBoxSendToHandler.exe /M &quot;%1&quot;" Component_="__4"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiServCtrlComponent">
+    <ROW ServiceControl="aij8676" Name="aij8676" Event="160" Wait="1" Component_="updater.exe"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiServInstComponent">
+    <ROW ServiceInstall="aij8676" Name="aij8676" DisplayName="aij8676 service for ZettaBox" ServiceType="16" StartType="3" ErrorControl="1" Arguments="/runservice" Component_="updater.exe" Description="Updater Support Service"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiShortsComponent">
+    <ROW Shortcut="Checkforzettaboxupdates" Directory_="SHORTCUTDIR" Name="CHECKF~1|Check for zettabox updates" Component_="updater.exe" Target="[#updater.exe]" Arguments="/checknow" Description="Zettabox updater" Hotkey="1877" Icon_="updater.exe" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
+    <ROW Shortcut="Launchzettabox" Directory_="APPDIR" Name="LAUNCH~1|Launch zettabox" Component_="ZettaBox.exe" Target="[#ZettaBox.exe]" Description="zettabox launcher" Hotkey="1858" Icon_="Logo_1.exe" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
+    <ROW Shortcut="ZettaBox.exe" Directory_="SHORTCUTDIR" Name="Zettabox" Component_="ZettaBox.exe" Target="[#ZettaBox.exe]" Description="ZettaBox.exe" Hotkey="1882" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
+    <ROW Shortcut="ZettaBoxUpdaterSilent" Directory_="APPDIR" Name="ZETTAB~1|ZettaBoxUpdaterSilent" Component_="updater.exe" Target="[#updater.exe]" Arguments="/silent -startappfirst -restartapp [#ZettaBox.exe] -restartappcmd " Hotkey="1914" Icon_="Logo_1.exe" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
+    <ROW Shortcut="ZettaBox_1" Directory_="DesktopFolder" Name="Zettabox" Component_="ZettaBox.exe" Target="[#ZettaBox.exe]" Hotkey="1858" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiThemeComponent">
+    <ATTRIBUTE name="UsedTheme" value="azure"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiUpgradeComponent">
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMax="[|ProductVersion]" Attributes="1025" ActionProperty="OLDPRODUCTS"/>
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMin="[|ProductVersion]" Attributes="2" ActionProperty="AI_NEWERPRODUCTFOUND"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.PreReqComponent">
+    <ROW PrereqKey="C673FE9433B49AFAC9592AB26B8F8E4" DisplayName=".NET Framework 4.0" VersionMin="4.0" SetupFileUrl="http://download.microsoft.com/download/9/5/A/95A9616B-7A37-4AF6-BC36-D6EA96C8DAAE/dotNetFx40_Full_x86_x64.exe" Location="1" ExactSize="0" WinNTVersions="Windows Server 2003 x86, Windows Server 2003 x86 Service Pack 1, Windows Server 2003 x86 Service Pack 2, Windows Vista x86, Windows Vista x86 Service Pack 1, Windows Vista x86 Service Pack 2, Windows Server 2008 x86, Windows 7 x86, Windows 7 x86 Service Pack 1, Windows 8 x86, Windows 8.1 x86" WinNT64Versions="Windows Vista x64, Windows Vista x64 Service Pack 1, Windows Vista x64 Service Pack 2, Windows Server 2008 x64, Windows 7 x64, Windows 7 x64 Service Pack 1, Windows Server 2008 R2 x64, Windows Server 2008 R2 x64 Service Pack 1, Windows 8 x64, Windows Server 2012 x64, Windows 8.1 x64, Windows Server 2012 R2 x64" Operator="1" ComLine="/q" BasicUiComLine="/q" NoUiComLine="/q /norestart" Options="x" TargetName=".NET Framework 4.0?dotNetFx40_Full_x86_x64.exe"/>
+    <ROW PrereqKey="E9BFB0D602DD498F96473C9BBCDDEC89" DisplayName=".NET Framework 4.5 (web installer)" SetupFileUrl="Prerequisites\.NET Framework 4.5\dotNetFx45_Full_setup.exe" Location="0" ExactSize="0" WinNTVersions="Windows 2000, Windows 2000 Service Pack 1, Windows 2000 Service Pack 2, Windows 2000 Service Pack 3, Windows 2000 Service Pack 4, Windows XP x86, Windows XP x86 Service Pack 1, Windows XP x86 Service Pack 2, Windows XP x86 Service Pack 3, Windows Server 2003 x86, Windows Server 2003 x86 Service Pack 1, Windows Server 2003 x86 Service Pack 2, Windows 8 x86, Windows 8.1 x86" WinNT64Versions="Windows 8 x64, Windows Server 2012 x64, Windows 8.1 x64, Windows Server 2012 R2 x64" Operator="1" ComLine="/q " BasicUiComLine="/q " NoUiComLine="/q /norestart" Options="x" TargetName=".NET Framework 4.5\dotNetFx45_Full_setup.exe"/>
+    <ROW PrereqKey="RequiredApplication" DisplayName="Update 4.0.3 for Microsoft .NET Framework 4 – Runtime Update (KB2600211)" VersionMin="4.0.3" SetupFileUrl="http://download.microsoft.com/download/3/3/9/3396A3CA-BFE8-4C9B-83D3-CADAE72C17BE/NDP40-KB2600211-x86-x64.exe" Location="1" ExactSize="0" WinNTVersions="Windows Server 2003 x86, Windows Server 2003 x86 Service Pack 1, Windows Server 2003 x86 Service Pack 2, Windows Vista x86, Windows Vista x86 Service Pack 1, Windows Vista x86 Service Pack 2, Windows Server 2008 x86, Windows 7 x86, Windows 7 x86 Service Pack 1, Windows 8 x86, Windows 8.1 x86" WinNT64Versions="Windows Vista x64, Windows Vista x64 Service Pack 1, Windows Vista x64 Service Pack 2, Windows Server 2008 x64, Windows 7 x64, Windows 7 x64 Service Pack 1, Windows Server 2008 R2 x64, Windows Server 2008 R2 x64 Service Pack 1, Windows 8 x64, Windows Server 2012 x64, Windows 8.1 x64, Windows Server 2012 R2 x64" Operator="1" ComLine="/q" BasicUiComLine="/q" NoUiComLine="/q"/>
+    <ROW PrereqKey="RequiredApplication_1" DisplayName="Restart explorer" SetupFileUrl="RestartExplorer.exe" Location="0" ExactSize="0" Operator="1" Options="px" TargetName="RestartExplorer.exe" Type="1" Feature="RequiredApplication_1"/>
+    <ATTRIBUTE name="PrereqsOrder" value="RequiredApplication E9BFB0D602DD498F96473C9BBCDDEC89 C673FE9433B49AFAC9592AB26B8F8E4 RequiredApplication_1"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.PreReqSearchComponent">
+    <ROW SearchKey="C673FE9433B49AFAC9592AB26B8F8E4Install" Prereq="C673FE9433B49AFAC9592AB26B8F8E4" SearchType="9" SearchString="HKLM\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\Install" RefContent="M1" Order="1" Property="PREREQSEARCH_C673FE9433B49AFAC9592AB26B8F8E4"/>
+    <ROW SearchKey="E9BFB0D602DD498F96473C9BBCDDEC89Release" Prereq="E9BFB0D602DD498F96473C9BBCDDEC89" SearchType="9" SearchString="HKLM\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\Release" RefContent="G378388" Order="1" Property="PreReqSearch_E9BFB0D602DD498F96473C9BBCDDEC89"/>
+    <ROW SearchKey="KB2600211" Prereq="RequiredApplication" SearchType="5" SearchString="HKLM\Software\Microsoft\Updates\Microsoft .NET Framework 4 Extended\KB2600211" Order="2" Property="PreReqSearch"/>
+    <ROW SearchKey="KB2600211_1" Prereq="RequiredApplication" SearchType="5" SearchString="HKLM\SOFTWARE\Microsoft\Updates\Microsoft .NET Framework 4 Client Profile\KB2600211" Order="2" Property="PreReqSearch_1"/>
+    <ROW SearchKey="Upgrades" Prereq="RequiredApplication_1" SearchType="7" SearchString="HKLM\Software\ZettaBox Holdings Limited\ZettaBox\Upgrades\UpgradeInstalled" Order="2" Property="PreReqSearch_3"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.SynchronizedFolderComponent">
+    <ROW Directory_="APPDIR" SourcePath="LatestBuild\ZettaBoxWindows\bin\Release" Feature="MainFeature" ExcludePattern="*~|#*#|%*%|._|CVS|.cvsignore|SCCS|vssver.scc|mssccprj.scc|vssver2.scc|.svn|.DS_Store" ExcludeFlags="6"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.UpdaterComponent">
+    <ROW Updater="updater.exe" URL="URL" SearchFreq="CheckFrequency" DownloadsFolder="DownloadsFolder" ID="ID" TargetDir="AppDir" AppName="ApplicationName" AppVersion="ApplicationVersion" CompanyName="CompanyName" DefCommandLine="DefaultCommandLine" SupportServiceName="SupportServiceName" Flags="Flags" IconPath="LatestBuild\ZettaBoxWindows\Updater.ico" IconIndex="0" UnistallCASeq="AI_UPDATER_UNINSTALL" SupportServiceCASeq="AI_UPDATER_SERVICE_CONFIG" SupportService="aij8676" SupportServiceCtrl="aij8676" Description="[|UpdaterName] [|ProductVersion] © [|Manufacturer], 2015"/>
+  </COMPONENT>
+</DOCUMENT>
