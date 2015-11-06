@@ -29,11 +29,11 @@
     <ROW Property="MICROSOFT_NODE" Value="Microsoft"/>
     <ROW Property="Manufacturer" Value="Zettabox Holdings Limited"/>
     <ROW Property="MsiLogging" MultiBuildValue="MsiBuild:v"/>
-    <ROW Property="ProductCode" Value="2057:{2B8F9583-46F0-4FD3-8E05-9088E3C27100} " Type="16"/>
+    <ROW Property="ProductCode" Value="2057:{F759EE1A-97AC-4328-80A4-36B5955B47A2} " Type="16"/>
     <ROW Property="ProductLanguage" Value="2057"/>
     <ROW Property="ProductName" Value="Zettabox"/>
     <ROW Property="ProductNameUpper" Value="ZettaBox"/>
-    <ROW Property="ProductVersion" Value="0.9.138" Type="32"/>
+    <ROW Property="ProductVersion" Value="0.9.137" Type="32"/>
     <ROW Property="RADIOBUTTONGROUP_1_PROP" Value="RadioButton_1" Type="4"/>
     <ROW Property="RUN" Value="Run"/>
     <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND;AI_SETUPEXEPATH;SETUPEXEDIR"/>
@@ -786,10 +786,10 @@
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiRegsComponent">
     <ROW Registry="AI_ExePath" Root="-1" Key="Software\Caphyon\Advanced Installer\LZMA\[ProductCode]\[ProductVersion]" Name="AI_ExePath" Value="[AI_SETUPEXEPATH]" Component_="AI_ExePath"/>
-    <ROW Registry="CommandFlags" Root="0" Key="*\shell\Share L Separator" Name="CommandFlags" Value="#00000008" Component_="CommandFlags"/>
-    <ROW Registry="CommandFlags_1" Root="0" Key="Directory\shell\Share F Separator" Name="CommandFlags" Value="#00000008" Component_="CommandFlags_1"/>
-    <ROW Registry="CommandFlags_2" Root="0" Key="*\shell\Share Message Separator" Name="CommandFlags" Value="#00000008" Component_="CommandFlags_2"/>
-    <ROW Registry="CommandFlags_3" Root="0" Key="Directory\shell\Share Message Separator" Name="CommandFlags" Value="#00000008" Component_="CommandFlags_3"/>
+    <ROW Registry="CommandFlags" Root="0" Key="*\shell\Send M Separator" Name="CommandFlags" Value="#00000008" Component_="CommandFlags"/>
+    <ROW Registry="CommandFlags_1" Root="0" Key="Directory\shell\Send M Separator" Name="CommandFlags" Value="#00000008" Component_="CommandFlags_1"/>
+    <ROW Registry="CommandFlags_2" Root="0" Key="*\shell\Share Link Separator" Name="CommandFlags" Value="#00000008" Component_="CommandFlags_2"/>
+    <ROW Registry="CommandFlags_3" Root="0" Key="Directory\shell\Share Link Separator" Name="CommandFlags" Value="#00000008" Component_="CommandFlags_3"/>
     <ROW Registry="Comments" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="Comments" Value="[ARPCOMMENTS]" Component_="AI_CustomARPName"/>
     <ROW Registry="Contact" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="Contact" Value="[ARPCONTACT]" Component_="AI_CustomARPName"/>
     <ROW Registry="Description_12" Root="1" Key="Software\Microsoft\Office\Word\AddIns\ZettaBox.ZettaBoxForOfficeBackstage" Name="Description" Value="ZettaBox Add-in for Office" Component_="Description_12"/>
@@ -821,8 +821,8 @@
     <ROW Registry="FriendlyName_23" Root="1" Key="Software\[MICROSOFT_NODE]\Office\PowerPoint\Addins\ZettaBox.ZettaBoxForOfficeTab" Name="FriendlyName" Value="ZettaBox Tab Add-in for PowerPoint" Component_="FriendlyName_23"/>
     <ROW Registry="HelpLink" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="HelpLink" Value="[ARPHELPLINK]" Component_="AI_CustomARPName"/>
     <ROW Registry="HelpTelephone" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="HelpTelephone" Value="[ARPHELPTELEPHONE]" Component_="AI_CustomARPName"/>
-    <ROW Registry="Icon_3" Root="0" Key="*\shell\Share Link" Name="Icon" Value="#%[APPDIR]ZettaBox.exe,0" Component_="Icon_3"/>
-    <ROW Registry="Icon_4" Root="0" Key="Directory\shell\Share Folder" Name="Icon" Value="#%[APPDIR]ZettaBox.exe,0" Component_="Icon_4"/>
+    <ROW Registry="Icon_3" Root="0" Key="*\shell\Send Message" Name="Icon" Value="#%[APPDIR]ZettaBox.exe,0" Component_="Icon_3"/>
+    <ROW Registry="Icon_4" Root="0" Key="Directory\shell\Send Message" Name="Icon" Value="#%[APPDIR]ZettaBox.exe,0" Component_="Icon_4"/>
     <ROW Registry="InstallDir" Root="2" Key="Software\[Manufacturer]\[ProductNameUpper]" Name="InstallDir" Value="[APPDIR]" Component_="InstallDir"/>
     <ROW Registry="InstallDir_1" Root="1" Key="Software\[Manufacturer]\[ProductNameUpper]" Name="InstallDir" Value="[APPDIR]" Component_="InstallDir_1"/>
     <ROW Registry="InstallLocation" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="InstallLocation" Value="[APPDIR]" Component_="AI_CustomARPName"/>
@@ -891,8 +891,8 @@
     <ROW Registry="__1" Root="0" Key="*\shell\Share Link\command" Value="[APPDIR]ZettaBoxSendToHandler.exe /d &quot;%1&quot;" Component_="_"/>
     <ROW Registry="__2" Root="0" Key="Directory\shell\Share Folder\command" Value="[APPDIR]ZettaBoxSendToHandler.exe /F &quot;%1&quot;" Component_="__1"/>
     <ROW Registry="__3" Root="0" Key="Directory\shell\Share Link\command" Value="[APPDIR]ZettaBoxSendToHandler.exe /D &quot;%1&quot;" Component_="__2"/>
-    <ROW Registry="__4" Root="0" Key="*\shell\Share Message\command" Value="[APPDIR]ZettaBoxSendToHandler.exe /m &quot;%1&quot;" Component_="__3"/>
-    <ROW Registry="__5" Root="0" Key="Directory\shell\Share Message\command" Value="[APPDIR]ZettaBoxSendToHandler.exe /M &quot;%1&quot;" Component_="__4"/>
+    <ROW Registry="__4" Root="0" Key="*\shell\Send Message\command" Value="[APPDIR]ZettaBoxSendToHandler.exe /m &quot;%1&quot;" Component_="__3"/>
+    <ROW Registry="__5" Root="0" Key="Directory\shell\Send Message\command" Value="[APPDIR]ZettaBoxSendToHandler.exe /M &quot;%1&quot;" Component_="__4"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiServCtrlComponent">
     <ROW ServiceControl="aij8676" Name="aij8676" Event="160" Wait="1" Component_="updater.exe"/>
